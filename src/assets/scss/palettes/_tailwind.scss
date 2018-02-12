@@ -1,0 +1,55 @@
+// Palette Tailwind
+$white: #FFFFFF;
+$gray-lightest: #F8FAFC;
+$gray-lighter: #F1F5F8;
+$gray-light: #DAE1E7;
+$gray-base: #B8C2CC;
+$gray-dark: #8795A1;
+$gray-darker: #606F7B;
+$gray-darkest: #3D4852;
+$black: #22292F;
+$teal : #4DC0B5;
+$indigo : #6574CD;
+$purple : #9561E2;
+$pink : #F66D9B;
+$foundation-palette: (
+    primary: #3490DC,
+    secondary: #3D4852,
+    success: #38C172,
+    warning: #F6993F,
+    alert: #E3342F,
+);
+$light-gray: $gray-lighter;
+$medium-gray: $gray-base;
+$dark-gray: $gray-dark;
+$text-primary: $gray-darkest;
+$text-heading: $black;
+$text-muted: $gray-base;
+$text-placeholder: $gray-base;
+// End Palette Tailwind
+
+$colors-list: (
+white: #FFFFFF,
+gray-lightest: #F8FAFC,
+gray-lighter: #F1F5F8,
+gray-light: #DAE1E7,
+gray-base: #B8C2CC,
+gray-dark: #8795A1,
+gray-darker: #606F7B,
+gray-darkest: #3D4852,
+black: #22292F,
+teal : #4DC0B5,
+indigo : #6574CD,
+purple : #9561E2,
+pink : #F66D9B,
+);
+
+@each $key, $value in $colors-list {
+  .#{$key} {
+    color: $value !important;
+  }
+
+  .bg-#{$key} {
+    background-color: $value !important;
+  }
+}
