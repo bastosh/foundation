@@ -1,0 +1,28 @@
+.alert-box {
+  @include callout-base;
+  &.primary {
+    background-color: $primary-color;
+    color: $white;
+    font-weight: 500;
+  }
+  &.secondary {
+    background-color: $secondary-color;
+    color: $white;
+    font-weight: 500;
+  }
+  &.alert {
+    background-color: $alert-color;
+    color: $white;
+    font-weight: 500;
+  }
+  &.success {
+    background-color: $success-color;
+    color: $white;
+    font-weight: 500;
+  }
+  &.warning {
+    background-color: $warning-color;
+    color: $white;
+    font-weight: 500;
+  }
+}

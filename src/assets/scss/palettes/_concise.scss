@@ -70,30 +70,25 @@ text-inverted:  white,
 background-dark:  #32373d,
 background-light: #f5f5f5,
 background-body:  white,
-
 state-muted:   #eee,
 state-success: #10a887,
 state-warning: #F17F42,
 state-error:   #da3c3c,
-
 blue-darker:  #1573b6,
 blue-dark:    #1e80c6,
 blue-base:    #2b90d9,
 blue-light:   #3fa2e9,
 blue-lighter: #4eb1f9,
-
 green-darker:  #089073,
 green-dark:    #0b9d7d,
 green-base:    #10a887,
 green-light:   #1eb896,
 green-lighter: #28ceaa,
-
 red-darker:  #653131,
 red-dark:    #b73333,
 red-base:    #da3c3c,
 red-light:   #f25a5a,
 red-lighter: #fa8181,
-
 gray-darker:  #333333,
 gray-dark:    #4d4d4d,
 gray-base:    #666666,
@@ -102,7 +97,7 @@ gray-lighter: #999999,
 );
 
 @each $key, $value in $colors-list {
-  .#{$key} {
+  .color-#{$key} {
     color: $value !important;
   }
 

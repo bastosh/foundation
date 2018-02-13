@@ -42,10 +42,15 @@ teal : #4DC0B5,
 indigo : #6574CD,
 purple : #9561E2,
 pink : #F66D9B,
+primary: #3490DC,
+secondary: #3D4852,
+success: #38C172,
+warning: #F6993F,
+alert: #E3342F,
 );
 
 @each $key, $value in $colors-list {
-  .#{$key} {
+  .color-#{$key} {
     color: $value !important;
   }
 

@@ -66,11 +66,11 @@ $washed-yellow:  #fffceb;
 $washed-red:  #ffdfdf;
 
 $foundation-palette: (
-        primary: $blue,
-        secondary: $navy,
-        success: $green,
-        warning: $gold,
-        alert: $red,
+  primary: $blue,
+  secondary: $navy,
+  success: $green,
+  warning: $gold,
+  alert: $red,
 );
 $light-gray: $light-gray;
 $medium-gray: $silver;
@@ -143,10 +143,15 @@ washed-blue:  #f6fffe,
 washed-green:  #e8fdf5,
 washed-yellow:  #fffceb,
 washed-red:  #ffdfdf,
+primary: $blue,
+secondary: $navy,
+success: $green,
+warning: $gold,
+alert: $red,
 );
 
 @each $key, $value in $colors-list {
-  .#{$key} {
+  .color-#{$key} {
     color: $value !important;
   }
 

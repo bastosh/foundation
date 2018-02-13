@@ -292,11 +292,11 @@ $md-white: #ffffff;
 $md-black: #000000;
 
 $foundation-palette: (
-        primary: $md-blue-500,
-        secondary: $md-blue-900,
-        success: $md-green-500,
-        warning: $md-orange-500,
-        alert: $md-red-500,
+  primary: $md-blue-500,
+  secondary: $md-blue-900,
+  success: $md-green-500,
+  warning: $md-orange-500,
+  alert: $md-red-500,
 );
 $white: $md-white;
 $light-gray: $md-grey-100;
@@ -566,10 +566,15 @@ $colors-list: (
   blue-grey-900: #263238,
   white: #ffffff,
   black: #000000,
+  primary: $md-blue-500,
+  secondary: $md-blue-900,
+  success: $md-green-500,
+  warning: $md-orange-500,
+  alert: $md-red-500
 );
 
 @each $key, $value in $colors-list {
-  .#{$key} {
+  .color-#{$key} {
     color: $value !important;
   }
 

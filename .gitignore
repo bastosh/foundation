@@ -5,3 +5,4 @@ yarn-error.log
 bower_components
 dist
 *.swp
+.idea

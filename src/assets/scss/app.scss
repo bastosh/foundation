@@ -52,95 +52,17 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import "components/utilities";
+@import "components/alert-box";
+@import "components/message";
+
 input::placeholder, textarea::placeholder {
   color: $text-placeholder;
 }
-
 .button {
   font-weight: $button-font-weight;
 }
 
-.text-center {
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.muted {
-  color: $text-muted;
-}
 
-.headline {
-  font-size: 3rem;
-  @include breakpoint(mobile) {
-    font-size: 4rem;
-  }
-  @include breakpoint(medium) {
-    font-size: 5rem;
-  }
-  @include breakpoint(large) {
-    font-size: 6rem;
-    letter-spacing: .025em;
-  }
 
-}
-
-.subheadline {
-  font-size: 2.5rem;
-  @include breakpoint(mobile) {
-    font-size: 3rem;
-  }
-  @include breakpoint(medium) {
-    font-size: 4rem;
-  }
-  @include breakpoint(large) {
-    font-size: 5rem;
-    letter-spacing: .025em;
-  }
-}
-
-// Paragraphs indentation
-.indent {
-  text-indent: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.small-caps       { font-variant: small-caps; }
-
-// Line-height
-.lh-sm            { line-height: 1.1; }
-
-// Paragraphs measure
-.paragraph-narrow { max-width: 20rem; }
-.paragraph        { max-width: 30rem;}
-.paragraph-wide   { max-width: 34rem;}
-
-// Title measure
-.title-narrow     { max-width: 40rem; }
-.title            { max-width: 50rem; }
-.title-wide       { max-width: 60rem; }
-
-// Letter-spacing
-.ls-sm            { letter-spacing: -.025em; }
-.ls               { letter-spacing:  .025em; }
-.ls-md            { letter-spacing:  .05em; }
-.ls-lg            { letter-spacing:  .1em; }
-.ls-xl            { letter-spacing:  .2em; }
-
-// Max-width
-.mw1              {  max-width: 1rem; }
-.mw2              {  max-width: 2rem; }
-.mw3              {  max-width: 4rem; }
-.mw4              {  max-width: 8rem; }
-.mw5              {  max-width: 16rem; }
-.mw6              {  max-width: 32rem; }
-.mw7              {  max-width: 48rem; }
-.mw8              {  max-width: 64rem; }
-.mw9              {  max-width: 96rem; }
-
-// Box-shadow
-.shadow-1 { box-shadow: 0 0 4px 2px rgba( 0, 0, 0, 0.2 ); }
-.shadow-2 { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, 0.2 ); }
-.shadow-3 { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ); }
-.shadow-4 { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, 0.2 ); }
-.shadow-5 { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, 0.2 ); }

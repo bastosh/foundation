@@ -67,10 +67,16 @@ $colors-list: (
   green:   #28a745,
   teal:    #20c997,
   cyan:    #17a2b8,
+  primary: $primary,
+  secondary: $secondary,
+  info: $info,
+  success: $success,
+  warning: $warning,
+  alert: $danger,
 );
 
 @each $key, $value in $colors-list {
-  .#{$key} {
+  .color-#{$key} {
     color: $value !important;
   }
 
