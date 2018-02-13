@@ -1,7 +1,8 @@
-.alert-box {
+.notification {
   @include callout-base;
   color: $white;
   font-weight: 500;
+  padding: 1.25rem 2.75rem 1.25rem 1.5rem ;
   @each $key, $value in $foundation-palette {
     &.#{$key} {
       background-color: $value
