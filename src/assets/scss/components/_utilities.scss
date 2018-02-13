@@ -36,6 +36,10 @@
   }
 }
 
+.subtitle {
+  line-height: .5;
+}
+
 // Paragraphs indentation
 .indent {
   text-indent: 1em;
@@ -44,6 +48,9 @@
 }
 
 .small-caps       { font-variant: small-caps; }
+
+.thin             { font-weight: 100; }
+.light            { font-weight: 200; }
 
 // Line-height
 .lh-sm            { line-height: 1.1; }

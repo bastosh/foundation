@@ -1,0 +1,37 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: $primary-color;
+  @each $key, $value in $foundation-palette {
+    &.#{$key} {
+      background-color: $value
+    }
+  }
+  h1, h2, h3, p {
+    color: $white;
+  }
+  .hero-body {
+    padding-bottom: 9rem;
+    padding-top: 9rem;
+  }
+  &.small {
+    .hero-body {
+      padding-bottom: 4rem;
+      padding-top: 4rem;
+    }
+  }
+  &.large {
+    .hero-body {
+      padding-bottom: 12rem;
+      padding-top: 12rem;
+    }
+  }
+  &.full {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -55,6 +55,7 @@
 @import "components/utilities";
 @import "components/alert-box";
 @import "components/message";
+@import "components/hero";
 
 input::placeholder, textarea::placeholder {
   color: $text-placeholder;
@@ -62,7 +63,3 @@ input::placeholder, textarea::placeholder {
 .button {
   font-weight: $button-font-weight;
 }
-
-
-
-

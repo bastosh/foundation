@@ -1,44 +1,4 @@
-
-.message-secondary {
-  @include callout-base;
-  padding: 0;
-  border: 1px solid $secondary-color;
-  header {
-    align-items: center;
-    background-color: $secondary-color;
-    border-radius: $global-radius $global-radius 0 0;
-    color: $white;
-    display: flex;
-    font-weight: 500;
-    justify-content: space-between;
-    line-height: 1.25;
-    padding: 0.5em 0.75em;
-    p, h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 0;
-    }
-    button {
-      background-color: darken($secondary-color, 10);
-      &:hover {
-        background-color: darken($secondary-color, 20);
-      }
-      border-radius: 9999px;
-      line-height: .65;
-      padding: .1em;
-      span {
-        position: relative;
-        top: -3px;
-      }
-    }
-  }
-  .message-body {
-    background-color: lighten($secondary-color, 55);
-    border: 1px solid $secondary-color;
-    border-radius: 0 0 $global-radius $global-radius;
-    color: $text-primary;
-    padding: 1em 1.25em;
-  }
-}
-.message-primary {
+.message {
   @include callout-base;
   padding: 0;
   border: 1px solid $primary-color;
@@ -55,7 +15,7 @@
     button {
       background-color: darken($primary-color, 10);
       &:hover {
-        background-color: darken($primary-color, 20);
+        background-color: darken($primary-color, 15);
       }
       border-radius: 9999px;
       line-height: .65;
@@ -73,123 +33,41 @@
     color: $text-primary;
     padding: 1em 1.25em;
   }
-}
-.message-success {
-  @include callout-base;
-  padding: 0;
-  border: 1px solid $success-color;
-  header {
-    align-items: center;
-    background-color: $success-color;
-    border-radius: $global-radius $global-radius 0 0;
-    color: $white;
-    display: flex;
-    font-weight: 500;
-    justify-content: space-between;
-    line-height: 1.25;
-    padding: 0.5em 0.75em;
-    p, h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 0;
-    }
-    button {
-      background-color: darken($success-color, 10);
-      &:hover {
-        background-color: darken($success-color, 20);
+  @each $key, $value in $foundation-palette {
+    &.#{$key} {
+      border: 1px solid $value;
+      header {
+        background-color: $value;
       }
-      border-radius: 9999px;
-      line-height: .65;
-      padding: .1em;
-      span {
-        position: relative;
-        top: -3px;
+      button {
+        background-color: darken($value, 10);
+        &:hover {
+          background-color: darken($value, 15);
+        }
+      }
+      .message-body {
+        border: 1px solid $value;
       }
     }
   }
-  .message-body {
-    background-color: lighten($success-color, 60);
-    border: 1px solid $success-color;
-    border-radius: 0 0 $global-radius $global-radius;
-    color: $text-primary;
-    padding: 1em 1.25em;
-  }
-}
-
-.message-warning {
-  @include callout-base;
-  padding: 0;
-  border: 1px solid $warning-color;
-  header {
-    align-items: center;
-    background-color: $warning-color;
-    border-radius: $global-radius $global-radius 0 0;
-    color: $white;
-    display: flex;
-    font-weight: 500;
-    justify-content: space-between;
-    line-height: 1.25;
-    padding: 0.5em 0.75em;
-    p, h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 0;
-    }
-    button {
-      background-color: darken($warning-color, 10);
-      &:hover {
-        background-color: darken($warning-color, 20);
-      }
-      border-radius: 9999px;
-      line-height: .65;
-      padding: .1em;
-      span {
-        position: relative;
-        top: -3px;
-      }
+  &.success {
+    .message-body {
+      background-color: lighten($success-color, 61);
     }
   }
-  .message-body {
-    background-color: lighten($alert-color, 43);
-    border: 1px solid $warning-color;
-    border-radius: 0 0 $global-radius $global-radius;
-    color: $text-primary;
-    padding: 1em 1.25em;
-  }
-}
-
-.message-alert {
-  @include callout-base;
-  padding: 0;
-  border: 1px solid $alert-color;
-  header {
-    align-items: center;
-    background-color: $alert-color;
-    border-radius: $global-radius $global-radius 0 0;
-    color: $white;
-    display: flex;
-    font-weight: 500;
-    justify-content: space-between;
-    line-height: 1.25;
-    padding: 0.5em 0.75em;
-    p, h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 0;
-    }
-    button {
-      background-color: darken($alert-color, 10);
-      &:hover {
-        background-color: darken($alert-color, 20);
-      }
-      border-radius: 9999px;
-      line-height: .65;
-      padding: .1em;
-      span {
-        position: relative;
-        top: -3px;
-      }
+  &.warning {
+    .message-body {
+      background-color: lighten($warning-color, 36);
     }
   }
-  .message-body {
-    background-color: lighten($alert-color, 43);
-    border: 1px solid $alert-color;
-    border-radius: 0 0 $global-radius $global-radius;
-    color: $alert-color;
-    padding: 1em 1.25em;
+  &.alert {
+    .message-body {
+      background-color: lighten($alert-color, 43);
+    }
+  }
+  &.secondary {
+    .message-body {
+      background-color: lighten($secondary-color, 57);
+    }
   }
 }
