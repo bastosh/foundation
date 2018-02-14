@@ -1,7 +1,5 @@
 // Palette Concise
-
-$base-primary:   #C65146;
-$base-selection: #EBE1D3; 
+$base-selection: #EBE1D3;
 $base-lines:     #DCDCDC;
 $text-primary:   #444;
 $text-secondary: #777;
@@ -11,10 +9,11 @@ $background-dark:  #32373d;
 $background-light: #f5f5f5;
 $background-body:  white;
 
-$state-muted:   #eee;
-$state-success: #10a887;
-$state-warning: #F17F42;
-$state-error:   #da3c3c;
+$primary:   #C65146;
+$muted:   #eee;
+$success: #10a887;
+$warning: #F17F42;
+$error:   #da3c3c;
 
 $blue-darker:  #1573b6;
 $blue-dark:    #1e80c6;
@@ -41,11 +40,36 @@ $gray-light:   #808080;
 $gray-lighter: #999999;
 
 $foundation-palette: (
-  primary: #2b90d9,
-  secondary: #666666,
-  success: #10a887,
-  warning: #F17F42,
-  alert: #da3c3c,
+  black:          #0a0a0a,
+  white:          #fefefe,
+  primary:        $primary,
+  secondary:      $gray-darker,
+  success:        $success,
+  warning:        $warning,
+  alert:          $error,
+  dark:           #32373d,
+  light:          #f5f5f5,
+  blue-darker:    #1573b6,
+  blue-dark:      #1e80c6,
+  blue:           #2b90d9,
+  blue-light:     #3fa2e9,
+  blue-lighter:   #4eb1f9,
+  green-darker:   #089073,
+  green-dark:     #0b9d7d,
+  green:          #10a887,
+  green-light:    #1eb896,
+  green-lighter:  #28ceaa,
+  red-darker:     #653131,
+  red-dark:       #b73333,
+  red:            #da3c3c,
+  red-light:      #f25a5a,
+  red-lighter:    #fa8181,
+  gray-darker:    #333333,
+  gray-dark:      #4d4d4d,
+  gray:           #666666,
+  gray-light:     #808080,
+  gray-lighter:   #999999,
+  text-inverted:  #fefefe,
 );
 $white: #fefefe;
 $light-gray: #f5f5f5;
@@ -59,44 +83,13 @@ $text-placeholder: #888;
 $text-muted: $medium-gray;
 // End Palette Concise
 
-$colors-list: (
-base-primary:   #C65146,
-base-selection: #EBE1D3,
-base-lines:     #DCDCDC,
-text-primary:   #444,
-text-secondary: #777,
-text-heading:   #222,
-text-inverted:  white,
-background-dark:  #32373d,
-background-light: #f5f5f5,
-background-body:  white,
-state-muted:   #eee,
-state-success: #10a887,
-state-warning: #F17F42,
-state-error:   #da3c3c,
-blue-darker:  #1573b6,
-blue-dark:    #1e80c6,
-blue-base:    #2b90d9,
-blue-light:   #3fa2e9,
-blue-lighter: #4eb1f9,
-green-darker:  #089073,
-green-dark:    #0b9d7d,
-green-base:    #10a887,
-green-light:   #1eb896,
-green-lighter: #28ceaa,
-red-darker:  #653131,
-red-dark:    #b73333,
-red-base:    #da3c3c,
-red-light:   #f25a5a,
-red-lighter: #fa8181,
-gray-darker:  #333333,
-gray-dark:    #4d4d4d,
-gray-base:    #666666,
-gray-light:   #808080,
-gray-lighter: #999999,
-);
+$message-primary-bg-opacity : 46;
+$message-secondary-bg-opacity: 72;
+$message-success-bg-opacity: 61;
+$message-warning-bg-opacity: 36;
+$message-alert-bg-opacity: 43;
 
-@each $key, $value in $colors-list {
+@each $key, $value in $foundation-palette {
   .color-#{$key} {
     color: $value !important;
   }

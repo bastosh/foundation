@@ -29,12 +29,25 @@ $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-800;
 $foundation-palette: (
-    primary: $primary,
-    secondary: $secondary,
-    info: $info,
-    success: $success,
-    warning: $warning,
-    alert: $danger,
+    black:          #000000,
+    white:          #ffffff,
+    primary:        $primary,
+    secondary:      $secondary,
+    info:           $info,
+    success:        $success,
+    warning:        $warning,
+    alert:          $danger,
+    dark:           $gray-100,
+    light:          $gray-800,
+    blue:           #007bff,
+    red:            #dc3545,
+    green:          #28a745,
+    gray-darker:    $gray-900,
+    gray-dark:      $gray-800,
+    gray:           $gray-700,
+    gray-light:     $gray-600,
+    gray-lighter:   $gray-500,
+    text-inverted:  #ffffff,
 );
 $light-gray: $gray-100;
 $medium-gray: $gray-500;
@@ -43,39 +56,16 @@ $text-primary: $dark;
 $text-heading: $dark;
 $text-muted: $gray-500;
 $text-placeholder: $gray-500;
+$text-inverted: $white;
 // End Palette Bootstrap
 
-$colors-list: (
-  white:    #fff,
-  gray-100: #f8f9fa,
-  gray-200: #e9ecef,
-  gray-300: #dee2e6,
-  gray-400: #ced4da,
-  gray-500: #adb5bd,
-  gray-600: #6c757d,
-  gray-700: #495057,
-  gray-800: #343a40,
-  gray-900: #212529,
-  black:    #000,
-  blue:    #007bff,
-  indigo:  #6610f2,
-  purple:  #6f42c1,
-  pink:    #e83e8c,
-  red:     #dc3545,
-  orange:  #fd7e14,
-  yellow:  #ffc107,
-  green:   #28a745,
-  teal:    #20c997,
-  cyan:    #17a2b8,
-  primary: $primary,
-  secondary: $secondary,
-  info: $info,
-  success: $success,
-  warning: $warning,
-  alert: $danger,
-);
+$message-primary-bg-opacity : 48;
+$message-secondary-bg-opacity: 48;
+$message-success-bg-opacity: 54;
+$message-warning-bg-opacity: 40;
+$message-alert-bg-opacity: 43;
 
-@each $key, $value in $colors-list {
+@each $key, $value in $foundation-palette {
   .color-#{$key} {
     color: $value !important;
   }

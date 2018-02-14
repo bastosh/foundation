@@ -71,7 +71,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1140);
 $global-lineheight: 1.5;
 
-@import "palettes/concise";
+@import "palettes/tailwind";
 
 $body-background: $white;
 $body-font-color: $text-primary;

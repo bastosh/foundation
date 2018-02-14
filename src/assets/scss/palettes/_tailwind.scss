@@ -13,11 +13,69 @@ $indigo : #6574CD;
 $purple : #9561E2;
 $pink : #F66D9B;
 $foundation-palette: (
-    primary: #3490DC,
-    secondary: #3D4852,
-    success: #38C172,
-    warning: #F6993F,
-    alert: #E3342F,
+    black:          #22292F,
+    white:          #FFFFFF,
+    primary:        #6574CD,
+    secondary:      #4DC0B5,
+    success:        #38C172,
+    warning:        #F6993F,
+    alert:          #E3342F,
+    light:          #F8FAFC,
+    dark:           #3D4852,
+    blue-darkest:   #12283A,
+    blue-darker:    #1C3D5A,
+    blue-dark:      #2779BD,
+    blue:           #3490DC,
+    blue-light:     #6CB2EB,
+    blue-lighter:   #BCDEFA,
+    blue-lightest:  #EFF8FF,
+    red-darkest:    #3B0D0C,
+    red-darker:     #621B18,
+    red-dark:       #CC1F1A,
+    red:            #E3342F,
+    red-light:      #EF5753,
+    red-lighter:    #F9ACAA,
+    red-lightest:   #FCEBEA,
+    green-darkest:  #0F2F21,
+    green-darker:   #1A4731,
+    green-dark:     #1F9D55,
+    green:          #38C172,
+    green-light:    #51D88A,
+    green-lighter:  #A2F5BF,
+    green-lightest: #E3FCEC,
+    gray-darker:    #22292F,
+    gray-dark:      #3D4852,
+    gray:           #606F7B,
+    gray-light:     #8795A1,
+    gray-lighter:   #B8C2CC,
+    teal-darkest:   #0D3331,
+    teal-darker:    #20504F,
+    teal-dark:      #38A89D,
+    teal:           #4DC0B5,
+    teal-light:     #64D5CA,
+    teal-lighter:   #A0F0ED,
+    teal-lightest:  #E8FFFE,
+    indigo-darkest: #191E38,
+    indigo-darker:  #2F365F,
+    indigo-dark:    #5661B3,
+    indigo :        #6574CD,
+    indigo-light:   #7886D7,
+    indigo-lighter: #B2B7FF,
+    indigo-lightest:#E6E8FF,
+    purple-darkest: #21183C,
+    purple-darker:  #382B5F,
+    purple-dark:    #794ACF,
+    purple:         #9561E2,
+    purple-light:   #A779E9,
+    purple-lighter: #D6BBFC,
+    purple-lightest:#F3EBFF,
+    pink-darkest:   #451225,
+    pink-darker:    #6F213F,
+    pink-dark:      #EB5286,
+    pink:           #F66D9B,
+    pink-light:     #FA7EA8,
+    pink-lighter:   #FFBBCA,
+    pink-lightest:  #FFEBEF,
 );
 $light-gray: $gray-lighter;
 $medium-gray: $gray-base;
@@ -26,30 +84,16 @@ $text-primary: $gray-darkest;
 $text-heading: $black;
 $text-muted: $gray-base;
 $text-placeholder: $gray-base;
+$text-inverted: $white;
 // End Palette Tailwind
 
-$colors-list: (
-white: #FFFFFF,
-gray-lightest: #F8FAFC,
-gray-lighter: #F1F5F8,
-gray-light: #DAE1E7,
-gray-base: #B8C2CC,
-gray-dark: #8795A1,
-gray-darker: #606F7B,
-gray-darkest: #3D4852,
-black: #22292F,
-teal : #4DC0B5,
-indigo : #6574CD,
-purple : #9561E2,
-pink : #F66D9B,
-primary: #3490DC,
-secondary: #3D4852,
-success: #38C172,
-warning: #F6993F,
-alert: #E3342F,
-);
+$message-primary-bg-opacity : 38;
+$message-secondary-bg-opacity: 44;
+$message-success-bg-opacity: 46;
+$message-warning-bg-opacity: 35;
+$message-alert-bg-opacity: 43;
 
-@each $key, $value in $colors-list {
+@each $key, $value in $foundation-palette {
   .color-#{$key} {
     color: $value !important;
   }

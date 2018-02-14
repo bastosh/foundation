@@ -35,6 +35,12 @@ $text-placeholder: $grey-light;
 $text-muted: $grey-light;
 // End Palette Bulma
 
+$message-primary-bg-opacity : 52;
+$message-secondary-bg-opacity: 42;
+$message-success-bg-opacity: 45;
+$message-warning-bg-opacity: 30;
+$message-alert-bg-opacity: 35;
+
 $colors-list: (
 orange:       hsl(14,  100%, 53%),
 yellow:       hsl(48,  100%, 67%),

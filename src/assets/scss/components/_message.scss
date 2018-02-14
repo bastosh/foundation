@@ -27,7 +27,7 @@
     }
   }
   .message-body {
-    background-color: lighten($primary-color, 46);
+    background-color: lighten($primary-color, $message-primary-bg-opacity);
     border: 1px solid $primary-color;
     border-radius: 0 0 $global-radius $global-radius;
     color: $text-primary;
@@ -47,27 +47,31 @@
       }
       .message-body {
         border: 1px solid $value;
+        a {
+          color: $value;
+          font-weight: 500;
+        }
       }
     }
   }
   &.success {
     .message-body {
-      background-color: lighten($success-color, 61);
+      background-color: lighten($success-color, $message-success-bg-opacity);
     }
   }
   &.warning {
     .message-body {
-      background-color: lighten($warning-color, 36);
+      background-color: lighten($warning-color, $message-warning-bg-opacity);
     }
   }
   &.alert {
     .message-body {
-      background-color: lighten($alert-color, 43);
+      background-color: lighten($alert-color, $message-alert-bg-opacity);
     }
   }
   &.secondary {
     .message-body {
-      background-color: lighten($secondary-color, 57);
+      background-color: lighten($secondary-color, $message-secondary-bg-opacity);
     }
   }
 }
