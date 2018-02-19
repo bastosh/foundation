@@ -1,3 +1,14 @@
+.section {
+  padding: 3rem 1rem;
+  @include breakpoint(medium) {
+    padding: 4rem 2rem;
+    text-align: left;
+  }
+  @include breakpoint(xlarge) {
+    padding: 5rem 0;
+  }
+}
+
 .text-inverted {
   color: $text-inverted;
 }
@@ -5,6 +16,114 @@
 .text-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.centered-on-mobile {
+  @include breakpoint(mobile down) {
+    text-align: center;
+  }
+}
+
+.margin-top-on-mobile {
+  @include breakpoint(mobile down) {
+    margin-top: 2rem;
+  }
+}
+
+.margin-right-on-mobile {
+  @include breakpoint(mobile down) {
+    margin-right: 2rem;
+  }
+}
+
+.margin-bottom-on-mobile {
+  @include breakpoint(mobile down) {
+    margin-bottom: 2rem;
+  }
+}
+
+.margin-left-on-mobile {
+  @include breakpoint(mobile down) {
+    margin-left: 2rem;
+  }
+}
+
+.margin-top-on-desktop {
+  @include breakpoint(large) {
+    margin-top: 2rem;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-top: 4rem;
+  }
+}
+
+.margin-right-on-desktop {
+  @include breakpoint(large) {
+    margin-right: 2rem;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-right: 4rem;
+  }
+}
+
+.margin-bottom-on-desktop {
+  @include breakpoint(large) {
+    margin-bottom: 2rem;
+  }
+  @include breakpoint(xlarge) {
+    padding-bottom: 4rem;
+  }
+}
+
+.margin-left-on-desktop {
+  @include breakpoint(large) {
+    margin-left: 2rem;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-left: 4rem;
+  }
+}
+
+.padding-top-on-desktop {
+  @include breakpoint(large) {
+    padding-top: 2rem;
+  }
+  @include breakpoint(xlarge) {
+    padding-top: 4rem;
+  }
+}
+
+.padding-right-on-desktop {
+  @include breakpoint(large) {
+    padding-right: 2rem;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-right: 4rem;
+  }
+}
+
+.padding-bottom-on-desktop {
+  @include breakpoint(large) {
+    padding-bottom: 2rem;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-bottom: 4rem;
+  }
+}
+
+.padding-left-on-desktop {
+  @include breakpoint(large) {
+    padding-left: 2rem;
+  }
+
+  @include breakpoint(xlarge) {
+    padding-left: 4rem;
+  }
 }
 
 .muted {
@@ -71,14 +190,38 @@
 .lh-sm            { line-height: 1.1; }
 
 // Paragraphs measure
-.paragraph-narrow { max-width: 20rem; }
-.paragraph        { max-width: 30rem;}
-.paragraph-wide   { max-width: 34rem;}
+.paragraph-narrow {
+  @include breakpoint(medium) {
+    max-width: 20rem;
+  }
+}
+.paragraph        {
+  @include breakpoint(medium) {
+    max-width: 30rem;
+  }
+}
+.paragraph-wide   {
+  @include breakpoint(medium) {
+    max-width: 34rem;
+  }
+}
 
 // Title measure
-.title-narrow     { max-width: 40rem; }
-.title            { max-width: 50rem; }
-.title-wide       { max-width: 60rem; }
+.title-narrow     {
+  @include breakpoint(medium) {
+    max-width: 40rem;
+  }
+}
+.title            {
+  @include breakpoint(medium) {
+    max-width: 50rem;
+  }
+}
+.title-wide       {
+  @include breakpoint(medium) {
+    max-width: 60rem;
+  }
+}
 
 // Letter-spacing
 .ls-sm            { letter-spacing: -.025em; }

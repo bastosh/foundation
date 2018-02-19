@@ -12,6 +12,7 @@
   "dependencies": {
     "aos": "^2.2.0",
     "foundation-sites": "~6.4.1",
+    "holderjs": "^2.9.4",
     "jquery": ">=3.0.0",
     "material-colors": "^1.2.5",
     "motion-ui": "~1.2.2",

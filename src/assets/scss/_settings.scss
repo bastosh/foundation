@@ -87,7 +87,7 @@ $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
-$global-prototype-breakpoints: false;
+$global-prototype-breakpoints: true;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
@@ -209,7 +209,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: $global-font-size * 1.25;
+$lead-font-size: $global-font-size * 1.35;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
