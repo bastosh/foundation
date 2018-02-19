@@ -1,0 +1,116 @@
+.testimonial-cards {
+  overflow: hidden;
+  background-color: $gray-lightest;
+
+  &__container {
+    padding-top: rem-calc(104);
+    padding-bottom: rem-calc(106);
+  }
+
+  &__title {
+    margin-bottom: rem-calc(57);
+    text-align: center;
+    color: $gray-darker;
+  }
+
+  &__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    margin-bottom: rem-calc(30);
+    border-radius: rem-calc(6);
+    padding: rem-calc(30);
+    min-height: rem-calc(216);
+    max-width: rem-calc(350);
+    background-color: $white;
+
+    &__photo {
+      display: block;
+      float: left;
+      margin-right: -100%;
+      width: rem-calc(45);
+      height: rem-calc(45);
+
+      &__image {
+        display: block;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__name {
+      display: block;
+      margin-right: rem-calc(30);
+      margin-bottom: rem-calc(2);
+      margin-left: rem-calc(60);
+      color: $gray-darker;
+    }
+
+    &__post {
+      display: block;
+      margin-right: rem-calc(30);
+      margin-bottom: rem-calc(13);
+      margin-left: rem-calc(60);
+      color: $gray-dark;
+    }
+
+    &__twitter {
+      position: absolute;
+      right: rem-calc(30);
+      top: rem-calc(30);
+      transition: font-size $base-transition;
+      &:hover {
+        font-size: 1.5rem;
+        transition: font-size $base-transition;
+      }
+
+      &__icon {
+        display: block;
+        width: rem-calc(20);
+        height: rem-calc(17);
+        color: #2AA3F0;
+      }
+    }
+
+    &__text {
+      display: block;
+      color: $gray-darker;
+    }
+  }
+
+  @include breakpoint(xlarge down) {
+    &__container {
+      padding-top: rem-calc(100);
+      padding-bottom: rem-calc(100);
+    }
+
+    &__row {
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__container {
+      padding-top: rem-calc(80);
+      padding-bottom: rem-calc(80);
+    }
+  }
+
+  @include breakpoint(small down) {
+    &__container {
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(60);
+    }
+
+    &__title {
+      margin-bottom: rem-calc(30);
+    }
+  }
+}
