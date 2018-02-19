@@ -1,0 +1,36 @@
+.hero-container {
+  @include breakpoint(medium down) {
+    height: 500px;
+  }
+  @include breakpoint(large up) {
+    height: 700px;
+  }
+}
+
+.hero-laptop {
+  color: $white;
+  h2 {
+    color: $white;
+  }
+  @include breakpoint(medium down) {
+    background: #358ed7;
+    .text-container {
+      text-align: center;
+    }
+  }
+  @include breakpoint(large only) {
+    background: url(../img/laptop-2x.png) 110% 100% no-repeat #358ed7;
+    background-size: 40rem;
+    .text-container {
+      margin-left: 4rem;
+    }
+  }
+  @include breakpoint(xlarge up) {
+    background: url(../img/laptop-2x.png) 100% 100% no-repeat #358ed7;
+    background-size: 40rem;
+    .text-container {
+      margin-left: 8rem;
+    }
+  }
+}
+
