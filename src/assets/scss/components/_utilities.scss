@@ -2,7 +2,6 @@
   padding: 3rem 1rem;
   @include breakpoint(medium) {
     padding: 4rem 2rem;
-    text-align: left;
   }
   @include breakpoint(xlarge) {
     padding: 5rem 0;
@@ -21,6 +20,19 @@
 .centered-on-mobile {
   @include breakpoint(mobile down) {
     text-align: center;
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+.centered-on-medium {
+  @include breakpoint(medium down) {
+    text-align: center;
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -193,16 +205,28 @@
 .paragraph-narrow {
   @include breakpoint(medium) {
     max-width: 20rem;
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .paragraph        {
   @include breakpoint(medium) {
     max-width: 30rem;
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .paragraph-wide   {
   @include breakpoint(medium) {
     max-width: 34rem;
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -210,16 +234,28 @@
 .title-narrow     {
   @include breakpoint(medium) {
     max-width: 40rem;
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .title            {
   @include breakpoint(medium) {
     max-width: 50rem;
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 .title-wide       {
   @include breakpoint(medium) {
     max-width: 60rem;
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
