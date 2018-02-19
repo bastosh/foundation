@@ -251,6 +251,16 @@
   }
 }
 
+.quote {
+  font-size: 18px;
+  @include breakpoint(medium) {
+    font-size: 19px;
+  }
+  @include breakpoint(large) {
+    font-size: 20px;
+  }
+}
+
 // Letter-spacing
 .ls-sm            { letter-spacing: -.025em; }
 .ls               { letter-spacing:  .025em; }

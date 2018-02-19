@@ -5,13 +5,15 @@
   }
 }
 
-.fa-angle-left, .fa-angle-right {
-  &:hover {
-    cursor: pointer;
-  }
+.fa-angle-left, .fa-angle-right, .fa-angle-double-left, .fa-angle-double-right {
+  color: $gray-base;
 }
 
 .testimonial-slider-container {
+  button:hover {
+    cursor: pointer;
+  }
+
   .orbit-previous,
   .orbit-next {
     color: $black;
@@ -37,7 +39,7 @@
   .testimonial-slide-content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 35rem;
+    max-width: 40rem;
     padding: 1rem 1.5rem;
     text-align: center;
     @media screen and (min-width: 40em) {
@@ -47,10 +49,13 @@
 
   .profile-pic {
     max-width: 225px;
+    @include breakpoint(medium down) {
+      display: none;
+    }
   }
 
   .testimonial-slide-text {
-    //padding-left: 3rem;
+    color: $gray-darker;
   }
 
   .testimonial-slide-author-container {
