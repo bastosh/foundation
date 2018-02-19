@@ -57,6 +57,8 @@
 @import "components/message";
 @import "components/hero";
 
+@import "building-blocks/header-full-screen";
+
 input::placeholder, textarea::placeholder {
   color: $text-placeholder;
 }
