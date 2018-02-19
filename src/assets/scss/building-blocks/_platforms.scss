@@ -1,0 +1,54 @@
+#platforms {
+  padding-top: 4rem;
+}
+
+.platforms {
+  position: relative;
+  bottom: rem-calc(-60);
+  overflow: hidden;
+  margin-top: rem-calc(-9);
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+
+  &__inner {
+    @include clearfix;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 100%;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    padding-left: percentage(80 / 1440);
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &--apple-watch {
+      margin-bottom: rem-calc(1);
+      width: percentage(153 / 1440 + 80 / 1440);
+      min-width: rem-calc(153 / 2 + 80 / 1440);
+    }
+
+    &--nexus-6p {
+      margin-bottom: rem-calc(2);
+      width: percentage(254 / 1440 + 80 / 1440);
+      min-width: rem-calc(254 / 2 + 80 / 1440);
+    }
+
+    &--iphone-6s {
+      width: percentage(253 / 1440 + 80 / 1440);
+      min-width: rem-calc(253 / 2 + 80 / 1440);
+    }
+
+    &--ipad-air-2 {
+      width: percentage(460 / 1440 + 80 / 1440);
+      min-width: rem-calc(460 / 2 + 80 / 1440);
+    }
+  }
+}
