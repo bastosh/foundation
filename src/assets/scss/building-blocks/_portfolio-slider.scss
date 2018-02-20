@@ -1,0 +1,124 @@
+.portfolio-1 {
+  background: $light-gray;
+
+  .orbit-next, .orbit-previous {
+    top: 45%;
+    background-color: rgba(10, 10, 10, 0.5);
+    &:hover {
+      background-color: rgba(10, 10, 10, 0.8);
+    }
+  }
+
+  nav {
+    margin-top: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .orbit-bullets button {
+    margin: .3rem;
+    width: .5rem;
+    height: .5rem;
+    background-color: #cacaca; }
+  .orbit-bullets button:hover {
+    background-color: #cacaca;
+    cursor: pointer;
+  }
+  .orbit-bullets button.is-active {
+    width: .7rem;
+    height: .7rem;
+    background-color: $primary-color; }
+
+  &__item {
+    &__image {
+      height: rem-calc(540);
+      background: 50% 50% / cover no-repeat;
+
+      &:nth-child(1) {
+        background-image: url("../img/slide-1.jpg");
+      }
+
+      &:nth-child(2) {
+        background-image: url("../img/slide-2.jpg");
+      }
+
+      &:nth-child(3) {
+        background-image: url("../img/slide-3.jpg");
+      }
+
+      &:nth-child(4) {
+        background-image: url("../img/slide-4.jpg");
+      }
+
+      &:nth-child(5) {
+        background-image: url("../img/slide-5.jpg");
+      }
+
+      &:nth-child(6) {
+        background-image: url("../img/slide-6.jpg");
+      }
+
+      @include breakpoint(retina) {
+        &:nth-child(1) {
+          background-image: url("../img/slide-1-2x.png");
+        }
+
+        &:nth-child(2) {
+          background-image: url("../img/slide-2-2x.png");
+        }
+
+        &:nth-child(3) {
+          background-image: url("../img/slide-3-2x.png");
+        }
+
+        &:nth-child(4) {
+          background-image: url("../img/slide-4-2x.png");
+        }
+
+        &:nth-child(5) {
+          background-image: url("../img/slide-5-2x.png");
+        }
+
+        &:nth-child(6) {
+          background-image: url("../img/slide-6-2x.png");
+        }
+      }
+    }
+
+    &__content {
+      margin-top: -1rem * 5;
+      margin-bottom: rem-calc(5);
+      border-radius: rem-calc(6);
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(60);
+      box-shadow: rem-calc(1 2 3) rgba($black, 0.1);
+      text-align: center;
+      background: $white;
+    }
+
+    &__tag {
+      margin-bottom: rem-calc(25);
+      color: $gray-dark;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+      color: $gray-darkest;
+    }
+
+    &__subheading {
+      color: $gray-darker;
+      line-height: 1.5;
+      margin: 0 auto rem-calc(28);
+      max-width: rem-calc(540);
+    }
+
+    &__button {
+      margin-bottom: rem-calc(0);
+      padding: rem-calc(12 30);
+      height: rem-calc(42);
+    }
+  }
+}

@@ -56,13 +56,19 @@
 @import "components/notification";
 @import "components/message";
 @import "components/hero";
+@import "components/burger";
 
 @import "building-blocks/header-full-screen";
 @import "building-blocks/platforms";
-@import "building-blocks/testimonial-slider";
+@import "building-blocks/quote-slider";
 @import "building-blocks/twitter-cards";
 @import "building-blocks/hero-laptop";
 @import "building-blocks/footer-basic";
+
+@import "building-blocks/header-burger-text";
+@import "building-blocks/portfolio-slider";
+@import "building-blocks/portfolio-cards";
+@import "building-blocks/team";
 
 input::placeholder, textarea::placeholder {
   color: $text-placeholder;

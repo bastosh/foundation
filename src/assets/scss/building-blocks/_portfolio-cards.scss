@@ -1,0 +1,98 @@
+.portfolio-2 {
+  padding-top: rem-calc(80);
+  padding-bottom: rem-calc(80);
+  background: $gray-lightest;
+
+  &__item {
+    display: block;
+    margin-bottom: rem-calc(30);
+    border-radius: rem-calc(6);
+    box-shadow: rem-calc(1 2 3) rgba($black, 0.1);
+    background-color: $white;
+
+    &__image {
+      position: relative;
+      z-index: 1;
+      display: block;
+      overflow: hidden;
+      border-radius: rem-calc(6 6 0 0);
+
+      img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: 0;
+        transition: opacity $base-transition;
+      }
+    }
+
+    &__content {
+      display: block;
+      padding: rem-calc(35 30 32 30);
+    }
+
+    &__tag {
+      display: block;
+      margin-bottom: rem-calc(12);
+      text-align: center;
+      text-transform: uppercase;
+      color: $primary-color;
+      transition: color $base-transition;
+    }
+
+    &__title {
+      display: block;
+      margin: 0 auto rem-calc(18);
+      max-width: rem-calc(430);
+      text-align: center;
+      color: $gray-darker;
+      transition: color $base-transition;
+    }
+
+    &__address {
+      display: block;
+      text-align: center;
+      color: $gray-dark;
+      transition: color $base-transition;
+    }
+
+    &:focus &__image,
+    &:hover &__image {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+
+    &:focus &__title,
+    &:hover &__title {
+      color: $gray-darkest;
+    }
+
+    &:focus &__address,
+    &:hover &__address {
+      color: $gray-darker;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: rem-calc(10 0 0 0);
+  }
+
+  @include breakpoint(small down) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+  }
+}

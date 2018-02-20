@@ -16,7 +16,7 @@ $foundation-palette: (
     black:          #22292F,
     white:          #FFFFFF,
     primary:        #3490DC,
-    secondary:      #4DC0B5,
+    secondary:      #51D88A,
     success:        #38C172,
     warning:        #F6993F,
     alert:          #E3342F,
@@ -82,8 +82,9 @@ $light-gray: $gray-lighter;
 $medium-gray: $gray-base;
 $dark-gray: $gray-dark;
 $text-primary: $gray-darkest;
+$text-secondary: $gray-darker;
 $text-heading: $black;
-$text-muted: $gray-base;
+$text-muted: $gray-dark;
 $text-placeholder: $gray-base;
 $text-inverted: $white;
 // End Palette Tailwind

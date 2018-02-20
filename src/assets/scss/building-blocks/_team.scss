@@ -1,0 +1,91 @@
+.team-1 {
+  &__image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: rem-calc(6);
+    height: rem-calc(210);
+    line-height: rem-calc(210);
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+      border-radius: rem-calc(6);
+      width: 100%;
+      height: 100%;
+      background: $black;
+      opacity: 0;
+      transition: all linear $base-transition;
+    }
+    img {
+      vertical-align: bottom;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  section.cell {
+    &:hover header {
+      &::before {
+        display: block;
+        opacity: 0.15;
+        transition: all linear $base-transition;
+      }
+    }
+  }
+
+  section.cell {
+    &:hover p {
+      color: $black;
+    }
+
+    &:hover .fa-twitter {
+      display: block;
+    }
+
+    a {
+      color: $white;
+      &:hover {
+        color: #2AA3F0;
+      }
+    }
+
+    .fa-twitter {
+      position: absolute;
+      right: rem-calc(20);
+      top: rem-calc(20);
+      display: none;
+      font-size: 2em;
+      transition: font-size linear $base-transition;
+      &:hover {
+        font-size: 2.4em;
+        transition: all linear $base-transition;
+      }
+    }
+  }
+
+  @include breakpoint(xlarge down) {
+    padding-top: rem-calc(100);
+    padding-bottom: rem-calc(40);
+  }
+
+  @include breakpoint(medium down) {
+    padding: rem-calc(80 0 20 0);
+
+    .subheading {
+      margin-bottom: 1rem * 5;
+    }
+
+    .team-1__image {
+      height: rem-calc(260);
+      line-height: rem-calc(260);
+    }
+  }
+
+  @include breakpoint(small down) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(0);
+  }
+}

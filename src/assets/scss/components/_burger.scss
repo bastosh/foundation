@@ -1,0 +1,96 @@
+// nav "burger" button
+// active it with a JS toggle-class to .is-active
+// recommanded HTML : <button class="nav-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
+// see doc : https://knacss.com/styleguide.html#buttons
+
+$burger-color             : $text-heading;
+$burger-background        : transparent;
+$burger-hover-background  : transparent;
+$burger-size              : 1.2rem;
+$burger-weight            : 2px; // size of stripes
+$burger-padding           : 0;
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid $text-heading;
+  border-radius: 50%;
+  transition: all linear $base-transition;
+  padding: 0;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: $burger-size;
+    width: $burger-size;
+    padding: $burger-padding;
+    background-color: $burger-background;
+    background-image: linear-gradient($burger-color, $burger-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 100% $burger-weight;
+    transition: .25s;
+    transition-property: transform, background;
+    will-change: transform, background;
+
+    &::before,
+    &::after {
+      content: "";
+      height: $burger-weight;
+      background: $burger-color;
+      transition: .25s;
+      transition-property: transform, top;
+      will-change: transform, top;
+    }
+  }
+
+  &:hover {
+    border: 2px solid $white;
+    opacity: .7;
+    transition: all linear $base-transition;
+    & > * {
+      background-color: $burger-hover-background;
+      height: 1.3rem;
+      width: 1.3rem;
+      transition: all linear $base-transition;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.is-active {
+    border: 2px solid $white;
+    & > * {
+      background-image: none;
+      justify-content: center;
+      &::before {
+        background: $white;
+        transform: translateY(50%) rotate3d(0,0,1,45deg);
+      }
+      &::after {
+        background: $white;
+        transform: translateY(-50%) rotate3d(0,0,1,-45deg);
+      }
+    }
+    &:hover {
+      border-color: transparent;
+      background-color: transparent;
+      opacity: .7;
+      transform: rotate(90deg);
+      transform-origin: 50% 50%;
+      transition: all linear $base-transition;
+    }
+  }
+}
