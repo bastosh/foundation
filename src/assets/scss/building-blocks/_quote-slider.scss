@@ -1,74 +1,137 @@
 #testimonial-slider {
-  padding: 6rem 1rem 2rem;
+  padding: 2rem 1rem 3rem;
   @include breakpoint(medium up) {
-    padding: 8rem 4rem 4rem;
+    padding: 3rem 2rem 4rem;
   }
   @include breakpoint(large up) {
-    padding: 10rem 4rem 4rem;
-  }
-}
-
-.fa-angle-left, .fa-angle-right, .fa-angle-double-left, .fa-angle-double-right {
-  color: $gray-base;
-}
-
-.testimonial-slider-container {
-  button:hover {
-    cursor: pointer;
+    padding: 4rem 3rem 5rem;
   }
 
-  .orbit-previous,
-  .orbit-next {
-    color: $black;
-
-    &:hover, &:active, &:focus {
-      background-color: transparent;
-    }
-  }
-  
-  .orbit-previous {
-    left: -1rem;
-  }
-  
-  .orbit-next {
-    right: -1rem;
-  }
-
-  .testimonial-slide {
-    display: flex;
-    justify-content: center;
-  }
-
-  .testimonial-slide-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40rem;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    @media screen and (min-width: 40em) {
-      padding: 1rem 4rem;
+  h2 {
+    margin-bottom: 1rem;
+    @include breakpoint(medium) {
+      margin-bottom: 2rem;
     }
   }
 
-  .profile-pic {
-    max-width: 225px;
-    @include breakpoint(medium down) {
-      display: none;
+  .testimonial-slider-container {
+
+    .orbit-bullets button {
+      width: 100px;
+      height: 80px;
+      @include breakpoint(medium) {
+        width: 140px;
+        height: 120px;
+      }
+      @include breakpoint(large) {
+        width: 200px;
+        height: 150px;
+      }
+      border-radius: 0;
+      opacity: .5;
+      &.is-active {
+        opacity: 1;
+      }
     }
-  }
 
-  .testimonial-slide-text {
-    color: $gray-darker;
-  }
+    nav {
+      #amazon {
+        background: url("../img/svg/amazon.svg") no-repeat center;
+        @include breakpoint(medium down) {
+          background-size: 60%;
+        }
+      }
+      #github {
+        background: url("../img/svg/github.svg") no-repeat center;
+        @include breakpoint(medium down) {
+          background-size: 60%;
+        }
+      }
+      #netflix {
+        background: url("../img/svg/netflix.svg") no-repeat center;
+        @include breakpoint(medium down) {
+          background-size: 60%;
+        }
+      }
+      #google {
+        background: url("../img/svg/google.svg") no-repeat center;
+        @include breakpoint(medium down) {
+          background-size: 60%;
+        }
+      }
+    }
 
-  .testimonial-slide-author-container {
-    display: flex;
-    justify-content: center;
+    .fa-angle-left, .fa-angle-right, .fa-angle-double-left, .fa-angle-double-right {
+      color: $gray-base;
+    }
 
-    @include breakpoint(small only) {
-      .testimonial-slide-author-info {
-        margin-left: 1rem;
+    button:hover {
+      cursor: pointer;
+    }
+
+    .orbit-previous,
+    .orbit-next {
+      color: $black;
+
+      &:hover, &:active, &:focus {
+        background-color: transparent;
+      }
+    }
+
+    .orbit-previous {
+      left: -1rem;
+    }
+
+    .orbit-next {
+      right: -1rem;
+    }
+
+    .testimonial-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .testimonial-slide-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40rem;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      &-large {
+        max-width: 50rem;
+      }
+      @media screen and (min-width: 40em) {
+        padding: 1rem 4rem;
+      }
+    }
+
+    .profile-pic {
+      max-width: 225px;
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+
+    .testimonial-slide-text {
+      padding: 0 1rem;
+      color: $gray-darker;
+    }
+
+    .testimonial-slide-author-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .testimonial-slide-author-info {
+      text-align: center;
+    }
+
+    p.quote {
+      @include breakpoint(mobile down) {
+        text-align: center;
       }
     }
   }
 }
+
+

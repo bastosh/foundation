@@ -1,0 +1,38 @@
+.next {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: rem-calc(-15);
+  z-index: 10;
+
+  &-link {
+    position: relative;
+    top: rem-calc(-30);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    width: rem-calc(45);
+    height: rem-calc(45);
+    box-shadow: rem-calc(1 1 1) rgba($black, 0.1);
+    background: $white;
+    transition: background-color $base-transition;
+
+    &-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 10;
+      margin: rem-calc((-6.5) 0 0 -4.5);
+      width: rem-calc(9);
+      height: rem-calc(15);
+      transform: rotate(90deg);
+      transform-origin: 50% 50%;
+    }
+    &:focus,
+    &:hover {
+      background-color: $gray-lighter;
+      transition: background-color $base-transition;
+    }
+  }
+}

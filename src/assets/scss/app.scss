@@ -58,19 +58,25 @@ input::placeholder, textarea::placeholder {
 .button {
   font-weight: $button-font-weight;
 }
+.lead {
+  @include breakpoint(mobile down) {
+    font-size: 120%;
+  }
+}
 
 @import "components/utilities";
 @import "components/notification";
 @import "components/message";
 @import "components/hero";
 @import "components/burger-dark";
+@import "components/scroll";
 
 @import "building-blocks/header-full-screen";
 @import "building-blocks/platforms";
 @import "building-blocks/quote-slider";
 @import "building-blocks/twitter-cards";
 @import "building-blocks/hero-laptop";
-@import "building-blocks/footer-basic";
+@import "building-blocks/footer";
 
 @import "building-blocks/header-burger-text";
 @import "building-blocks/portfolio-slider";
@@ -79,3 +85,9 @@ input::placeholder, textarea::placeholder {
 
 @import "building-blocks/header-full-img";
 @import "components/burger-white";
+@import "building-blocks/bg-img-card-center";
+@import "building-blocks/features-6-img";
+@import "building-blocks/bg-img-card";
+@import "building-blocks/cta-alternative";
+@import "building-blocks/cta-bg-img";
+

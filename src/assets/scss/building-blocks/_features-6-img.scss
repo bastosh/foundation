@@ -1,0 +1,38 @@
+.features-6-img {
+  background-image: none;
+  @include breakpoint(large) {
+    background: url("../img/ask-device-bg.jpg") 47% 100% no-repeat;
+    background-size: 40%;
+  }
+  @include breakpoint(xlarge) {
+    background: url("../img/ask-device-bg.jpg") 47% 140% no-repeat;
+  }
+  header {
+    margin-bottom: 2rem;
+    @include breakpoint(large) {
+      margin-bottom: 5rem;
+    }
+  }
+  &__columns {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(large up) {
+      justify-content: space-between;
+    }
+    &__left {
+      @include breakpoint(large up) {
+        text-align: right;
+      }
+    }
+    &__right {
+      @include breakpoint(large up) {
+        text-align: left;
+      }
+    }
+  }
+  &__item {
+    margin-bottom: rem-calc(35);
+    max-width: rem-calc(251);
+  }
+}

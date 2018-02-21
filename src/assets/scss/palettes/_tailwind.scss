@@ -43,11 +43,12 @@ $foundation-palette: (
     green-light:    #51D88A,
     green-lighter:  #A2F5BF,
     green-lightest: #E3FCEC,
-    gray-darker:    #22292F,
-    gray-dark:      #3D4852,
-    gray:           #606F7B,
-    gray-light:     #8795A1,
-    gray-lighter:   #B8C2CC,
+    gray-darkest:   #3D4852,
+    gray-darker:    #606F7B,
+    gray-dark:      #8795A1,
+    gray:           #B8C2CC,
+    gray-light:     #DAE1E7,
+    gray-lighter:   #F1F5F8,
     gray-lightest:  #F8FAFC,
     teal-darkest:   #0D3331,
     teal-darker:    #20504F,
@@ -83,7 +84,7 @@ $medium-gray: $gray-base;
 $dark-gray: $gray-dark;
 $text-primary: $gray-darkest;
 $text-secondary: $gray-darker;
-$text-heading: $black;
+$text-heading: $gray-darkest;
 $text-muted: $gray-dark;
 $text-placeholder: $gray-base;
 $text-inverted: $white;

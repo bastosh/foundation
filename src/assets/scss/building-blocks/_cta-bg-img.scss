@@ -1,0 +1,52 @@
+.cta-bg-img {
+  background: url("../img/new-bg.jpg") 50% 0 no-repeat;
+  background-size: cover;
+
+  &__container {
+    padding-top: rem-calc(100);
+    padding-bottom: rem-calc(100);
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: rem-calc(20);
+    color: $white;
+  }
+
+  &__subheading {
+    margin: 0 auto rem-calc(40);
+    max-width: rem-calc(560);
+    color: rgba($white, 0.8);
+  }
+
+  &__button {
+    margin: 0 auto rem-calc(20);
+    padding-right: rem-calc(55);
+    padding-left: rem-calc(55);
+    color: $white;
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  &__caption {
+    margin: 0 auto;
+    color: rgba($white, 0.7);
+  }
+
+  @include breakpoint(medium down) {
+    &__container {
+      padding-top: rem-calc(80);
+      padding-bottom: rem-calc(80);
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__container {
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(60);
+    }
+  }
+}

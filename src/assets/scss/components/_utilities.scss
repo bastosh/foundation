@@ -8,6 +8,22 @@
   }
 }
 
+.section-lg {
+  padding: 4rem 2rem;
+  @include breakpoint(medium) {
+    padding: 6rem 3rem;
+  }
+  @include breakpoint(xlarge) {
+    padding: 8rem 0;
+  }
+}
+
+.section-boxed {
+  @include breakpoint(large) {
+    padding: 1.5rem;
+  }
+}
+
 .text-inverted {
   color: $text-inverted;
 }
@@ -175,6 +191,37 @@
   @include breakpoint(large) {
     font-size: 5rem;
     letter-spacing: .025em;
+  }
+}
+
+.subheading {
+  @include breakpoint(small) {
+    font-weight: 300;
+    font-size: rem-calc(16);
+    line-height: rem-calc(25);
+
+    a {
+      &,
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+    line-height: rem-calc(30);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(22);
+    line-height: rem-calc(32);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(22);
+    line-height: rem-calc(32);
   }
 }
 
