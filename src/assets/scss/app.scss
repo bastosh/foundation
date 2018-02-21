@@ -52,11 +52,18 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+input::placeholder, textarea::placeholder {
+  color: $text-placeholder;
+}
+.button {
+  font-weight: $button-font-weight;
+}
+
 @import "components/utilities";
 @import "components/notification";
 @import "components/message";
 @import "components/hero";
-@import "components/burger";
+@import "components/burger-dark";
 
 @import "building-blocks/header-full-screen";
 @import "building-blocks/platforms";
@@ -70,9 +77,5 @@
 @import "building-blocks/portfolio-cards";
 @import "building-blocks/team";
 
-input::placeholder, textarea::placeholder {
-  color: $text-placeholder;
-}
-.button {
-  font-weight: $button-font-weight;
-}
+@import "building-blocks/header-full-img";
+@import "components/burger-white";

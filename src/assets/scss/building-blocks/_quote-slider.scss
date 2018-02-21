@@ -3,6 +3,9 @@
   @include breakpoint(medium up) {
     padding: 8rem 4rem 4rem;
   }
+  @include breakpoint(large up) {
+    padding: 10rem 4rem 4rem;
+  }
 }
 
 .fa-angle-left, .fa-angle-right, .fa-angle-double-left, .fa-angle-double-right {
