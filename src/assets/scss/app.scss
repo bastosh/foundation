@@ -56,21 +56,30 @@ input::placeholder, textarea::placeholder {
   color: $text-placeholder;
 }
 .button {
-  font-weight: $button-font-weight;
-}
+  border-radius: .375rem;
+  padding: 1.25rem 3.125rem;
+  height: 3.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+ }
+
 .lead {
   @include breakpoint(mobile down) {
     font-size: 120%;
   }
 }
 
+@import "components/textbox";
 @import "components/utilities";
+@import "components/navbar";
+@import "components/hamburger";
 @import "components/notification";
 @import "components/message";
 @import "components/hero";
 @import "components/burger-dark";
 @import "components/scroll";
 
+// Template Foundation
 @import "building-blocks/header-full-screen";
 @import "building-blocks/platforms";
 @import "building-blocks/quote-slider";
@@ -78,11 +87,13 @@ input::placeholder, textarea::placeholder {
 @import "building-blocks/hero-laptop";
 @import "building-blocks/footer";
 
+// Template Agency
 @import "building-blocks/header-burger-text";
 @import "building-blocks/portfolio-slider";
 @import "building-blocks/portfolio-cards";
 @import "building-blocks/team";
 
+// Template Device
 @import "building-blocks/header-full-img";
 @import "components/burger-white";
 @import "building-blocks/bg-img-card-center";
@@ -91,3 +102,5 @@ input::placeholder, textarea::placeholder {
 @import "building-blocks/cta-alternative";
 @import "building-blocks/cta-bg-img";
 
+// Template Service
+@import "building-blocks/header-register";

@@ -1,0 +1,39 @@
+<nav class="navbar" data-aos="fade-up">
+    <div class="navbar__left">
+        <a class="navbar__logo" href="/">
+            {{>logo}}
+        </a>
+    </div>
+    <div class="navbar__center">
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item">
+                <a class="navbar__menu__item__link" href="#">Product</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a class="navbar__menu__item__link" href="#">Features</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a class="navbar__menu__item__link" href="#">Pricing</a>
+            </li>
+            <li class="navbar__menu__item">
+                <a class="navbar__menu__item__link" href="#">Support</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar__right">
+        <div class="navbar__auth">
+            <div class="navbar__auth__search">
+                <div class="navbar__auth__search__icon">
+                    {{>search}}
+                </div>
+                <form class="navbar__auth__search__form is-hidden">
+                    <input class="navbar__auth__search__form__item" type="text" placeholder="Search..."/>
+                </form>
+            </div>
+            <a class="navbar__auth__login button button--transparent-white" href="#">Login</a>
+        </div>
+        <a class="menu__hamburger hamburger-button" href="#">
+            {{>hamburger}}
+        </a>
+    </div>
+</nav>

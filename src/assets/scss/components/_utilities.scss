@@ -369,3 +369,33 @@
     transition: border-color .3s,background-color .3s;
   }
 }
+/*
+input,
+.input,
+textarea,
+.textarea {
+  @include breakpoint(small) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(16);
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(16);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(16);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(16);
+  }
+}*/
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}

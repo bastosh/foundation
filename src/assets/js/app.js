@@ -44,6 +44,7 @@ AOS.init();
                     e.preventDefault();
                 }, false );
         }
+
     } // end toggleNav()
 
     toggleNav();
@@ -136,4 +137,83 @@ $(function () {
         $('.header-5__tag').remove();
     }*/
 
+});
+
+$(function () {
+    var $searchButton = $('.navbar__auth__search__icon, .hamburger__search__icon');
+    var $searchForm = $('.navbar__auth__search__form, .hamburger__search__form');
+
+    var isDesktop = $(window).width() > 767;
+
+    $searchButton.on('click', function () {
+
+        if ($searchForm.hasClass('is-hidden')) {
+
+            $searchButton.css({
+                position: 'absolute'
+            }).animate({
+                left: isDesktop ? -250 : 0
+            }, 500);
+
+            $searchForm.removeClass('is-hidden')
+                .animate({
+                    width: isDesktop ? 200 : '100%'
+                }, 500);
+        } else {
+
+            $searchButton.animate({
+                left: -42
+            }, 500, function () {
+                $searchButton.css({
+                    position: 'static'
+                })
+            });
+
+            $searchForm
+                .animate({
+                    width: 0
+                }, 500, function () {
+                    $searchForm.addClass('is-hidden');
+                });
+        }
+    });
+});
+
+$(function () {
+    "use strict";
+
+    var $hamburgerButton = $('.hamburger-button');
+    var $hamburgerPopup = $('.hamburger');
+    var $hamburgerClose = $('.hamburger-close');
+
+    $hamburgerButton.on('click', function (event) {
+        event.preventDefault();
+
+        $hamburgerPopup
+            .removeClass('is-hidden')
+            .animate({
+                left: 0
+            }, 0, function () {
+                $hamburgerPopup.css({
+                    position: 'fixed'
+                }).animate({
+                    opacity: 1
+                }, 500);
+            });
+    });
+
+    $hamburgerClose.on('click', function (event) {
+        event.preventDefault();
+
+        $hamburgerPopup
+            .animate({
+                opacity: 0
+            }, 500, function () {
+                $hamburgerPopup
+                    .addClass('is-hidden')
+                    .css({
+                        left: '-100%'
+                    });
+            })
+    });
 });
