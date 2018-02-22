@@ -1,0 +1,86 @@
+$header-full-bg-color: $primary-color;
+$header-full-height: 100vh;
+$header-full-mobile-height: 75vh;
+
+.header__full-bg-primary {
+  height: $header-full-mobile-height;
+  @include breakpoint(medium) {
+    height: $header-full-height;
+  }
+  background-color: $header-full-bg-color;
+
+ /* .hamburger-button {
+    position: relative;
+    display: none;
+    border: rem-calc(2) solid $white;
+    border-radius: 50%;
+    width: rem-calc(44);
+    height: rem-calc(44);
+    background-color: rgba($white, 0.1);
+
+    @include breakpoint(1024 down) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all linear $base-transition;
+
+      svg {
+        width: rem-calc(20);
+        height: rem-calc(14);
+        fill: $white;
+      }
+
+      &:hover {
+        border-color: transparent;
+        background-color: transparent;
+        opacity: 0.7;
+        transform: scale(1.1);
+        transition: all linear $base-transition;
+      }
+    }
+  }*/
+
+  .hamburger {
+    background-color: rgba(255,255,255,.97) !important;
+    &__logo {
+      &__svg {
+        fill: $primary-color;
+      }
+    }
+
+    &__header {
+      &__close {
+        right: rem-calc(15);
+        top: rem-calc(50);
+        border: rem-calc(2) solid $primary-color;
+        &__svg {
+          fill: $primary-color;
+        }
+
+        @include breakpoint(360 down) {
+          right: rem-calc(20);
+        }
+      }
+    }
+
+    &__menu {
+      li a {
+        color: $primary-color;
+        font-weight: 500;
+        transition: all linear $base-transition;
+        &:hover {
+          opacity: 0.7;
+          transition: all linear $base-transition;
+        }
+      }
+    }
+
+    &__footer {
+      margin-bottom: rem-calc(45);
+      p {
+        color: $primary-color;
+      }
+    }
+  }
+
+}

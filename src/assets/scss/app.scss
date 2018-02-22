@@ -52,16 +52,16 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+[type="search"] {
+  box-shadow: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 input::placeholder, textarea::placeholder {
   color: $text-placeholder;
 }
-.button {
-  border-radius: .375rem;
-  padding: 1.25rem 3.125rem;
-  height: 3.75rem;
-  font-weight: 500;
-  font-size: 1rem;
- }
 
 .lead {
   @include breakpoint(mobile down) {
@@ -69,8 +69,8 @@ input::placeholder, textarea::placeholder {
   }
 }
 
+@import "components/button";
 @import "components/textbox";
-@import "components/utilities";
 @import "components/navbar";
 @import "components/hamburger";
 @import "components/notification";
@@ -78,9 +78,12 @@ input::placeholder, textarea::placeholder {
 @import "components/hero";
 @import "components/burger-dark";
 @import "components/scroll";
+@import "components/header";
+@import "components/utilities";
 
 // Template Foundation
-@import "building-blocks/header-full-screen";
+@import "building-blocks/header-full-bg-primary";
+@import "building-blocks/header-bg-primary";
 @import "building-blocks/platforms";
 @import "building-blocks/quote-slider";
 @import "building-blocks/twitter-cards";
@@ -94,7 +97,7 @@ input::placeholder, textarea::placeholder {
 @import "building-blocks/team";
 
 // Template Device
-@import "building-blocks/header-full-img";
+@import "building-blocks/header-full-img-cta-video";
 @import "components/burger-white";
 @import "building-blocks/bg-img-card-center";
 @import "building-blocks/features-6-img";

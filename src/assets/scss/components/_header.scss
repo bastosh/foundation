@@ -1,0 +1,164 @@
+.header {
+
+  &__middle {
+    padding-top: rem-calc(100);
+    text-align: center;
+
+    &__title {
+      margin-bottom: rem-calc(20);
+      text-align: center;
+      color: $white;
+    }
+
+    &__subheading {
+      margin: 0 auto rem-calc(48);
+      max-width: rem-calc(450);
+      @include breakpoint(xlarge) {
+        max-width: rem-calc(550);
+      }
+      text-align: center;
+      color: rgba($white, 0.8);
+    }
+
+    &__button {
+      margin-bottom: rem-calc(70);
+      padding-right: rem-calc(15);
+      padding-left: rem-calc(15);
+      width: rem-calc(356);
+      max-width: 100%;
+
+      &__icon {
+        margin: rem-calc(-5 20 0 0);
+        width: rem-calc(10);
+        height: rem-calc(18);
+        fill: $white;
+      }
+    }
+
+    &__alter {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: rem-calc(68);
+
+      &__line {
+        flex-grow: 2;
+        border-bottom: solid rem-calc(1) rgba($white, 0.2);
+
+        &.item-01 {
+          margin-right: rem-calc(30);
+        }
+
+        &.item-02 {
+          margin-left: rem-calc(30);
+        }
+      }
+
+      &__text {
+        margin-bottom: rem-calc(-8);
+        font-weight: 400;
+        font-size: rem-calc(16);
+        line-height: rem-calc(21);
+        color: rgba($white, 0.8);
+      }
+    }
+  }
+
+  &__bottom {
+    padding-bottom: rem-calc(80);
+
+    &__form {
+      margin: 0 auto;
+      width: rem-calc(750);
+
+      &__row {
+        margin-bottom: 0;
+      }
+
+      &__textbox {
+        display: block;
+        margin-bottom: rem-calc(16);
+        width: 100%;
+
+        .textbox__input {
+          border-color: rgba($white, 0.2);
+          background-color: transparent;
+        }
+      }
+
+      &__button {
+        display: block;
+        margin-bottom: rem-calc(16);
+        width: 100%;
+      }
+    }
+
+    &__description {
+      font-weight: 400;
+      font-size: rem-calc(15);
+      line-height: rem-calc(19);
+      text-align: center;
+      color: rgba($white, 0.8);
+    }
+  }
+
+  .hamburger {
+    &__header {
+      &__close {
+        right: rem-calc(15);
+        top: rem-calc(50);
+
+        @include breakpoint(360 down) {
+          right: rem-calc(20);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+    &__middle {
+      padding-top: rem-calc(80);
+    }
+
+    &__bottom {
+      &__form {
+        width: auto;
+
+        &__row {
+          margin-bottom: rem-calc(30);
+        }
+
+        &__column {
+          margin-bottom: rem-calc(30);
+        }
+
+        &__textbox {
+          margin-bottom: 0;
+        }
+
+        &__button {
+          margin-bottom: 0;
+        }
+
+        &__group {
+          flex-flow: row wrap;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(map-get($breakpoints, mobile) down) {
+    &__middle {
+      padding-top: rem-calc(60);
+
+      &__button {
+        margin-bottom: rem-calc(60);
+      }
+    }
+
+    &__bottom {
+      padding-bottom: rem-calc(60);
+    }
+  }
+
+}
+

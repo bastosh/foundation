@@ -1,8 +1,7 @@
 $header-full-img-height: 100vh;
 $header-full-img-mobile-height: 80vh;
-$header-full-img-text-color: $white;
 
-header.full-img {
+.header__full-img__cta-video {
   height: $header-full-img-height;
   background: url("../img/header-bg.jpg") 50% 0 no-repeat;
   background-size: cover;
@@ -10,7 +9,7 @@ header.full-img {
     background-image: url("../img/header-bg-middle.jpg");
     height: $header-full-img-mobile-height;
   }
-  #burger {
+  /*#burger {
     background: transparent;
     @include breakpoint(medium up) {
       display: none;
@@ -121,9 +120,10 @@ header.full-img {
         font-weight: 500;
       }
     }
-  }
+  }*/
 }
 
+/*
 .scroll {
   position: relative;
   display: block;
@@ -217,3 +217,4 @@ header.full-img {
     }
   }
 }
+*/
