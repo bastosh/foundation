@@ -9,6 +9,12 @@
   ul li {
     margin-right: 1rem;
   }
+  .menu.social ul li {
+    margin: 0;
+  }
+  .menu.social li a {
+    padding: .4rem;
+  }
   @include breakpoint(mobile down) {
     ul li {
       margin: 0;
@@ -28,6 +34,12 @@
     }
   }
   padding: 2rem;
+  @include breakpoint(medium) {
+    padding: 2rem 4rem;
+  }
+  @include breakpoint(large) {
+    padding: 2rem 6rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
