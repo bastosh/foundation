@@ -10,7 +10,7 @@
   &__title {
     margin-bottom: rem-calc(57);
     text-align: center;
-    color: $gray-darker;
+    color: $text-heading;
   }
 
   &__row {
@@ -49,7 +49,7 @@
       margin-right: rem-calc(30);
       margin-bottom: rem-calc(2);
       margin-left: rem-calc(60);
-      color: $gray-darker;
+      color: $text-subheading;
     }
 
     &__post {
@@ -57,7 +57,7 @@
       margin-right: rem-calc(30);
       margin-bottom: rem-calc(13);
       margin-left: rem-calc(60);
-      color: $gray-dark;
+      color: $text-subheading;
     }
 
     &__twitter {
@@ -80,7 +80,7 @@
 
     &__text {
       display: block;
-      color: $gray-darker;
+      color: $text-subheading;
     }
   }
 

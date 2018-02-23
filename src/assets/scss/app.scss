@@ -69,6 +69,7 @@ input::placeholder, textarea::placeholder {
   }
 }
 
+@import "components/triangle";
 @import "components/button";
 @import "components/textbox";
 @import "components/navbar";
@@ -79,6 +80,7 @@ input::placeholder, textarea::placeholder {
 @import "components/hero";
 @import "components/scroll";
 @import "components/header";
+@import "components/footer";
 @import "components/utilities";
 
 // Template Foundation
@@ -86,7 +88,7 @@ input::placeholder, textarea::placeholder {
 @import "building-blocks/quote-slider";
 @import "building-blocks/twitter-cards";
 @import "building-blocks/hero-laptop";
-@import "building-blocks/footer";
+
 
 // Template Agency
 @import "building-blocks/portfolio-slider";
@@ -103,3 +105,8 @@ input::placeholder, textarea::placeholder {
 
 // Template Service
 @import "building-blocks/header-register";
+@import "building-blocks/features-3-devices";
+@import "building-blocks/integration";
+@import "building-blocks/promo-laptop";
+@import "building-blocks/features-6-no-icon";
+@import "building-blocks/subscribe";

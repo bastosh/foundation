@@ -1,0 +1,66 @@
+.integration {
+  padding-top: rem-calc(80);
+  padding-bottom: rem-calc(80);
+
+  &__tag {
+    margin-bottom: rem-calc(50);
+    text-align: center;
+    color: $text-secondary;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto rem-calc(40);
+    max-width: rem-calc(405);
+  }
+
+  &__icon {
+    &__svg {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &--google-drive &__svg {
+      width: rem-calc(68);
+      height: rem-calc(58);
+    }
+
+    &--slack &__svg {
+      width: rem-calc(68);
+      height: rem-calc(68);
+    }
+
+    &--dropbox &__svg {
+      width: rem-calc(68);
+      height: rem-calc(63);
+    }
+  }
+
+  &__subheading {
+    margin: 0 auto;
+    max-width: rem-calc(650);
+    text-align: center;
+    color: $text-subheading;
+  }
+
+  @include breakpoint(small down) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+
+    &__icons {
+      align-items: center;
+      flex-flow: column wrap;
+    }
+
+    &__icon {
+      margin-bottom: rem-calc(30);
+
+      &:last-child {
+        margin-bottom: rem-calc(0);
+      }
+    }
+  }
+}

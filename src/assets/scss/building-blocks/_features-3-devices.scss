@@ -1,0 +1,136 @@
+.features-3-device {
+  border-bottom: solid rem-calc(1) $separator;
+  padding-top: rem-calc(100);
+  padding-bottom: rem-calc(50);
+  background: url("../img/chart-01.png") 100% 50% no-repeat;
+  background-size: 58% auto;
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__tag {
+    margin-bottom: rem-calc(20);
+    text-align: center;
+    color: $text-secondary;
+  }
+
+  &__title {
+    margin-bottom: rem-calc(85);
+    text-align: center;
+    color: $text-heading;
+  }
+
+  &__block {
+    padding-top: rem-calc(82);
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: rem-calc(67);
+      max-width: rem-calc(385);
+
+      &__icon {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        justify-content: center;
+        margin-top: rem-calc(-7);
+        width: rem-calc(85);
+        height: rem-calc(85);
+
+        &__svg {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        &--layers &__svg {
+          width: rem-calc(74);
+          height: rem-calc(66);
+        }
+
+        &--design &__svg {
+          width: rem-calc(72);
+          height: rem-calc(66);
+        }
+
+        &--structure &__svg {
+          width: rem-calc(60);
+          height: rem-calc(59);
+        }
+      }
+
+      &__image {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &__content {
+        padding-left: rem-calc(20);
+      }
+
+      &__title {
+        margin-bottom: rem-calc(10);
+        color: $text-heading;
+      }
+
+      &__text {
+        margin: 0;
+        color: $text-primary;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    max-width: rem-calc(609);
+
+    &__img {
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+
+  @include breakpoint(large down) {
+    padding-top: rem-calc(100);
+    padding-bottom: rem-calc(100);
+    background: none;
+
+    &__wrap {
+      justify-content: center;
+    }
+
+    &__block {
+      margin-bottom: rem-calc(60);
+      padding-top: rem-calc(0);
+    }
+  }
+
+  @include breakpoint(medium down) {
+    padding-top: rem-calc(80);
+    padding-bottom: rem-calc(80);
+
+    &__wrap {
+      justify-content: center;
+    }
+
+    &__block {
+      margin-bottom: rem-calc(50);
+      padding-top: 0;
+    }
+  }
+
+  @include breakpoint (small down) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+  }
+}

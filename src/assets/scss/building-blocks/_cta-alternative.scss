@@ -7,14 +7,14 @@
   &__title {
     margin: 0 auto rem-calc(20);
     text-align: center;
-    color: $gray-darkest;
+    color: $text-heading;
   }
 
   &__subheading {
     margin: 0 auto rem-calc(70);
     max-width: rem-calc(750);
     text-align: center;
-    color: $gray-darker;
+    color: $text-subheading;
   }
 
   &__block {
@@ -37,13 +37,13 @@
       &__title {
         margin-bottom: rem-calc(15);
         max-width: rem-calc(400);
-        color: $gray-darkest;
+        color: $text-heading;
       }
 
       &__text {
         margin: 0 auto rem-calc(40);
         max-width: rem-calc(350);
-        color: $gray-darker;
+        color: $text-primary;
       }
 
       &__button {

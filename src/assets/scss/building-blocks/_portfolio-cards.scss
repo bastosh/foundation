@@ -57,14 +57,14 @@
       margin: 0 auto rem-calc(18);
       max-width: rem-calc(430);
       text-align: center;
-      color: $gray-darker;
+      color: $text-heading;
       transition: color $base-transition;
     }
 
     &__address {
       display: block;
       text-align: center;
-      color: $gray-dark;
+      color: $text-muted;
       transition: color $base-transition;
     }
 

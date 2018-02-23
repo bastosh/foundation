@@ -1,0 +1,28 @@
+<section class="subscribe">
+  <h2 class="h1 subscribe__title" data-aos="fade-up">Let’s be in Touch</h2>
+  <form class="subscribe__form" data-aos="fade-up">
+    <div class="subscribe__form__textbox textbox">
+      <select class="subscribe__form__select" id="phone-country" name="phone-country">
+        <option class="subscribe__form__select__field" value="+33" data-country="france" data-country-full="France">
+          {{>france}}
+          <span class="subscribe__form__select__field__text">+33</span>
+        </option>
+        <option class="subscribe__form__select__field" value="+55" data-country="usa" data-country-full="United States">
+          {{>usa}}
+          <span class="subscribe__form__select__field__text">+1</span>
+        </option>
+        <option class="subscribe__form__select__field" value="+55" data-country="germany" data-country-full="Germany">
+          {{>germany}}
+          <span class="subscribe__form__select__field__text">+49</span>
+        </option>
+      </select>
+      <input class="textbox__input" type="tel" placeholder="Enter your phone" required="required"/>
+    </div>
+    <button class="subscribe__form__button button secondary" type="submit">Get the app</button>
+    <div class="select__icons">
+      <div class="select__icons__item france-flag" data-country="france"></div>
+      <div class="select__icons__item usa-flag" data-country="usa"></div>
+      <div class="select__icons__item germany-flag" data-country="germany"></div>
+    </div>
+  </form>
+</section>

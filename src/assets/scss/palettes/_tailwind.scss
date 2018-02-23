@@ -1,3 +1,6 @@
+$blue-gray: #5E6977;
+$blue-gray-dark: #545E6B;
+
 // Palette Tailwind
 $white: #FFFFFF;
 $gray-lightest: #F8FAFC;
@@ -5,8 +8,10 @@ $gray-lighter: #F1F5F8;
 $gray-light: #DAE1E7;
 $gray-base: #B8C2CC;
 $gray-dark: #8795A1;
-$gray-darker: #606F7B;
-$gray-darkest: #3D4852;
+//$gray-darker: #606F7B;
+$gray-darker: $blue-gray;
+//$gray-darkest: #3D4852;
+$gray-darkest: $blue-gray-dark;
 $black: #22292F;
 $teal : #4DC0B5;
 $indigo : #6574CD;
@@ -83,11 +88,14 @@ $light-gray: $gray-lighter;
 $medium-gray: $gray-base;
 $dark-gray: $gray-dark;
 $text-primary: $gray-darkest;
-$text-secondary: $gray-darker;
+$text-secondary: $gray-dark;
 $text-heading: $gray-darkest;
+$text-subheading: $gray-darker;
 $text-muted: $gray-dark;
 $text-placeholder: $gray-base;
+$text-light: $gray-light;
 $text-inverted: $white;
+$separator: rgb(235, 235, 235);
 // End Palette Tailwind
 
 // Increase to lighten

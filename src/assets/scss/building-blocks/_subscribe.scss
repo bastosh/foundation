@@ -1,0 +1,251 @@
+.subscribe {
+	position: relative;
+	z-index: 99;
+	padding-top: rem-calc(100);
+	padding-bottom: rem-calc(82);
+	background-color: $gray-darker;
+
+	&__title {
+		margin-bottom: rem-calc(30);
+		text-align: center;
+		color: $white;
+	}
+
+	&__form {
+		display: flex;
+		margin: 0 auto;
+		max-width: rem-calc(570);
+
+		&__select {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: rem-calc(15 0);
+			width: rem-calc(92);
+			height: 100%;
+
+			&__field {
+				display: block;
+				border-right: solid rem-calc(2) rgba($white, 0.2);
+				padding-left: rem-calc(18);
+				height: 100%;
+				line-height: rem-calc(30);
+
+				&__icon {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: rem-calc(6);
+					width: rem-calc(26);
+					height: rem-calc(25);
+				}
+
+				&__text {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: rem-calc(16);
+					line-height: rem-calc(16);
+					color: $white;
+				}
+			}
+		}
+
+		&__textbox {
+			flex-grow: 1;
+
+			.textbox__input {
+				border-color: rgba($white, 0.2);
+				border-right-width: 0;
+				border-radius: rem-calc(6 0 0 6);
+				padding-left: rem-calc(115);
+				background-color: transparent;
+			}
+		}
+
+		&__button {
+			margin: 0;
+			border-radius: rem-calc(0 6 6 0);
+			padding-right: rem-calc(10);
+			padding-left: rem-calc(10);
+			width: rem-calc(167);
+		}
+	}
+
+	@include breakpoint(medium down) {
+		padding-top: rem-calc(80);
+		padding-bottom: rem-calc(80);
+	}
+
+	@include breakpoint(mobile down) {
+		&__form {
+			display: block;
+
+			&__textbox {
+				display: block;
+				margin-bottom: rem-calc(15);
+				width: 100%;
+
+				.textbox__input {
+					border-right-width: rem-calc(2);
+					border-radius: rem-calc(6);
+				}
+			}
+
+			&__button {
+				display: block;
+				border-radius: rem-calc(6);
+				width: 100%;
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		padding-top: rem-calc(60);
+		padding-bottom: rem-calc(60);
+	}
+}
+
+.select__icons {
+	display: none;
+}
+
+.select-styled {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 400;
+	font-size: rem-calc(16);
+	line-height: rem-calc(16);
+	color: $white;
+	user-select: none;
+}
+
+.select__icons__item {
+	margin-right: rem-calc(10);
+	width: rem-calc(26);
+	height: rem-calc(25);
+
+	&__svg {
+		width: rem-calc(25);
+		height: rem-calc(25);
+	}
+
+	&.france-flag {
+		background-image: url("../img/flags/france-flag.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			background-image: url("../img/flags/france-flag-2x.png");
+			background-size: contain;
+		}
+	}
+
+	&.usa-flag {
+		background-image: url("../img/flags/usa-flag.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			background-image: url("../img/flags/usa-flag-2x.png");
+			background-size: contain;
+		}
+	}
+
+	&.germany-flag {
+		background-image: url("../img/flags/germany-flag.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			background-image: url("../img/flags/germany-flag-2x.png");
+			background-size: contain;
+		}
+	}
+}
+
+.select__icons__text {
+	margin-top: rem-calc(2);
+
+	&__country {
+		display: none;
+	}
+}
+
+.select {
+	position: absolute;
+	left: rem-calc(20);
+	top: rem-calc(2);
+	z-index: 999;
+	border: none;
+	padding-top: rem-calc(15);
+	padding-bottom: rem-calc(15);
+	font-weight: 400;
+	font-size: rem-calc(16);
+	line-height: rem-calc(16);
+	color: $white;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:focus,
+	&:active {
+		border: none;
+		background-color: transparent;
+	}
+
+	.select-options {
+		position: absolute;
+		left: rem-calc(-10);
+		top: rem-calc(36);
+		display: none;
+		list-style: none;
+		margin: 0;
+		margin-top: rem-calc(20);
+		border-radius: rem-calc(6);
+		padding: rem-calc(12);
+		min-width: rem-calc(185);
+		box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+		background-color: $white;
+
+		&:focus,
+		&:active {
+			border: none;
+			background-color: #5e6977;
+		}
+
+		li {
+			display: flex;
+			margin-bottom: rem-calc(8);
+			font-weight: 400;
+			font-size: rem-calc(16);
+			line-height: rem-calc(25);
+			color: #34383c;
+		}
+
+		.select__icons__text {
+			display: flex;
+
+			&__number {
+				margin-right: rem-calc(10);
+			}
+
+			&__country {
+				display: block;
+				color: #86939e;
+			}
+		}
+
+		&::after {
+			@include triangle(to top, rem-calc(10), rem-calc(5), $white);
+
+			content: "";
+			position: absolute;
+			left: rem-calc(17);
+			top: rem-calc(-5);
+		}
+
+		@include breakpoint(610 down) {
+			top: auto;
+			bottom: 110%;
+		}
+	}
+}

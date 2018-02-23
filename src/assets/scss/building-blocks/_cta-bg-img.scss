@@ -1,5 +1,5 @@
 .cta-bg-img {
-  background: url("../img/new-bg.jpg") 50% 0 no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/new-bg.jpg") 50% 0 no-repeat;
   background-size: cover;
 
   &__container {

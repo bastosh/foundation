@@ -256,6 +256,36 @@
   }
 }
 
+.caption {
+  @include breakpoint(small) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(19);
+
+    a {
+      &,
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(19);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(19);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(19);
+  }
+}
+
 // Paragraphs indentation
 .indent {
   text-indent: 1em;
@@ -368,6 +398,37 @@
   @include breakpoint(xlarge) {
     font-size: rem-calc(52);
     line-height: rem-calc(65);
+  }
+}
+
+.tag-1 {
+  @include breakpoint(small) {
+    font-weight: 500;
+    font-size: rem-calc(18);
+    line-height: rem-calc(18);
+
+    a {
+      &,
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(18);
+    line-height: rem-calc(18);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(18);
+    line-height: rem-calc(18);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(18);
+    line-height: rem-calc(18);
   }
 }
 
