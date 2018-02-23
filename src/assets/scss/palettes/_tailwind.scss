@@ -90,9 +90,10 @@ $text-placeholder: $gray-base;
 $text-inverted: $white;
 // End Palette Tailwind
 
-$message-primary-bg-opacity : 38;
-$message-secondary-bg-opacity: 44;
-$message-success-bg-opacity: 46;
+// Increase to lighten
+$message-primary-bg-opacity : 43;
+$message-secondary-bg-opacity: 41;
+$message-success-bg-opacity: 48;
 $message-warning-bg-opacity: 35;
 $message-alert-bg-opacity: 43;
 

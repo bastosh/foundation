@@ -171,6 +171,20 @@
   }
 }
 
+.padding-vertical-4 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  @include breakpoint(medium) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @include breakpoint(xlarge) {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+  }
+
+}
+
 .muted {
   color: $text-muted;
 }
@@ -315,13 +329,45 @@
   }
 }
 
-.quote {
+.small-quote {
   font-size: 18px;
   @include breakpoint(medium) {
-    font-size: 19px;
+    font-size: 20px;
   }
   @include breakpoint(large) {
-    font-size: 20px;
+    font-size: 22px;
+  }
+}
+
+.big-quote {
+  @include breakpoint(small) {
+    font-weight: 300;
+    font-size: rem-calc(37);
+    line-height: rem-calc(44);
+    letter-spacing: -0.035em;
+
+    a {
+      &,
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(42);
+    line-height: rem-calc(50);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(48);
+    line-height: rem-calc(58);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(52);
+    line-height: rem-calc(65);
   }
 }
 

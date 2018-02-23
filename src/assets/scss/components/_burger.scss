@@ -3,7 +3,8 @@
 // recommanded HTML : <button class="nav-button" type="button" role="button" aria-label="open/close navigation"><i></i></button>
 // see doc : https://knacss.com/styleguide.html#buttons
 
-$burger-color             : $text-heading;
+$burger-color             : $white;
+$burger-dark-color        : $text-heading;
 $burger-background        : transparent;
 $burger-hover-background  : transparent;
 $burger-size              : 1.2rem;
@@ -16,7 +17,17 @@ $burger-padding           : 0;
   justify-content: center;
   width: 50px;
   height: 50px;
-  border: 2px solid $text-heading;
+  border: 2px solid $white;
+  &.burger-dark {
+    border: 2px solid $burger-dark-color;
+    & > * {
+      background-image: linear-gradient($burger-dark-color, $burger-dark-color);
+      &::before,
+      &::after {
+        background: $burger-dark-color;
+      }
+    }
+  }
   border-radius: 50%;
   transition: all linear $base-transition;
   padding: 0;
@@ -55,7 +66,7 @@ $burger-padding           : 0;
   }
 
   &:hover {
-    border: 2px solid $white;
+    border: 2px solid transparent;
     opacity: .7;
     transition: all linear $base-transition;
     & > * {

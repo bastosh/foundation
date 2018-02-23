@@ -36,7 +36,7 @@
     .navbar__auth__button.button.button--transparent-white,
     .navbar__action__button.button.button--transparent-white {
       color: $primary-color;
-      border-color: $primary-color;
+      border-color: rgba(53, 142, 215, 0.3);;
       &:hover,
       &:focus {
         background-color: $primary-color;
@@ -44,9 +44,9 @@
       }
     }
     .hamburger-button {
-      border: rem-calc(2) solid $primary-color;
+      border: rem-calc(2) solid $gray-darker;
       svg {
-        fill: $primary-color;
+        fill: $gray-darker;
       }
     }
   }

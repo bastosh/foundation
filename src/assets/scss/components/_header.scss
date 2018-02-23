@@ -1,7 +1,23 @@
+$header-full-height: 100vh;
+$header-full-mobile-height: 75vh;
+
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.header-full {
+    min-height: $header-full-mobile-height;
+    @include breakpoint(medium) {
+      min-height: $header-full-height;
+    }
+  }
+
+  &.header-primary {
+    background-color: $primary-color;
+  }
 
   &__middle {
-    padding-top: rem-calc(100);
     text-align: center;
 
     &__title {
@@ -21,7 +37,7 @@
     }
 
     &__button {
-      margin-bottom: rem-calc(70);
+      margin-bottom: 3rem;
       padding-right: rem-calc(15);
       padding-left: rem-calc(15);
       width: rem-calc(356);
@@ -38,7 +54,7 @@
     &__alter {
       display: flex;
       justify-content: space-between;
-      margin-bottom: rem-calc(68);
+      margin-bottom: 3rem;
 
       &__line {
         flex-grow: 2;
@@ -64,8 +80,9 @@
   }
 
   &__bottom {
-    padding-bottom: rem-calc(80);
-
+    @include breakpoint(mobile down) {
+      padding-bottom: 1rem;
+    }
     &__form {
       margin: 0 auto;
       width: rem-calc(750);
@@ -99,66 +116,139 @@
       text-align: center;
       color: rgba($white, 0.8);
     }
+
+    &__scroll {
+      padding-bottom: 2rem;
+    }
+
   }
 
-  .hamburger {
-    &__header {
-      &__close {
-        right: rem-calc(15);
-        top: rem-calc(50);
+  .video__popup {
+    position: fixed;
+    left: rem-calc(0);
+    right: rem-calc(0);
+    top: rem-calc(0);
+    bottom: rem-calc(0);
+    z-index: 999;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
 
-        @include breakpoint(360 down) {
-          right: rem-calc(20);
+    &__item {
+      display: flex;
+      align-items: center;
+      flex: 0 0 100%;
+      justify-content: center;
+      height: 100%;
+
+      iframe {
+        width: 70%;
+        height: 65%;
+
+        @include breakpoint(map-get($breakpoints, mobile) down) {
+          height: 30%;
         }
+      }
+    }
+
+    &__close {
+      position: absolute;
+      right: rem-calc(60);
+      top: rem-calc(40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $white;
+      border-radius: 50%;
+      width: rem-calc(45);
+      height: rem-calc(45);
+      background-color: $gray-darkest;
+      cursor: pointer;
+      transition: all linear $base-transition;
+
+      &:hover {
+        opacity: 0.8;
+        transition: all linear $base-transition;
+      }
+
+      &__svg {
+        width: rem-calc(13);
+        height: rem-calc(13);
+        fill: $white;
+      }
+
+      @include breakpoint(mobile down) {
+        right: rem-calc(15);
+        top: rem-calc(15);
+      }
+    }
+  }
+
+  .scroll {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border: solid rem-calc(2) rgba($white, 0.2);
+    border-radius: rem-calc(14);
+    width: rem-calc(18);
+    height: rem-calc(28);
+    background-color: rgba($white, 0.1);
+    cursor: pointer;
+    transition: border-color $base-transition, background-color $base-transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: rem-calc(6);
+      margin-left: rem-calc(-2);
+      border-radius: rem-calc(2);
+      width: rem-calc(4);
+      height: rem-calc(6);
+      background-color: rgba($white, 0.6);
+      transition: background-color $base-transition;
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $secondary-color;
+      background-color: $secondary-color;
+
+      &::before {
+        fill: $white;
       }
     }
   }
 
   @include breakpoint(medium down) {
     &__middle {
-      padding-top: rem-calc(80);
+
     }
 
     &__bottom {
-      &__form {
-        width: auto;
 
-        &__row {
-          margin-bottom: rem-calc(30);
-        }
-
-        &__column {
-          margin-bottom: rem-calc(30);
-        }
-
-        &__textbox {
-          margin-bottom: 0;
-        }
-
-        &__button {
-          margin-bottom: 0;
-        }
-
-        &__group {
-          flex-flow: row wrap;
-        }
-      }
     }
   }
 
-  @include breakpoint(map-get($breakpoints, mobile) down) {
+  @include breakpoint(mobile down) {
     &__middle {
-      padding-top: rem-calc(60);
-
-      &__button {
-        margin-bottom: rem-calc(60);
+      padding-top: rem-calc(30);
+      .button {
+        margin-bottom: rem-calc(20);
+      }
+      &__title{
+        margin-bottom: rem-calc(10);
+      }
+      &__subheading {
+        margin-bottom: rem-calc(20);
       }
     }
 
     &__bottom {
-      padding-bottom: rem-calc(60);
     }
   }
 
 }
-

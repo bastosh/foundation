@@ -73,17 +73,15 @@ input::placeholder, textarea::placeholder {
 @import "components/textbox";
 @import "components/navbar";
 @import "components/hamburger";
+@import "components/burger";
 @import "components/notification";
 @import "components/message";
 @import "components/hero";
-@import "components/burger-dark";
 @import "components/scroll";
 @import "components/header";
 @import "components/utilities";
 
 // Template Foundation
-@import "building-blocks/header-full-bg-primary";
-@import "building-blocks/header-bg-primary";
 @import "building-blocks/platforms";
 @import "building-blocks/quote-slider";
 @import "building-blocks/twitter-cards";
@@ -91,14 +89,12 @@ input::placeholder, textarea::placeholder {
 @import "building-blocks/footer";
 
 // Template Agency
-@import "building-blocks/header-burger-text";
 @import "building-blocks/portfolio-slider";
 @import "building-blocks/portfolio-cards";
 @import "building-blocks/team";
 
 // Template Device
 @import "building-blocks/header-full-img-cta-video";
-@import "components/burger-white";
 @import "building-blocks/bg-img-card-center";
 @import "building-blocks/features-6-img";
 @import "building-blocks/bg-img-card";
