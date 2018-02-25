@@ -84,29 +84,33 @@ input::placeholder, textarea::placeholder {
 @import "components/utilities";
 
 // Template Foundation
-@import "building-blocks/platforms";
-@import "building-blocks/quote-slider";
-@import "building-blocks/twitter-cards";
-@import "building-blocks/hero-laptop";
+@import "components/building-blocks/platforms";
+@import "components/building-blocks/quote-slider";
+@import "components/building-blocks/twitter-cards";
+@import "components/building-blocks/hero-laptop";
 
 
 // Template Agency
-@import "building-blocks/portfolio-slider";
-@import "building-blocks/portfolio-cards";
-@import "building-blocks/team";
+@import "components/building-blocks/portfolio-slider";
+@import "components/building-blocks/portfolio-cards";
+@import "components/building-blocks/team";
 
 // Template Device
-@import "building-blocks/header-full-img-cta-video";
-@import "building-blocks/bg-img-card-center";
-@import "building-blocks/features-6-img";
-@import "building-blocks/bg-img-card";
-@import "building-blocks/cta-alternative";
-@import "building-blocks/cta-bg-img";
+@import "components/building-blocks/header-full-img-cta-video";
+@import "components/building-blocks/bg-img-card-center";
+@import "components/building-blocks/features-6-img";
+@import "components/building-blocks/bg-img-card";
+@import "components/building-blocks/cta-alternative";
+@import "components/building-blocks/cta-bg-img";
 
 // Template Service
-@import "building-blocks/header-register";
-@import "building-blocks/features-3-devices";
-@import "building-blocks/integration";
-@import "building-blocks/promo-laptop";
-@import "building-blocks/features-6-no-icon";
-@import "building-blocks/subscribe";
+@import "components/building-blocks/header-register";
+@import "components/building-blocks/features-3-devices";
+@import "components/building-blocks/integration";
+@import "components/building-blocks/promo-laptop";
+@import "components/building-blocks/features-6-no-icon";
+@import "components/building-blocks/subscribe";
+
+// Template Studio
+@import 'components/building-blocks/fullscreen-image-slider';
+@import 'components/building-blocks/image-slider';

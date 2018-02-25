@@ -1,0 +1,109 @@
+.image-slider {
+  position: relative;
+  background-color: $black;
+  padding-bottom: .12rem;
+
+  .orbit-image {
+    width: 100%;
+    height: rem-calc(510);
+  }
+
+  .slide-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/studio-slide-1.jpg") 50% 50% / cover no-repeat;
+  }
+  .slide-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/studio-slide-2.jpg") 50% 50% / cover no-repeat;
+  }
+  .slide-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/studio-slide-3.jpg") 50% 50% / cover no-repeat;
+  }
+  .slide-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/studio-slide-4.jpg") 50% 50% / cover no-repeat;
+  }
+
+  &__item {
+    position: relative;
+    height: rem-calc(510);
+    background-position: 50% 50%;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba($black, 0.3);
+    }
+
+    &__container {
+      position: relative;
+      z-index: 2;
+      padding-top: rem-calc(160);
+      padding-bottom: rem-calc(170);
+    }
+
+    &__tag {
+      text-transform: uppercase;
+      color: rgba($white, 0.7);
+    }
+
+    &__title {
+      margin-top: rem-calc(22);
+      color: $white;
+    }
+
+    &__text {
+      margin: rem-calc(12 0 0);
+      color: rgba($white, 0.6);
+    }
+
+    &__link {
+      display: inline-block;
+      margin-top: rem-calc(36);
+      font-weight: 500;
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);
+      color: $white;
+      opacity: 1;
+      transition: opacity $base-transition;
+
+      &__icon {
+        margin-left: rem-calc(12);
+        width: rem-calc(6);
+        height: rem-calc(11);
+        fill: $white;
+        opacity: 0.8;
+      }
+
+      &:focus,
+      &:hover {
+        color: $white;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .bullets-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .orbit-bullets {
+    width: 130px;
+    height: 30px;
+    border: solid rem-calc(2) rgba($white, 0.11);
+    border-radius: rem-calc(14);
+    padding: rem-calc(2 13);
+    background-color: rgba($white, 0.1);
+  }
+
+  .orbit-bullets button:hover {
+    cursor: pointer;
+  }
+
+}
+
+

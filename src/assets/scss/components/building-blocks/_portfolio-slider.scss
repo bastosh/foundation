@@ -1,4 +1,4 @@
-.portfolio-1 {
+.portfolio-slider {
   background: $light-gray;
 
   .orbit-next, .orbit-previous {
@@ -16,20 +16,17 @@
     align-items: center;
     justify-content: center;
   }
-
   .orbit-bullets button {
-    margin: .3rem;
-    width: .5rem;
-    height: .5rem;
-    background-color: #cacaca; }
-  .orbit-bullets button:hover {
     background-color: #cacaca;
+  }
+  .orbit-bullets button:hover {
     cursor: pointer;
   }
   .orbit-bullets button.is-active {
-    width: .7rem;
-    height: .7rem;
-    background-color: $primary-color; }
+    background-color: $primary-color;
+    width: 1rem;
+    height: 1rem;
+  }
 
   &__item {
     &__image {

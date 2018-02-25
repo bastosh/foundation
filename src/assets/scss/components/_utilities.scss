@@ -456,3 +456,33 @@
 .shadow-3 { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ); }
 .shadow-4 { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, 0.2 ); }
 .shadow-5 { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, 0.2 ); }
+
+.next {
+  &__link {
+    position: relative;
+    top: rem-calc(-50);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    width: rem-calc(45);
+    height: rem-calc(45);
+    box-shadow: rem-calc(1 1 1) rgba($black, 0.1);
+    background: $white;
+    transition: background-color $base-transition;
+
+    &__icon {
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      z-index: 10;
+      margin: rem-calc((-6.5) 0 0 -4.5);
+      width: rem-calc(20);
+      height: rem-calc(20);
+      fill: $text-heading;
+      //transform: rotate(90deg);
+      //transform-origin: 50% 50%;
+      transition: fill $base-transition;
+    }
+  }
+}
