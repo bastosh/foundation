@@ -432,6 +432,39 @@
   }
 }
 
+
+.tag-2 {
+  @include breakpoint(small) {
+    font-weight: 500;
+    font-size: rem-calc(14);
+    line-height: rem-calc(14);
+    letter-spacing: 0.093em;
+
+    a {
+      &,
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(14);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(14);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(14);
+    line-height: rem-calc(14);
+  }
+}
+
 // Letter-spacing
 .ls-sm            { letter-spacing: -.025em; }
 .ls               { letter-spacing:  .025em; }

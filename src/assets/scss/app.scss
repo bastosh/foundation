@@ -4,6 +4,10 @@
 @import 'foundation';
 @import 'motion-ui';
 
+@import "vendors/owl.carousel";
+@import "vendors/aos";
+@import "vendors/font-awesome";
+
 @include foundation-global-styles;
 // @include foundation-grid;
 // @include foundation-flex-grid;
@@ -114,3 +118,5 @@ input::placeholder, textarea::placeholder {
 // Template Studio
 @import 'components/building-blocks/fullscreen-image-slider';
 @import 'components/building-blocks/image-slider';
+@import 'components/building-blocks/owl-header';
+@import 'components/building-blocks/latest-post';

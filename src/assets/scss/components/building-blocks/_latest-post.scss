@@ -1,0 +1,122 @@
+.latest-post {
+  text-align: center;
+  border-bottom: solid rem-calc(1) $gray-light;
+
+  &__container {
+    padding: rem-calc(23 0 23 8);
+  }
+
+  &__button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: rem-calc(15);
+    border: solid rem-calc(1) rgba($primary-color, 0.5);
+    border-radius: rem-calc(18);
+    padding: rem-calc(6 18);
+    min-width: rem-calc(121);
+    font-weight: 400;
+    font-size: rem-calc(16);
+    line-height: rem-calc(21);
+    text-align: center;
+    color: $primary-color;
+    background: rgba($primary-color, 0);
+    cursor: pointer;
+    transition: color $base-transition, background-color $base-transition;
+
+    &:focus,
+    &:hover {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: rem-calc(7 26 7 5);
+
+    &__text {
+      display: block;
+      overflow: hidden;
+      font-weight: 500;
+      font-size: rem-calc(16);
+      line-height: rem-calc(21);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $text-primary;
+      transition: color $base-transition;
+    }
+
+    .arrow-icon {
+      position: absolute;
+      right: rem-calc(10);
+      top: rem-calc(11);
+      width: rem-calc(6);
+      height: rem-calc(11);
+      fill: $text-primary;
+      opacity: 0.8;
+      transition: fill $base-transition, opacity $base-transition;
+    }
+
+    &:focus &__text,
+    &:hover &__text {
+      color: $gray-darker;
+    }
+
+    &:focus &__icon,
+    &:hover &__icon {
+      color: $gray-darker;
+      opacity: 1;
+    }
+  }
+}
+
+@include breakpoint(large down) {
+  .latest-post {
+    &__container {
+      padding-top: rem-calc(13);
+      padding-bottom: rem-calc(12);
+    }
+  }
+}
+
+@include breakpoint(1024 down) {
+  .latest-post {
+    &__container {
+      white-space: nowrap;
+    }
+
+    &__button {
+      vertical-align: top;
+      margin-right: rem-calc(10);
+      margin-left: rem-calc(-15);
+      border: none;
+      padding-right: 0;
+      padding-left: 0;
+      min-width: 0;
+
+      &:focus,
+      &:hover {
+        color: $primary-color;
+        background: none;
+      }
+    }
+
+    &__link {
+      vertical-align: top;
+      padding-left: 0;
+      max-width: calc(100vw - #{rem-calc(110)});
+    }
+  }
+}
+
+@include breakpoint(768 down) {
+  .latest-post {
+    &__container {
+      display: flex;
+      align-items: center;
+      flex-flow: column wrap;
+    }
+  }
+}

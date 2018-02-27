@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+  </head>
+  <body>
+
+    {{> body}}
+
+    <script src="{{root}}assets/vendors/aos.js"></script>
+    <script src="{{root}}assets/vendors/jquery.js"></script>
+    <script src="{{root}}assets/vendors/owl.carousel.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            var $carousel = jQuery(".owl-carousel").owlCarousel({
+                items: 1,
+                autoHeight: true,
+                dots: true,
+                nav: false,
+                loop: false,
+                mouseDrag: false
+            });
+            var $owlDots = $('.owl-dots');
+
+            var positionDots = function () {
+
+                var $posElem = $('.owl-item').filter('.active').find('.tag-2');
+
+                var coords = $posElem.offset();
+
+                if (coords) {
+                    $owlDots.css({
+                        left: coords.left
+                    });
+                }
+
+                $owlDots.css('display', 'block');
+            };
+
+            positionDots();
+
+            $carousel.on('changed.owl.carousel', function () {
+
+                $owlDots.css('display', 'none');
+                setTimeout(function () {
+                    positionDots();
+                }, 500);
+            });
+        });
+        $(function () {
+            'use strict';
+
+            var $hamburgerButton = $('.owl-header__button__hamburger');
+            var $hamburgerPopup = $('.owl-header__hamburger');
+            var $hamburgerClose = $('.owl-header__hamburger__header__close');
+
+            $hamburgerButton.on('click', function (event) {
+                event.preventDefault();
+
+                $hamburgerPopup
+                    .removeClass('is-hidden')
+                    .animate({
+                        opacity: 1
+                    }, 500);
+
+                $hamburgerButton.addClass('is-hidden');
+            });
+
+            $hamburgerClose.on('click', function (event) {
+                event.preventDefault();
+
+                $hamburgerPopup
+                    .animate({
+                        opacity: 0
+                    }, 500, function () {
+                        $hamburgerPopup.addClass('is-hidden');
+                    });
+
+                $hamburgerButton.removeClass('is-hidden');
+            });
+        });
+    </script>
+    <script src="{{root}}assets/js/app.js"></script>
+
+  </body>
+</html>
