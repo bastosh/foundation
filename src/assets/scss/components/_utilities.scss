@@ -369,6 +369,37 @@
   }
 }
 
+.quote {
+  @include breakpoint(small) {
+    font-weight: 300;
+    font-size: rem-calc(25);
+    line-height: rem-calc(38);
+
+    a {
+      &,
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(27);
+    line-height: rem-calc(40);
+  }
+
+  @include breakpoint(large) {
+    font-size: rem-calc(32);
+    line-height: rem-calc(46);
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: rem-calc(32);
+    line-height: rem-calc(46);
+  }
+}
+
 .big-quote {
   @include breakpoint(small) {
     font-weight: 300;
@@ -489,6 +520,10 @@
 .shadow-3 { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, 0.2 ); }
 .shadow-4 { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, 0.2 ); }
 .shadow-5 { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, 0.2 ); }
+
+.border-bottom {
+  border-bottom: solid rem-calc(1) $separator;
+}
 
 .next {
   &__link {

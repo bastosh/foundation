@@ -9,9 +9,8 @@
 @import "vendors/font-awesome";
 
 @include foundation-global-styles;
-// @include foundation-grid;
+@include foundation-grid;
 // @include foundation-flex-grid;
-//
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
@@ -87,12 +86,15 @@ input::placeholder, textarea::placeholder {
 @import "components/footer";
 @import "components/utilities";
 
+// Sliders
+@import 'components/building-blocks/fullscreen-image-slider';
+@import 'components/building-blocks/image-slider';
+
 // Template Foundation
 @import "components/building-blocks/platforms";
-@import "components/building-blocks/quote-slider";
+@import "components/building-blocks/testimonial-slider";
 @import "components/building-blocks/twitter-cards";
 @import "components/building-blocks/hero-laptop";
-
 
 // Template Agency
 @import "components/building-blocks/portfolio-slider";
@@ -116,7 +118,9 @@ input::placeholder, textarea::placeholder {
 @import "components/building-blocks/subscribe";
 
 // Template Studio
-@import 'components/building-blocks/fullscreen-image-slider';
-@import 'components/building-blocks/image-slider';
 @import 'components/building-blocks/owl-header';
 @import 'components/building-blocks/latest-post';
+@import 'components/building-blocks/portfolio-tabs';
+@import 'components/building-blocks/clients';
+@import 'components/building-blocks/team-thumbnails';
+@import 'components/building-blocks/footer-address';

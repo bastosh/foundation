@@ -1,4 +1,9 @@
-#testimonial-slider {
+.testimonial-slider {
+
+  &-dark {
+    background-color: $gray-lightest;
+  }
+
   padding: 2rem 1rem 3rem;
   @include breakpoint(medium up) {
     padding: 3rem 2rem 4rem;

@@ -1,0 +1,336 @@
+.clients {
+	&__container {
+		padding-top: rem-calc(94);
+		padding-bottom: rem-calc(97);
+	}
+
+	&__tag {
+		margin-bottom: rem-calc(20);
+		color: $gray-dark;
+	}
+
+	&__quote {
+		max-width: rem-calc(480);
+		color: $gray-darkest;
+	}
+
+	&__link {
+		display: none;
+		margin-top: rem-calc(35);
+		font-size: 0;
+		line-height: 0;
+
+		&__text {
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: 500;
+			font-size: rem-calc(16);
+			line-height: rem-calc(24);
+			color: $primary-color;
+			transition: color $base-transition;
+		}
+
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: rem-calc(10);
+			width: rem-calc(6);
+			height: rem-calc(11);
+			fill: $primary-color;
+			opacity: 0.8;
+			transition: fill $base-transition;
+		}
+
+		&:focus &__text,
+		&:hover &__text {
+			color: #3582c1;
+		}
+
+		&:focus &__icon,
+		&:hover &__icon {
+			fill: #3582c1;
+		}
+	}
+
+	&__column &__link {
+		display: inline-block;
+	}
+
+	&__logos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-left: rem-calc(-57);
+		transform: translate(rem-calc(15), rem-calc(13));
+
+		&__item {
+			display: flex;
+			align-items: center;
+			flex-basis: 33%;
+			justify-content: center;
+			height: rem-calc(95);
+
+			.icon {
+				max-width: 90%;
+				max-height: 90%;
+				fill: $gray-dark;
+
+				&-cannes-lions {
+					width: rem-calc(106);
+					height: rem-calc(46);
+				}
+
+				&-github {
+					margin-left: rem-calc(-14);
+					width: rem-calc(106);
+					height: rem-calc(29);
+				}
+
+				&-airbnb {
+					width: rem-calc(125);
+					height: rem-calc(39);
+				}
+
+				&-flickr {
+					margin-top: rem-calc(-25);
+					width: rem-calc(92);
+					height: rem-calc(28);
+				}
+
+				&-vine {
+					margin-top: rem-calc(-22);
+					margin-left: rem-calc(-15);
+					width: rem-calc(88);
+					height: rem-calc(34);
+				}
+
+				&-amazon {
+					margin-top: rem-calc(-2);
+					width: rem-calc(162);
+					height: rem-calc(32);
+				}
+			}
+
+			&:nth-child(1) {
+				order: 1;
+			}
+
+			&:nth-child(2) {
+				order: 2;
+			}
+
+			&:nth-child(3) {
+				order: 3;
+			}
+
+			&:nth-child(4) {
+				order: 4;
+			}
+
+			&:nth-child(5) {
+				order: 5;
+			}
+
+			&:nth-child(6) {
+				order: 6;
+			}
+		}
+	}
+
+	@include breakpoint(xlarge down) {
+		&__tag {
+			margin-top: rem-calc(43);
+		}
+
+		&__logos {
+			&__item {
+				flex-basis: 50%;
+
+				.icon {
+					&-cannes-lions {
+						margin-top: rem-calc(10);
+						margin-left: rem-calc(61);
+					}
+
+					&-github {
+						margin-top: 0;
+						margin-left: rem-calc(61);
+					}
+
+					&-airbnb {
+						margin-top: rem-calc(-1);
+						margin-left: rem-calc(-11);
+					}
+
+					&-flickr {
+						margin-top: rem-calc(10);
+						margin-left: rem-calc(-10);
+					}
+
+					&-vine {
+						margin-top: rem-calc(-22);
+						margin-left: rem-calc(62);
+					}
+
+					&-amazon {
+						margin-top: rem-calc(-2);
+						margin-left: rem-calc(-10);
+					}
+				}
+
+				&:nth-child(1) {
+					order: 1;
+				}
+
+				&:nth-child(2) {
+					order: 3;
+				}
+
+				&:nth-child(3) {
+					order: 4;
+				}
+
+				&:nth-child(4) {
+					order: 2;
+				}
+
+				&:nth-child(5) {
+					order: 5;
+				}
+
+				&:nth-child(6) {
+					order: 6;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(large down) {
+		&__tag {
+			margin-top: rem-calc(44);
+			margin-bottom: rem-calc(15);
+		}
+
+		&__logos {
+			&__item {
+				.icon {
+					&-cannes-lions {
+						margin-top: rem-calc(16);
+						margin-left: rem-calc(29);
+					}
+
+					&-github {
+						margin-top: rem-calc(5);
+						margin-left: rem-calc(32);
+					}
+
+					&-airbnb {
+						margin-top: rem-calc(5);
+						margin-left: rem-calc(-5);
+					}
+
+					&-flickr {
+						margin-top: rem-calc(16);
+						margin-left: rem-calc(-4);
+					}
+
+					&-vine {
+						margin-top: rem-calc(-18);
+						margin-left: rem-calc(29);
+					}
+
+					&-amazon {
+						margin-top: rem-calc(4);
+						margin-left: rem-calc(-6);
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__container {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(mobile down) {
+		&__container {
+			text-align: center;
+		}
+
+		&__row {
+			display: flex;
+			align-items: center;
+			flex-flow: column wrap;
+			justify-content: center;
+		}
+
+		&__tag {
+			margin-top: 0;
+			margin-bottom: rem-calc(16);
+			text-align: center;
+		}
+
+		&__quote {
+			text-align: center;
+		}
+
+		&__column {
+			@include flex-grid-size(12);
+		}
+
+		&__column &__link {
+			display: none;
+		}
+
+		&__link {
+			display: inline-block;
+			margin-top: rem-calc(19);
+		}
+
+		&__logos {
+			margin-top: rem-calc(12);
+
+			.icon {
+				&-cannes-lions {
+					margin-top: rem-calc(15);
+					margin-left: rem-calc(18);
+				}
+
+				&-github {
+					margin-top: rem-calc(5);
+					margin-left: rem-calc(18);
+				}
+
+				&-airbnb {
+					margin-top: rem-calc(-15);
+					margin-left: rem-calc(5);
+				}
+
+				&-flickr {
+					margin-top: rem-calc(16);
+					margin-left: rem-calc(-14);
+				}
+
+				&-vine {
+					margin-top: rem-calc(-18);
+					margin-left: rem-calc(18);
+				}
+
+				&-amazon {
+					margin-top: rem-calc(4);
+					margin-left: rem-calc(-15);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__container {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+	}
+}
