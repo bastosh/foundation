@@ -1,0 +1,100 @@
+.features-img-circle {
+	&__container {
+		padding-top: rem-calc(100);
+		padding-bottom: rem-calc(120);
+	}
+
+	&__tag {
+		margin-bottom: rem-calc(20);
+		text-align: center;
+		color: $gray-dark;
+	}
+
+	&__title {
+		margin-bottom: rem-calc(20);
+		text-align: center;
+		color: $text-heading;
+	}
+
+	&__subheading {
+		margin: 0 auto rem-calc(80);
+		max-width: rem-calc(700);
+		text-align: center;
+		color: $gray-darker;
+	}
+
+	&__list {
+		@include flex-grid-row;
+		@include row-zero-padding;
+	}
+
+	&__item {
+		@include flex-grid-column(1 of 3);
+
+		&__image {
+			position: relative;
+			overflow: hidden;
+			margin: 0 auto rem-calc(20);
+			border-radius: 50%;
+			padding: rem-calc(4);
+			width: rem-calc(90);
+			height: rem-calc(90);
+			box-shadow: rem-calc(1 1 3) rgba($black, 0.1);
+			background-color: $white;
+
+			&__img {
+				display: block;
+				border-radius: 50%;
+				width: 100%;
+				height: 100%;
+				background-color: $gray-lightest;
+			}
+		}
+
+		&__title {
+			margin-bottom: rem-calc(10);
+			text-align: center;
+			color: $text-heading;
+		}
+
+		&__text {
+			margin: 0 auto;
+			max-width: rem-calc(320);
+			text-align: center;
+			color: $gray-dark;
+		}
+	}
+
+	@include breakpoint(large down) {
+		&__container {
+			padding-top: rem-calc(100);
+			padding-bottom: rem-calc(100);
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__container {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(mobile down) {
+		&__item {
+			@include flex-grid-size(1 of 1);
+
+			margin-bottom: rem-calc(40);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__container {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+	}
+}

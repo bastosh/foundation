@@ -1,0 +1,117 @@
+.ecommerce-2 {
+	border-bottom: solid rem-calc(1) $gray-lightest;
+
+	&__container {
+		padding-top: rem-calc(85);
+		padding-bottom: rem-calc(70);
+		text-align: center;
+	}
+
+	&__list {
+		@include flex-grid-row;
+		@include row-zero-padding;
+	}
+
+	&__item {
+		@include flex-grid-column(1 of 2);
+
+		margin-bottom: rem-calc(60);
+	}
+
+	&__product {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		margin: 0 auto;
+		border-radius: rem-calc(6);
+		padding: rem-calc(15);
+		max-width: rem-calc(523);
+
+		&__image {
+			display: block;
+			margin: 0 auto rem-calc(21);
+			width: 100%;
+			height: auto;
+			max-width: rem-calc(493);
+			max-height: rem-calc(493);
+		}
+
+		&__title {
+			display: block;
+			margin: 0 auto rem-calc(11);
+			max-width: rem-calc(400);
+			text-align: center;
+			color: $text-heading;
+		}
+
+		&__colors {
+			display: block;
+			margin-bottom: rem-calc(12);
+			font-size: 0;
+			line-height: 0;
+			text-align: center;
+		}
+
+		&__color {
+			display: inline-block;
+			vertical-align: middle;
+			margin: rem-calc(7.5);
+			border-radius: 50%;
+			width: rem-calc(24);
+			height: rem-calc(24);
+		}
+
+		&__price {
+			display: block;
+			text-align: center;
+			color: $gray-dark
+		}
+
+		&__more-link {
+			display: inline-block;
+			padding: rem-calc(10);
+			font-weight: 500;
+			font-size: rem-calc(16);
+			line-height: rem-calc(16);
+			color: $primary-color;
+			transition: color $base-transition;
+
+			.icon {
+				margin-right: rem-calc(10);
+				width: rem-calc(15);
+				height: rem-calc(15);
+				fill: $primary-color;
+				transition: fill $base-transition;
+			}
+
+			&:focus,
+			&:hover {
+				color: #3582c1;
+			}
+
+			&:focus .icon,
+			&:hover .icon {
+				fill: #3582c1;
+			}
+		}
+
+		@include breakpoint(medium down) {
+			&__container {
+				padding-top: rem-calc(80);
+			}
+		}
+
+		@include breakpoint(mobile down) {
+			&__item {
+				@include flex-grid-size(1 of 1);
+			}
+		}
+
+		@include breakpoint(small down) {
+			&__container {
+				padding-top: rem-calc(60);
+				padding-bottom: rem-calc(60);
+			}
+		}
+	}
+}

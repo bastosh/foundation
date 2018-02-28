@@ -215,6 +215,22 @@
                 $carousel.trigger('next.owl.carousel');
             });
         });
+
+        jQuery(function () {
+
+            var leftArrow = '<i class="fas fa-angle-left fa-2x"></i>';
+            var rightArrow = '<i class="fas fa-angle-right fa-2x"></i>';
+
+            jQuery('.carousel__slider').owlCarousel({
+                items: 1,
+                autoHeight: true,
+                dots: true,
+                nav: true,
+                loop: true,
+                mouseDrag: false,
+                navText: [leftArrow, rightArrow]
+            });
+        });
     </script>
     <script src="{{root}}assets/js/app.js"></script>
   </body>

@@ -73,6 +73,7 @@ input::placeholder, textarea::placeholder {
 }
 
 @import "components/triangle";
+@import "components/row-zero-padding";
 @import "components/button";
 @import "components/textbox";
 @import "components/navbar";
@@ -139,3 +140,10 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/blog';
 @import 'components/building-blocks/newsletter';
 @import 'components/building-blocks/footer-complete';
+
+// Template Ecommerce2
+@import 'components/building-blocks/header-product';
+@import 'components/building-blocks/ecommerce-2';
+@import 'components/building-blocks/carousel';
+@import 'components/building-blocks/features-img-circle';
+@import 'components/building-blocks/footer-address-centered';

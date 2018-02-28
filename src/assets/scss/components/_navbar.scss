@@ -24,7 +24,7 @@
   &.navbar-light {
     background-color: $white;
     li a {
-      color: $primary-color;
+      color: $text-heading;
     }
     padding: rem-calc(20 30 20 30);
     @include breakpoint(large) {
@@ -47,6 +47,14 @@
         background-color: $primary-color;
         color: $white;
       }
+    }
+    .navbar__logo {
+      .icon {
+        fill: $gray-darker;
+      }
+    }
+    .navbar__auth__login {
+      color: $gray-darker;
     }
     .hamburger-button {
       border: rem-calc(2) solid $gray-darker;
@@ -210,6 +218,10 @@
       &:hover {
         color: $white;
         opacity: 0.6;
+      }
+
+      &__country__text {
+        margin-left: .3rem;
       }
 
       &__counter {

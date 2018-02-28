@@ -302,6 +302,52 @@ $(function () {
     });
 });
 
+$(function () {
+    "use strict";
+
+    var colors = {
+        'black': 'assets/img/ecommerce2/bg-black.jpg',
+        'silver': 'assets/img/ecommerce2/bg-silver.jpg',
+        'gold': 'assets/img/ecommerce2/bg-gold.jpg',
+        'gloss': 'assets/img/ecommerce2/bg-gloss.jpg'
+    };
+
+    var $colorItem = $('.header-product__colors__item');
+    var $image = $('.header-product__image');
+
+    $colorItem.on('click', function (event) {
+        var $this = $(event.currentTarget);
+
+        $image.addClass('fadeIn').attr('src', '' + colors[$this.data('color')] + '');
+
+        setTimeout(function() {
+            $image.removeClass('fadeIn');
+        }, 150);
+    });
+});
+
+$(function () {
+    "use strict";
+
+    // Load more products
+
+    var $loadButton = $('.ecommerce-2__more-link');
+    var $productsBlock = $('.ecommerce-2__list');
+
+    $loadButton.on('click', function (event) {
+        event.preventDefault();
+
+        var products = $('.ecommerce-2__item').clone().toArray();
+        var shuffled = _.shuffle(products);
+
+        $(shuffled).slice(0, 2).appendTo($productsBlock);
+
+        $('body, html').animate({
+            scrollTop: $loadButton.offset().top - $(window).height() + $loadButton.outerWidth()
+        }, 600)
+    });
+});
+
 
 
 

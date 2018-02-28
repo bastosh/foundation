@@ -1,0 +1,159 @@
+.footer-address-centered {
+	background-color: $gray-lightest;
+
+	&__top {
+		&__container {
+			border-bottom: solid rem-calc(1) $separator;
+			padding-top: rem-calc(70);
+			padding-bottom: rem-calc(60);
+		}
+	}
+
+	&__bottom {
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			padding-top: rem-calc(34);
+			padding-bottom: rem-calc(34);
+		}
+
+		&__left {
+			width: rem-calc(200);
+			&__country {
+				color: $gray-darker;
+				font-weight: 500;
+				margin-left: .3rem;
+			}
+		}
+
+		&__right {
+			width: rem-calc(200);
+			text-align: right;
+		}
+	}
+
+	&__title {
+		margin-bottom: rem-calc(5);
+		text-align: center;
+		color: $text-heading;
+	}
+
+	&__address {
+		margin-bottom: rem-calc(32);
+		text-align: center;
+		color: $gray-dark;
+	}
+
+	&__social {
+		text-align: center;
+
+		&__link {
+			display: inline-block;
+			vertical-align: middle;
+			margin: rem-calc(7);
+			padding: rem-calc(5);
+			width: rem-calc(27);
+			height: rem-calc(27);
+			transition: all linear $base-transition;
+
+			.icon {
+				display: block;
+				max-width: rem-calc(17);
+				max-height: rem-calc(17);
+				fill: $gray-dark;
+				transition: fill $base-transition;
+			}
+
+			&:focus,
+			&:hover {
+				fill: $text-heading;
+			}
+
+			&:hover {
+				opacity: 0.7;
+				transition: all linear $base-transition;
+			}
+		}
+	}
+
+	&__menu {
+		list-style: none;
+		margin: 0;
+		font-size: 0;
+		text-align: center;
+
+		&__item {
+			display: inline-block;
+			vertical-align: middle;
+			margin: rem-calc(0 10);
+
+			&__link {
+				display: block;
+				padding: rem-calc(8 10);
+				font-weight: 500;
+				font-size: rem-calc(16);
+				line-height: rem-calc(16);
+				color: $gray-darker;
+				transition: color $base-transition;
+
+				&:focus,
+				&:hover {
+					color: $text-heading;
+				}
+			}
+		}
+	}
+
+	&__copyright {
+		padding: rem-calc(6 0);
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+	}
+
+	@include breakpoint(medium down) {
+		&__menu {
+			&__item {
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+	}
+
+	@include breakpoint(mobile down) {
+		&__bottom {
+			&__container {
+				display: block;
+			}
+
+			&__left {
+				width: 100%;
+			}
+
+			&__right {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		&__menu {
+			margin-bottom: rem-calc(20);
+
+			&__item {
+				display: block;
+				margin-bottom: rem-calc(14);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__top {
+			&__container {
+				padding-top: rem-calc(60);
+			}
+		}
+	}
+}
