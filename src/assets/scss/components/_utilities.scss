@@ -1,6 +1,14 @@
 .icon {
   display: inline-block;
   vertical-align: middle;
+  &-white {
+    .icon {
+      fill: $white;
+      &:hover {
+        fill: $secondary-color;
+      }
+    }
+  }
 }
 
 .container {
@@ -405,7 +413,7 @@
     font-weight: 300;
     font-size: rem-calc(37);
     line-height: rem-calc(44);
-    letter-spacing: -0.035em;
+    letter-spacing: -0.025em;
 
     a {
       &,
@@ -427,8 +435,11 @@
   }
 
   @include breakpoint(xlarge) {
-    font-size: rem-calc(52);
-    line-height: rem-calc(65);
+    max-width: rem-calc(950);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: rem-calc(50);
+    line-height: rem-calc(62);
   }
 }
 
@@ -523,6 +534,10 @@
 
 .border-bottom {
   border-bottom: solid rem-calc(1) $separator;
+}
+
+.border-top {
+  border-top: solid rem-calc(1) $separator;
 }
 
 .border-radius {

@@ -91,6 +91,7 @@
     }
 
     &__slider {
+      z-index: 99;
       .owl-stage {
         padding-bottom: rem-calc(2);
       }

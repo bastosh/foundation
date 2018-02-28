@@ -1,0 +1,62 @@
+.features-icons {
+	padding-top: rem-calc(100);
+	padding-bottom: rem-calc(120);
+	text-align: center;
+
+	&__title {
+		text-align: center;
+		color: $text-heading;
+	}
+
+	&__subheading {
+		margin: 0 auto;
+		max-width: rem-calc(764);
+		text-align: center;
+		color: $gray-darker;
+	}
+
+	&__tag {
+		margin: (1rem * 2.2) 0 (1rem * 3.5);
+		text-align: center;
+		color: $gray-dark;
+	}
+
+	&__wrapper {
+		margin: 0 auto;
+		max-width: rem-calc(585);
+	}
+
+	&__item {
+		margin-bottom: 1rem * 3.5;
+
+		&__icon {
+			margin-bottom: 1rem * 2;
+			max-width: rem-calc(59);
+			max-height: rem-calc(48);
+		}
+
+		&__title {
+			display: block;
+			color: $text-heading;
+		}
+	}
+
+	&__button {
+		margin-bottom: rem-calc(0);
+	}
+
+	@include breakpoint(large down) {
+		padding-top: rem-calc(100);
+		padding-bottom: rem-calc(100);
+	}
+
+	@include breakpoint(medium down) {
+		padding-top: rem-calc(80);
+		padding-bottom: rem-calc(80);
+	}
+
+	@include breakpoint(small down) {
+		padding-top: rem-calc(60);
+		padding-bottom: rem-calc(60);
+	}
+}

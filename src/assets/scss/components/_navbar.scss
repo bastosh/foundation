@@ -24,7 +24,11 @@
   &.navbar-light {
     background-color: $white;
     li a {
-      color: $text-heading;
+      color: $gray-darker;
+      &:hover {
+        color: $secondary-color;
+        opacity: 1;
+      }
     }
     padding: rem-calc(20 30 20 30);
     @include breakpoint(large) {

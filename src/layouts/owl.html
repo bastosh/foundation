@@ -231,6 +231,25 @@
                 navText: [leftArrow, rightArrow]
             });
         });
+
+        jQuery(function () {
+            var leftArrow = '<i class="fas fa-angle-left fa-2x"></i>';
+            var rightArrow = '<i class="fas fa-angle-right fa-2x"></i>';
+
+            jQuery('.carousel-fullscreen__items').owlCarousel({
+                items: 1,
+                autoHeight: true,
+                dots: false,
+                nav: true,
+                loop: true,
+                mouseDrag: false,
+                navText: [leftArrow, rightArrow]
+            });
+
+            setTimeout(function () {
+                jQuery('.carousel-fullscreen__more__link').removeClass('is-hidden');
+            }, 500);
+        });
     </script>
     <script src="{{root}}assets/js/app.js"></script>
   </body>

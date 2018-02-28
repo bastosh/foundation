@@ -10,7 +10,7 @@
 
 @include foundation-global-styles;
 @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
@@ -147,3 +147,9 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/carousel';
 @import 'components/building-blocks/features-img-circle';
 @import 'components/building-blocks/footer-address-centered';
+
+// Template Corporate
+@import 'components/building-blocks/carousel-fullscreen';
+@import 'components/building-blocks/portfolio-small-cards';
+@import 'components/building-blocks/features-icons';
+@import 'components/building-blocks/contact';
