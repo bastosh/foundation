@@ -1,0 +1,105 @@
+.newsletter {
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: rem-calc(6);
+		padding: rem-calc(60 100);
+		background-color: $gray-lightest;
+	}
+
+	&__title {
+		margin-right: rem-calc(120);
+		margin-bottom: 0;
+		color: $text-heading;
+	}
+
+	&__form {
+		display: flex;
+		flex-grow: 2;
+		justify-content: flex-start;
+
+		&__field {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__button {
+				margin: 0;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			&__input {
+				display: block;
+				margin: 0;
+				border: transparent;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				padding-left: rem-calc(45);
+				height: rem-calc(63);
+				color: $gray-dark;
+				background-color: rgba($black, 0.1);
+
+				&::placeholder {
+					color: $gray-dark;
+				}
+
+				&:focus {
+					border: transparent;
+					background-color: rgba($black, 0.1);
+				}
+			}
+
+			&__icon {
+				position: absolute;
+				left: rem-calc(15);
+				top: rem-calc(22);
+				width: rem-calc(17);
+				height: rem-calc(17);
+				background-image: url("../img/paper-plane.png");
+			}
+
+			&:first-child {
+				flex-grow: 2;
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__container {
+			flex-flow: row wrap;
+			justify-content: center;
+		}
+
+		&__title {
+			margin-right: 0;
+			margin-bottom: rem-calc(35);
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	@include breakpoint(mobile down) {
+		&__container {
+			padding: rem-calc(60 40);
+		}
+
+		&__form {
+			align-items: center;
+			flex-flow: column wrap;
+
+			&__field {
+				&__button {
+					margin-top: rem-calc(15);
+					border-radius: rem-calc(6);
+				}
+
+				&__input {
+					border-radius: rem-calc(6);
+				}
+			}
+		}
+	}
+}

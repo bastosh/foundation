@@ -12,11 +12,13 @@
     {{> body}}
 
     <script src="{{root}}assets/vendors/aos.js"></script>
+    <script src="{{root}}assets/vendors/underscore.js"></script>
     <script src="{{root}}assets/vendors/jquery.js"></script>
     <script src="{{root}}assets/vendors/owl.carousel.js"></script>
     <script>
+
         jQuery(document).ready(function() {
-            var $carousel = jQuery(".owl-carousel").owlCarousel({
+            var $carousel = jQuery(".owl-header__slider").owlCarousel({
                 items: 1,
                 autoHeight: true,
                 dots: true,
@@ -24,6 +26,7 @@
                 loop: false,
                 mouseDrag: false
             });
+
             var $owlDots = $('.owl-dots');
 
             var positionDots = function () {
@@ -173,6 +176,43 @@
 
             $sliderPrev.on('click', function () {
                 $carousel.trigger('prev.owl.carousel');
+            });
+        });
+
+        jQuery(function () {
+            var $slider = jQuery('.header-products__middle__slider');
+            var $leftArrow = jQuery('.header-products__middle__slider__nav__prev');
+            var $rightArrow = jQuery('.header-products__middle__slider__nav__next');
+
+            var $carousel = $slider.owlCarousel({
+                mouseDrag: true,
+                autoWidth: true,
+                items: 3,
+                loop: true,
+                margin: 28,
+                nav: false,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                responsive: {
+                    0: {
+                        items: 1,
+                        center: true
+                    },
+                    820: {
+                        items: 2
+                    },
+                    1220: {
+                        items: 3
+                    }
+                }
+            });
+
+            $leftArrow.on('click', function () {
+                $carousel.trigger('prev.owl.carousel');
+            });
+
+            $rightArrow.on('click', function () {
+                $carousel.trigger('next.owl.carousel');
             });
         });
     </script>

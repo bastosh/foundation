@@ -1,0 +1,205 @@
+.header-products {
+  background: url("../img/ecommerce/header-bg.png") 50% 0 no-repeat;
+  background-size: cover;
+
+  &__middle {
+    padding-top: rem-calc(90);
+
+    &__title {
+      margin: 0 auto;
+      max-width: rem-calc(572);
+      text-align: center;
+      color: $white;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: rem-calc(40);
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0;
+      width: rem-calc(220);
+    }
+
+    &__info {
+      position: relative;
+      margin-right: rem-calc(166);
+      margin-bottom: rem-calc(40);
+
+      &__wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      &__text {
+        max-width: rem-calc(200);
+        font-weight: 400;
+        font-size: rem-calc(14);
+        line-height: rem-calc(21);
+        color: rgba($white, 0.7);
+
+        span {
+          float: right;
+          color: $white;
+        }
+      }
+
+      &__price {
+        font-weight: 400;
+        font-size: rem-calc(14);
+        line-height: rem-calc(21);
+        text-align: right;
+        color: $white;
+      }
+
+      &__button {
+        position: absolute;
+        right: rem-calc(-70);
+        top: rem-calc(2);
+        border: solid rem-calc(2) rgba($white, 0.1);
+        border-radius: 50%;
+        width: rem-calc(35);
+        height: rem-calc(35);
+        background-color: rgba($white, 0.1);
+        transition: border-color $base-transition, background-color $base-transition;
+
+        .icon {
+          position: absolute;
+          left: rem-calc(14);
+          top: rem-calc(10);
+          display: block;
+          width: rem-calc(6);
+          height: rem-calc(11);
+          fill: $white;
+          transition: fill $base-transition;
+        }
+
+        &:focus,
+        &:hover {
+          border-color: $secondary-color;
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+    &__slider__wrap {
+      position: relative;
+      bottom: rem-calc(-78);
+      margin-top: rem-calc(-78);
+    }
+
+    &__slider {
+      .owl-stage {
+        padding-bottom: rem-calc(2);
+      }
+
+      &__item {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+        border-radius: rem-calc(6);
+        width: rem-calc(360);
+        height: rem-calc(400);
+        box-shadow: rem-calc(1 1 3 1) rgba($black, 0.25);
+        background: $white;
+
+        &__image {
+          img {
+            border-radius: rem-calc(6);
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        &__content {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding-bottom: rem-calc(30);
+          padding-left: rem-calc(30);
+
+          &__title {
+            margin-bottom: rem-calc(8);
+            color: $text-heading;
+          }
+
+          &__link {
+            font-weight: 500;
+            font-size: rem-calc(16);
+            line-height: rem-calc(21);
+            text-align: left;
+            color: $gray-darker;
+            transition: opacity $base-transition;
+
+            .icon {
+              margin-top: rem-calc(-3);
+              margin-left: rem-calc(6);
+              width: rem-calc(6);
+              height: rem-calc(11);
+              fill: $gray-darker;
+            }
+
+            &:focus,
+            &:hover {
+              color: $gray-darker;
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      &__nav {
+        position: absolute;
+        left: rem-calc(0);
+        top: rem-calc(0);
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+
+        &__prev {
+          position: absolute;
+          left: rem-calc(-49);
+          top: 45%;
+          cursor: pointer;
+          transform: rotate(180deg);
+          transition: all linear $base-transition;
+
+          .icon {
+            width: rem-calc(19);
+            height: rem-calc(34);
+            fill: rgba($white, 0.7);
+          }
+
+          &:hover {
+            opacity: 0.5;
+            transition: all linear $base-transition;
+          }
+        }
+
+        &__next {
+          position: absolute;
+          right: rem-calc(-33);
+          top: 45%;
+          width: rem-calc(10);
+          height: rem-calc(10);
+          cursor: pointer;
+          transition: all linear $base-transition;
+
+          .icon {
+            width: rem-calc(19);
+            height: rem-calc(34);
+            fill: rgba($white, 0.7);
+          }
+
+          &:hover {
+            opacity: 0.5;
+            transition: all linear $base-transition;
+          }
+        }
+      }
+    }
+  }
+}

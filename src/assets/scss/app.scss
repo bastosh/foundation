@@ -90,7 +90,7 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/fullscreen-image-slider';
 @import 'components/building-blocks/image-slider';
 
-// Template Foundation
+// Template Homepage
 @import "components/building-blocks/platforms";
 @import "components/building-blocks/testimonial-slider";
 @import "components/building-blocks/twitter-cards";
@@ -132,3 +132,10 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/features-steps-vertical';
 @import 'components/building-blocks/testimonial-slider-img';
 @import 'components/building-blocks/pricing';
+
+// Template Ecommerce
+@import 'components/building-blocks/header-products';
+@import 'components/building-blocks/ecommerce-1';
+@import 'components/building-blocks/blog';
+@import 'components/building-blocks/newsletter';
+@import 'components/building-blocks/footer-complete';
