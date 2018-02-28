@@ -3,6 +3,31 @@
 	display: inline-block;
 	vertical-align: middle;
 
+	&-secondary {
+		.textbox__input {
+			border: solid rem-calc(2) $gray-light;
+			border-right: solid rem-calc(2) transparent!important;
+			&:hover {
+				border: solid rem-calc(2) $gray-light!important;
+				border-right: solid rem-calc(2) transparent!important;
+			}
+			&:focus {
+				border: solid rem-calc(2) $secondary-color!important;
+				border-right: solid rem-calc(2) transparent!important;
+			}
+			&::placeholder {
+				color: rgba($black, 0.4);
+				opacity: 1;
+				transition: opacity $base-transition;
+			}
+			&:focus {
+				&::placeholder {
+					opacity: 0.2;
+				}
+			}
+		}
+	}
+
 	&__input {
 		display: block;
 		margin: 0;
@@ -44,6 +69,28 @@
 		@at-root {
 			textarea#{&} {
 				resize: vertical;
+			}
+		}
+	}
+
+	@include breakpoint(mobile down) {
+
+		.textbox__input {
+			border-radius: $global-radius!important;
+			border-right-color: $gray-dark!important;
+			&:focus,
+			&:hover {
+				border-right-color: $white!important;
+			}
+		}
+
+		&-secondary {
+			.textbox__input {
+				border-radius: $global-radius!important;
+				border-right: solid rem-calc(2) $gray-light!important;
+				&:focus {
+					border-right-color: $secondary-color!important;
+				}
 			}
 		}
 	}

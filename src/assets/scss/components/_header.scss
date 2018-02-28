@@ -198,6 +198,18 @@ $header-full-mobile-height: 75vh;
     background-color: rgba($white, 0.1);
     cursor: pointer;
     transition: border-color $base-transition, background-color $base-transition;
+    &.primary {
+      border: solid rem-calc(2) rgba($primary-color, 0.2);
+      background-color: rgba($primary-color, 0.1);
+      &::before {
+        background-color: rgba($primary-color, 0.6);
+      }
+      &:focus,
+      &:hover {
+        border-color: rgba($primary-color, 0.4);
+        background-color: rgba($primary-color, 0.6);
+      }
+    }
 
     &::before {
       content: "";

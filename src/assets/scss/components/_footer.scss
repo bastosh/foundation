@@ -25,9 +25,9 @@
   }
   .fab, .fas {
     font-size: 1.5rem;
-    color: $text-primary;
+    color: $gray-darker;
     &:hover {
-      color: $primary-color;
+      color: $gray-darkest;
     }
     @include breakpoint(medium down) {
       font-size: 1em;

@@ -1,0 +1,116 @@
+.features-steps-vertical {
+	&__content {
+		padding-top: rem-calc(120);
+		padding-bottom: rem-calc(120);
+
+		&__tag {
+			margin-bottom: rem-calc(20);
+			text-align: center;
+			color: $gray-dark;
+		}
+
+		&__title {
+			margin: 0 auto rem-calc(60);
+			max-width: rem-calc(865);
+			text-align: center;
+			color: $text-heading;
+		}
+
+		&__block {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: rem-calc(80);
+			border-top: solid rem-calc(1) rgba($separator, 0.7);
+			padding-top: rem-calc(40);
+
+			&__item {
+				position: relative;
+				max-width: rem-calc(290);
+
+				&__number {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: rem-calc(-57);
+					margin: 0 auto;
+					border: solid rem-calc(2) $gray-lightest;
+					border-radius: 50%;
+					padding: rem-calc(8 11);
+					width: rem-calc(35);
+					height: rem-calc(35);
+					font-weight: 500;
+					font-size: rem-calc(16);
+					line-height: rem-calc(16);
+					color: $gray-dark;
+					background-color: $white;
+				}
+
+				&__title {
+					margin-bottom: rem-calc(10);
+					text-align: center;
+					color: $text-heading;
+				}
+
+				&__text {
+					font-weight: 400;
+					font-size: rem-calc(16);
+					line-height: rem-calc(25);
+					text-align: center;
+					color: $gray-dark;
+				}
+			}
+		}
+
+		&__button {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			padding-left: rem-calc(80);
+			width: rem-calc(250);
+			user-select: none;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: rem-calc(40);
+				border-top: solid rem-calc(8) transparent;
+				border-bottom: solid rem-calc(8) transparent;
+				border-left: solid rem-calc(12) $white;
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+
+	@include breakpoint(large down) {
+		&__content {
+			padding-top: rem-calc(100);
+			padding-bottom: rem-calc(100);
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__content {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+
+			&__block {
+				align-items: center;
+				flex-flow: column wrap;
+				margin-bottom: rem-calc(0);
+
+				&__item {
+					margin-bottom: rem-calc(70);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__content {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+	}
+}

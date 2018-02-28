@@ -52,12 +52,12 @@
             });
         });
 
-        $(function () {
+        jQuery(function () {
             'use strict';
 
-            var $hamburgerButton = $('.owl-header__button__hamburger');
-            var $hamburgerPopup = $('.owl-header__hamburger');
-            var $hamburgerClose = $('.owl-header__hamburger__header__close');
+            var $hamburgerButton = jQuery('.owl-header__button__hamburger');
+            var $hamburgerPopup = jQuery('.owl-header__hamburger');
+            var $hamburgerClose = jQuery('.owl-header__hamburger__header__close');
 
             $hamburgerButton.on('click', function (event) {
                 event.preventDefault();
@@ -82,6 +82,97 @@
                     });
 
                 $hamburgerButton.removeClass('is-hidden');
+            });
+        });
+
+        jQuery(function () {
+
+            'use strict';
+
+            var $filterButtons = jQuery('.portfolio-tabs__tabs__button');
+            var $filterBlocks = jQuery('.portfolio-tabs__projects');
+
+            $filterButtons.on('click', function (event) {
+                var $this = jQuery(event.currentTarget);
+                event.preventDefault();
+
+                $filterButtons.removeClass('is-active');
+                $this.addClass('is-active');
+
+                var thisData = $this.data('item');
+
+                $filterBlocks.not('.is-hidden')
+                    .animate({
+                        opacity: 0
+                    }, 300, function () {
+                        jQuery(this).addClass('is-hidden')
+                    }).end()
+                    .filter(function (index, elem) {
+                        return (jQuery(elem).data('item') === thisData);
+                    }).css({
+                    opacity: 0
+                }).removeClass('is-hidden').animate({
+                    opacity: 1
+                }, 300);
+            });
+
+            var $moreButton = jQuery('.portfolio-tabs__all');
+
+            $moreButton.on('click', function (event) {
+                event.preventDefault();
+
+                var $items = $filterBlocks.not('.is-hidden').clone();
+                $items.insertBefore($moreButton);
+
+                jQuery('html, body').animate({
+                    scrollTop: $moreButton.offset().top - $(window).height() + $moreButton.outerHeight()
+                }, 600);
+            });
+
+            // Swap buttons
+
+            jQuery(window).on('load', function (event) {
+                if (jQuery(window).width() <= 600 - 17) {
+                    var $swipeButtons = jQuery('.portfolio-tabs__tabs__inner').addClass('owl-carousel');
+                    var $swipeItems = jQuery('.portfolio-tabs__tabs__button');
+
+                    $swipeItems.wrap('<div class="swipe-buttons-wrap">');
+
+                    var $buttonsSlider = $swipeButtons.owlCarousel({
+                        autoWidth: true,
+                        center: false,
+                        items: 3
+                    });
+
+                    $swipeButtons.find('.owl-stage').css({
+                        'width': '+=1'
+                    });
+                }
+            });
+        });
+
+        jQuery(function () {
+            var $slider = jQuery('.testimonial-slider-img__content');
+            var $sliderNext = jQuery('.testimonial-slider-img__nav__next');
+            var $sliderPrev = jQuery('.testimonial-slider-img__nav__prev');
+
+            var $carousel = $slider.owlCarousel({
+                autoWidth: false,
+                items: 1,
+                loop: true,
+                margin: 50,
+                mouseDrag: true,
+                nav: true,
+                navText: ['', ''],
+                responsive: {}
+            });
+
+            $sliderNext.on('click', function () {
+                $carousel.trigger('next.owl.carousel');
+            });
+
+            $sliderPrev.on('click', function () {
+                $carousel.trigger('prev.owl.carousel');
             });
         });
     </script>

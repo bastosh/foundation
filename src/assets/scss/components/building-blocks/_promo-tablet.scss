@@ -1,0 +1,208 @@
+.promo-tablet {
+	background: url("../img/module-bg.png") 90% 50% no-repeat;
+	border-bottom: 1px solid #eee;
+    padding-bottom: 8rem;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding-top: rem-calc(155);
+
+		&__right {
+			&__image {
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				text-align: right;
+			}
+		}
+
+		&__left {
+			padding-top: rem-calc(135);
+			padding-left: 20%;
+
+			&__title {
+				margin-bottom: rem-calc(20);
+				color: $text-heading;
+			}
+
+			&__subheading {
+				margin-bottom: rem-calc(40);
+				max-width: rem-calc(460);
+				color: $text-subheading;
+			}
+
+			&__card {
+				position: relative;
+				border-radius: rem-calc(6);
+				padding: rem-calc(30 30 10 30);
+				max-width: rem-calc(412);
+				background-color: $secondary-color;
+				cursor: pointer;
+				transition: all linear 0.2s;
+
+				&__title {
+					margin-bottom: rem-calc(10);
+					font-weight: 500;
+					font-size: rem-calc(12);
+					line-height: rem-calc(12);
+					letter-spacing: rem-calc(1);
+					text-transform: uppercase;
+					color: $white;
+				}
+
+				&__text {
+					margin-bottom: rem-calc(18);
+					font-weight: 400;
+					font-size: rem-calc(17);
+					line-height: rem-calc(22);
+					color: $white;
+				}
+
+				&__users {
+					position: relative;
+					z-index: 9;
+					display: flex;
+					justify-content: flex-start;
+
+					&__item {
+						display: flex;
+						align-items: flex-start;
+						justify-content: flex-start;
+						overflow: hidden;
+						margin-right: rem-calc(6);
+						border-radius: rem-calc(6);
+						width: rem-calc(20);
+						height: rem-calc(20);
+					}
+
+					&__ago {
+						position: relative;
+						top: rem-calc(5);
+						font-weight: 400;
+						font-size: rem-calc(15);
+						line-height: rem-calc(15);
+						text-align: right;
+						color: rgba($white, 0.51);
+					}
+
+					&__valid {
+						position: absolute;
+						right: rem-calc(30);
+						top: rem-calc(16);
+
+						.icon-check {
+							width: rem-calc(17);
+							height: rem-calc(12);
+							fill: $white;
+						}
+					}
+				}
+
+				&:hover {
+					opacity: 0.8;
+					transition: all linear 0.2s;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(1400 down) {
+		&__content {
+			&__left {
+				padding-left: 10%;
+			}
+		}
+	}
+
+	@include breakpoint(large down) {
+		&__content {
+			align-items: center;
+			flex-flow: column;
+			justify-content: flex-start;
+			padding-top: rem-calc(100);
+			padding-bottom: rem-calc(100);
+
+			&__left {
+				margin-bottom: rem-calc(100);
+				padding-top: 0;
+				padding-left: 0;
+
+				&__title {
+					text-align: center;
+				}
+
+				&__description {
+					text-align: center;
+				}
+
+				&__card {
+					margin: 0 auto;
+				}
+			}
+
+			&__right {
+				align-self: flex-end;
+				flex: 0 1 auto;
+
+				&__image {
+					display: block;
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__content {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+
+			&__right {
+				&__image {
+					&__popup {
+						right: 4%;
+						top: -20%;
+					}
+				}
+			}
+
+			&__left {
+				&__subheading {
+					padding-right: rem-calc(20);
+					padding-left: rem-calc(20);
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(mobile down) {
+		&__content {
+			&__right {
+				&__image {
+					&__popup {
+						right: rem-calc(10);
+						top: rem-calc(-120);
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__content {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+			&__left {
+				&__card {
+					margin-left: 1.5rem;
+					margin-right: 1.5rem;
+				}
+			}
+		}
+	}
+}

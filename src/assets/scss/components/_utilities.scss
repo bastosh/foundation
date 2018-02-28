@@ -313,7 +313,7 @@
 }
 .paragraph        {
   @include breakpoint(medium) {
-    max-width: 30rem;
+    max-width: 29rem;
     &.centered {
       margin-left: auto;
       margin-right: auto;
@@ -525,32 +525,6 @@
   border-bottom: solid rem-calc(1) $separator;
 }
 
-.next {
-  &__link {
-    position: relative;
-    top: rem-calc(-50);
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 50%;
-    width: rem-calc(45);
-    height: rem-calc(45);
-    box-shadow: rem-calc(1 1 1) rgba($black, 0.1);
-    background: $white;
-    transition: background-color $base-transition;
-
-    &__icon {
-      position: absolute;
-      left: 50%;
-      top: 65%;
-      z-index: 10;
-      margin: rem-calc((-6.5) 0 0 -4.5);
-      width: rem-calc(20);
-      height: rem-calc(20);
-      fill: $text-heading;
-      //transform: rotate(90deg);
-      //transform-origin: 50% 50%;
-      transition: fill $base-transition;
-    }
-  }
+.border-radius {
+  border-radius: $global-radius;
 }

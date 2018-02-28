@@ -55,6 +55,9 @@
     display: flex;
     justify-content: flex-start;
     width: rem-calc(190);
+    @include breakpoint(xlarge) {
+      width: rem-calc(300);
+    }
   }
 
   &__center {
@@ -65,7 +68,9 @@
   &__right {
     display: flex;
     justify-content: flex-end;
-    width: rem-calc(190);
+    @include breakpoint(xlarge) {
+      width: rem-calc(300);
+    }
   }
 
   &__logo {

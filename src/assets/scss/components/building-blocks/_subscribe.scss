@@ -2,13 +2,25 @@
 	position: relative;
 	z-index: 99;
 	padding-top: rem-calc(100);
-	padding-bottom: rem-calc(82);
-	background-color: $gray-darker;
+	padding-bottom: rem-calc(120);
+	&-dark {
+		background-color: $gray-darker;
+		.subscribe__title, p {
+			color: $white;
+		}
+		.textbox__input {
+			border-color: rgba($white, 0.2);
+			border-right-width: 0;
+			border-radius: rem-calc(6 0 0 6);
+			padding-left: rem-calc(115);
+			background-color: transparent;
+		}
+	}
 
 	&__title {
 		margin-bottom: rem-calc(30);
 		text-align: center;
-		color: $white;
+		color: $text-heading;
 	}
 
 	&__form {
@@ -51,13 +63,43 @@
 
 		&__textbox {
 			flex-grow: 1;
+			position: relative;
 
 			.textbox__input {
-				border-color: rgba($white, 0.2);
-				border-right-width: 0;
-				border-radius: rem-calc(6 0 0 6);
-				padding-left: rem-calc(115);
+				display: block;
+				margin: 0;
+				border-right: solid rem-calc(2) transparent;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				padding: rem-calc(19 21 19 51);
+				height: auto;
+				min-width: rem-calc(305);
+				color: $dark-gray;
 				background-color: transparent;
+
+				&:focus,
+				&:hover {
+					border-right: solid rem-calc(2) transparent;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					background-color: transparent;
+				}
+
+				&:invalid {
+					outline: none;
+				}
+			}
+
+			&__icon {
+				position: absolute;
+				left: rem-calc(21);
+				top: rem-calc(13);
+
+				.icon {
+					width: rem-calc(16);
+					height: rem-calc(17);
+					fill: $input-placeholder-color;
+				}
 			}
 		}
 

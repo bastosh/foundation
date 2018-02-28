@@ -1,0 +1,85 @@
+.header-clear-bg {
+  background: url("../img/background.jpg") 50% 50% / cover no-repeat $white;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, #fff 25%, transparent);
+  }
+
+  .navbar-logo {
+    display: block;
+    margin-left: rem-calc(-7);
+    padding: rem-calc(7);
+
+    .icon-logo-small {
+      display: block;
+      width: rem-calc(60);
+      height: rem-calc(28);
+      fill: $gray-dark;
+    }
+  }
+
+  .navbar__action__trial {
+    display: block;
+    margin-right: rem-calc(10);
+    padding: rem-calc(13 20);
+    font-weight: 500;
+    font-size: rem-calc(16);
+    line-height: rem-calc(16);
+    color: $gray-dark;
+    transition: color $base-transition;
+
+    &:focus,
+    &:hover {
+      color: $gray-darkest;
+    }
+  }
+
+  .navbar__action__button {
+    display: block;
+    margin: 0;
+    padding: rem-calc(11 28);
+    height: rem-calc(42);
+  }
+
+  .header__middle__button {
+    display: inline-block;
+    margin: 0;
+    border: none;
+    width: rem-calc(220);
+    padding: rem-calc(22 30);
+    color: $white;
+    background: $primary-color;
+
+    &__text {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem-calc(20);
+      padding-right: rem-calc(23);
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: rem-calc(-11);
+        width: rem-calc(2);
+        height: rem-calc(22);
+        background-color: rgba($white, 0.3);
+      }
+    }
+
+    &__price {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

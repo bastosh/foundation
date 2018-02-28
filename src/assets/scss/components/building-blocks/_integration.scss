@@ -17,23 +17,23 @@
   }
 
   &__icon {
-    &__svg {
+    .icon {
       display: block;
       max-width: 100%;
       max-height: 100%;
     }
 
-    &--google-drive &__svg {
+    &-google-drive {
       width: rem-calc(68);
       height: rem-calc(58);
     }
 
-    &--slack &__svg {
+    &-slack {
       width: rem-calc(68);
       height: rem-calc(68);
     }
 
-    &--dropbox &__svg {
+    &-dropbox {
       width: rem-calc(68);
       height: rem-calc(63);
     }

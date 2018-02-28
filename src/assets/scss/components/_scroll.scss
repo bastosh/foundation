@@ -2,12 +2,22 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: rem-calc(-15);
   z-index: 10;
 
-  &-link {
+  &__link {
     position: relative;
-    top: rem-calc(-30);
+    top: rem-calc(40);
+    &__bottom {
+      @include breakpoint(small) {
+        top: rem-calc(25);
+      }
+      @include breakpoint(medium) {
+        top: rem-calc(43);
+      }
+      @include breakpoint(xlarge) {
+        top: rem-calc(59);
+      }
+    }
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -18,16 +28,14 @@
     background: $white;
     transition: background-color $base-transition;
 
-    &-icon {
+    &__icon {
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 64%;
       z-index: 10;
       margin: rem-calc((-6.5) 0 0 -4.5);
       width: rem-calc(9);
       height: rem-calc(15);
-      transform: rotate(90deg);
-      transform-origin: 50% 50%;
     }
     &:focus,
     &:hover {

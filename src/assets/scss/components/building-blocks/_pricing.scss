@@ -1,0 +1,191 @@
+.pricing {
+	background-color: $gray-lightest;
+
+	&__content {
+		padding-top: rem-calc(100);
+		padding-bottom: rem-calc(100);
+
+		&__title {
+			margin-bottom: rem-calc(57);
+			text-align: center;
+			color: $text-heading;
+		}
+
+		&__block {
+			display: flex;
+			justify-content: space-between;
+
+			&__item {
+				position: relative;
+				display: flex;
+				flex-flow: column;
+				justify-content: space-between;
+				margin-right: rem-calc(20);
+				border: rem-calc(2) solid transparent;
+				border-radius: rem-calc(6);
+				padding: rem-calc(60 0 0 0);
+				height: rem-calc(430);
+				max-width: rem-calc(360);
+				box-shadow: rem-calc(1 2 3) rgba($black, 0.1);
+				background-color: $white;
+				cursor: pointer;
+
+				&__top {
+					padding-right: rem-calc(30);
+					padding-left: rem-calc(30);
+
+					&__title {
+						margin-bottom: rem-calc(15);
+						text-align: center;
+						color: $text-heading;
+					}
+
+					&__description {
+						font-weight: 400;
+						font-size: rem-calc(16);
+						line-height: rem-calc(25);
+						text-align: center;
+						color: $gray-dark;
+					}
+				}
+
+				&__bottom {
+					display: flex;
+					flex-flow: column;
+					justify-content: flex-end;
+					border-top: solid rem-calc(1) rgba($separator, 0.7);
+					padding: rem-calc(24 30 30 30);
+
+					&__price {
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: rem-calc(26);
+
+						&__number {
+							position: relative;
+							margin-right: rem-calc(28);
+
+							&__sign {
+								position: absolute;
+								left: rem-calc(10);
+								top: rem-calc(-5);
+								font-weight: 400;
+								font-size: rem-calc(27);
+								line-height: rem-calc(35);
+								letter-spacing: rem-calc(-1);
+								color: $gray-darker;
+
+								&.price-free {
+									display: none;
+								}
+							}
+
+							&__col {
+								padding-left: rem-calc(25);
+								color: $gray-darkest;
+
+								&.price-free {
+									padding-left: rem-calc(15);
+									color: $secondary-color;
+								}
+							}
+						}
+
+						&__text {
+							font-weight: 400;
+							font-size: rem-calc(14);
+							line-height: rem-calc(20);
+							color: $gray-dark;
+						}
+					}
+
+					&__button {
+						margin-bottom: 0;
+						width: 100%;
+					}
+				}
+
+				&__info {
+					position: absolute;
+					right: rem-calc(5);
+					top: 0;
+
+					.icon {
+						width: rem-calc(6);
+						height: rem-calc(14);
+						fill: $gray-dark;
+					}
+				}
+
+				&:hover {
+					border: 2px solid rgba(53, 142, 215, 0.21);
+					background-image: url("../img/licence-item-bg.png");
+					background-position: 100% 0;
+					background-repeat: no-repeat;
+				}
+
+				&:last-child {
+					margin-right: rem-calc(0);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__content {
+			&__block {
+				display: flex;
+				align-items: center;
+				flex-flow: column;
+
+				&__item {
+					margin-right: rem-calc(0);
+					margin-bottom: rem-calc(30);
+					height: auto;
+
+					&:last-child {
+						margin-bottom: rem-calc(0);
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__content {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__content {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+
+			&__block {
+				&__item {
+					&__top {
+						padding-bottom: rem-calc(20);
+					}
+
+					&__bottom {
+						&__price {
+							display: flex;
+							flex-flow: row wrap;
+							justify-content: center;
+
+							&__number {
+								margin-bottom: rem-calc(20);
+							}
+
+							&__text {
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
