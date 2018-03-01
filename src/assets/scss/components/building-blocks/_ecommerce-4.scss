@@ -1,0 +1,144 @@
+.ecommerce-4 {
+	&__container {
+		position: relative;
+		padding-top: rem-calc(80);
+		padding-bottom: rem-calc(30);
+	}
+
+	&__title {
+		margin: rem-calc(0 0 60 0);
+		text-align: center;
+		color: $text-heading;
+	}
+
+	&__block {
+		&__item {
+			display: flex;
+			justify-content: center;
+
+			&__product {
+				display: block;
+				outline: none;
+				transition: opacity linear 0.2s;
+				max-width: rem-calc(450);;
+
+				&__image {
+					display: block;
+					margin: rem-calc(0 0 20 0);
+					border-radius: rem-calc(6);
+					width: auto;
+					height: auto;
+					background-color: $gray-light;
+				}
+
+				&__title {
+					margin: rem-calc(0 0 10 0);
+					font-weight: 400;
+					font-size: rem-calc(18);
+					line-height: rem-calc(25);
+					text-align: center;
+					color: $text-heading;
+				}
+
+				&__price {
+					font-weight: 400;
+					font-size: rem-calc(16);
+					line-height: rem-calc(25);
+					text-align: center;
+					color: $dark-gray;
+				}
+
+				&:hover {
+					opacity: 0.8;
+					transition: opacity linear 0.2s;
+				}
+			}
+		}
+	}
+
+	.owl-dots {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		margin: rem-calc(20 0 0 0);
+	}
+
+	.owl-dot {
+		margin: rem-calc(0 10 0 0);
+		border-radius: 50%;
+		width: rem-calc(6);
+		height: rem-calc(6);
+		background-color: rgba($gray-dark, 0.21);
+
+		&.active {
+			width: rem-calc(10);
+			height: rem-calc(10);
+			background-color: $secondary-color;
+		}
+	}
+
+	&__nav {
+		&__prev {
+			position: absolute;
+			left: rem-calc(-64);
+			top: 50%;
+			z-index: 10;
+			cursor: pointer;
+		}
+
+		&__next {
+			position: absolute;
+			right: rem-calc(-64);
+			top: 50%;
+			z-index: 10;
+			cursor: pointer;
+		}
+	}
+
+	@include breakpoint(xlarge down) {
+		&__block {
+			&__item {
+				align-items: center;
+				flex-flow: column wrap;
+
+				&__product {
+					margin: rem-calc(0 0 20 0);
+
+					&__image {
+						width: auto;
+						height: auto;
+					}
+				}
+			}
+		}
+
+		&__nav {
+			&__prev {
+				left: rem-calc(15%);
+				top: 51%;
+			}
+
+			&__next {
+				right: rem-calc(15%);
+				top: 51%;
+			}
+		}
+	}
+
+
+	@include breakpoint(mobile down) {
+		&__container {
+			padding-top: rem-calc(60);
+		}
+
+		&__nav {
+			&__prev {
+				display: none;
+			}
+
+			&__next {
+				display: none;
+			}
+		}
+	}
+}

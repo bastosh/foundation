@@ -1,0 +1,56 @@
+.cta-promo {
+	&__container {
+		padding-top: rem-calc(20);
+		padding-bottom: rem-calc(20);
+	}
+
+	&__wrap {
+		border-radius: rem-calc(6);
+		padding: rem-calc(80 0 60 0);
+		background-color: $gray-lightest;
+	}
+
+	&__slogan {
+		margin: rem-calc(0 0 20 0);
+		font-weight: 500;
+		font-size: rem-calc(14);
+		line-height: rem-calc(14);
+		text-align: center;
+		text-transform: uppercase;
+		color: $gray-dark;
+	}
+
+	&__title {
+		margin: rem-calc(0 0 10 0);
+		text-align: center;
+		color: $text-heading;
+	}
+
+	&__description {
+		margin: 0 auto rem-calc(41);
+		max-width: rem-calc(462);
+		font-weight: 400;
+		font-size: rem-calc(16);
+		line-height: rem-calc(25);
+		text-align: center;
+		color: $gray-dark;
+	}
+
+	&__button {
+		display: block;
+		margin: 0 auto;
+		max-width: rem-calc(165);
+	}
+
+	@include breakpoint(mobile down) {
+		&__wrap {
+			padding: rem-calc(80 20 60 20);
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__wrap {
+			padding: rem-calc(60 20 60 20);
+		}
+	}
+}

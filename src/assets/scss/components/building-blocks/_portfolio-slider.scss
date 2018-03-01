@@ -34,52 +34,52 @@
       background: 50% 50% / cover no-repeat;
 
       &:nth-child(1) {
-        background-image: url("../img/slide-1.jpg");
+        background-image: url("../img/agency/slide-1.jpg");
       }
 
       &:nth-child(2) {
-        background-image: url("../img/slide-2.jpg");
+        background-image: url("../img/agency/slide-2.jpg");
       }
 
       &:nth-child(3) {
-        background-image: url("../img/slide-3.jpg");
+        background-image: url("../img/agency/slide-3.jpg");
       }
 
       &:nth-child(4) {
-        background-image: url("../img/slide-4.jpg");
+        background-image: url("../img/agency/slide-4.jpg");
       }
 
       &:nth-child(5) {
-        background-image: url("../img/slide-5.jpg");
+        background-image: url("../img/agency/slide-5.jpg");
       }
 
       &:nth-child(6) {
-        background-image: url("../img/slide-6.jpg");
+        background-image: url("../img/agency/slide-6.jpg");
       }
 
       @include breakpoint(retina) {
         &:nth-child(1) {
-          background-image: url("../img/slide-1-2x.png");
+          background-image: url("../img/agency/slide-1-2x.png");
         }
 
         &:nth-child(2) {
-          background-image: url("../img/slide-2-2x.png");
+          background-image: url("../img/agency/slide-2-2x.png");
         }
 
         &:nth-child(3) {
-          background-image: url("../img/slide-3-2x.png");
+          background-image: url("../img/agency/slide-3-2x.png");
         }
 
         &:nth-child(4) {
-          background-image: url("../img/slide-4-2x.png");
+          background-image: url("../img/agency/slide-4-2x.png");
         }
 
         &:nth-child(5) {
-          background-image: url("../img/slide-5-2x.png");
+          background-image: url("../img/agency/slide-5-2x.png");
         }
 
         &:nth-child(6) {
-          background-image: url("../img/slide-6-2x.png");
+          background-image: url("../img/agency/slide-6-2x.png");
         }
       }
     }

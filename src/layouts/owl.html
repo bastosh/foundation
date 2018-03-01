@@ -14,6 +14,7 @@
     <script src="{{root}}assets/vendors/aos.js"></script>
     <script src="{{root}}assets/vendors/underscore.js"></script>
     <script src="{{root}}assets/vendors/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <script src="{{root}}assets/vendors/owl.carousel.js"></script>
     <script>
 
@@ -250,6 +251,155 @@
                 jQuery('.carousel-fullscreen__more__link').removeClass('is-hidden');
             }, 500);
         });
+
+        jQuery(function () {
+            "use strict";
+
+            var $slider01 = jQuery('.ecommerce-3__image__slider');
+            var $slider02 = jQuery('.ecommerce-3__info__slider');
+            var $sliderLeft = jQuery('.ecommerce-3__image__slider__nav__left');
+            var $sliderRight = jQuery('.ecommerce-3__image__slider__nav__right');
+
+            var $carousel01 = $slider01.owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 0,
+                center: true,
+                autoWidth: true,
+                mouseDrag: false
+            });
+
+            setTimeout(function () {
+                $carousel01.trigger('refresh.owl.carousel');
+            }, 700);
+
+            $sliderLeft.on('click', function () {
+                $carousel01.trigger('prev.owl.carousel');
+            });
+
+            $sliderRight.on('click', function () {
+                $carousel01.trigger('next.owl.carousel');
+            });
+
+            $(window).resize(function() {
+                clearTimeout(window.resizedFinished);
+                window.resizedFinished = setTimeout(function(){
+                    $carousel01.trigger('refresh.owl.carousel');
+                }, 250);
+            });
+
+            var $number = jQuery('.ecommerce-3__info__price__col').find('input');
+
+            $number.spinner({
+                'min': 1,
+                'step': 1
+            });
+
+            var $favoriteStar = jQuery('.ecommerce-3__info__fav-share__left__star');
+
+            $favoriteStar.on('click', function (event) {
+                event.preventDefault();
+                jQuery(this).find('svg').toggleClass('is-active');
+            });
+
+            var $colorItem = jQuery('.ecommerce-3__info__colors__item');
+
+            $colorItem.on('click', function (event) {
+                var $this = jQuery(event.currentTarget);
+                $colorItem.removeClass('is-active');
+                $this.addClass('is-active');
+            });
+
+            var $infoItem = jQuery('.ecommerce-3__info__item');
+
+            $infoItem.each(function () {
+                var $ratingItem = jQuery(this).find('.ecommerce-3__info__rating__item');
+
+                $ratingItem.on('click', function (event) {
+                    var $this = jQuery(event.currentTarget);
+                    var thisNumber = $this.data('number');
+
+                    $ratingItem.removeClass('is-active');
+
+                    for (var i = 0; i < thisNumber; i = i + 1) {
+                        $ratingItem.eq(i).addClass('is-active');
+                    }
+                });
+            });
+        });
+
+        jQuery(function () {
+            if (jQuery(window).width() <= 580 - 17) {
+                var $swipeButtons = jQuery('.infos-tabs__filter').addClass('owl-carousel');
+                var $swipeItems = jQuery('.infos-tabs__filter__button');
+
+                $swipeItems.wrap('<div class="swipe-buttons-wrap">');
+
+                var $buttonsSlider = $swipeButtons.owlCarousel({
+                    autoWidth: true,
+                    center: false,
+                    items: 3
+                });
+
+                $swipeButtons.find('.owl-stage').css({
+                    'width': '+=1'
+                });
+            }
+        });
+
+        jQuery(function () {
+            'use strict';
+
+            var $itemFull = jQuery('.item-full').find('img');
+
+            var images = {
+                normal: 'assets/img/ecommerce3/home-image-03.jpg',
+                square: 'assets/img/ecommerce3/home-image-03-02.jpg'
+            };
+
+            var srcset = $itemFull.attr('srcset');
+
+            jQuery(window).on('resize', function () {
+                if (jQuery(window).width() <= 360 - 17) {
+                    $itemFull.attr('src', images.square);
+                    $itemFull.removeAttr('srcset');
+                } else {
+                    $itemFull.attr('src', images.normal);
+                    $itemFull.attr('srcset', srcset);
+                }
+            });
+
+            if (jQuery(window).width() <= 360 - 17) {
+                $itemFull.attr('src', images.square);
+                $itemFull.removeAttr('srcset');
+            } else {
+                $itemFull.attr('src', images.normal);
+                $itemFull.attr('srcset', srcset);
+            }
+
+            console.log(jQuery(window).width());
+        });
+
+        jQuery(function () {
+            var $slider = jQuery('.ecommerce-4__block');
+            var $leftArrow = jQuery('.ecommerce-4__nav__prev');
+            var $rightArrow = jQuery('.ecommerce-4__nav__next');
+
+            var $carousel = $slider.owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true
+            });
+
+            $leftArrow.on('click', function () {
+                $carousel.trigger('prev.owl.carousel');
+            });
+
+            $rightArrow.on('click', function () {
+                $carousel.trigger('next.owl.carousel');
+            });
+        });
+
     </script>
     <script src="{{root}}assets/js/app.js"></script>
   </body>

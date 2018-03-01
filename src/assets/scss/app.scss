@@ -7,6 +7,7 @@
 @import "vendors/owl.carousel";
 @import "vendors/aos";
 @import "vendors/font-awesome";
+@import "vendors/jquery-ui";
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -153,3 +154,12 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/portfolio-small-cards';
 @import 'components/building-blocks/features-icons';
 @import 'components/building-blocks/contact';
+
+// Template Ecommerce3
+@import 'components/building-blocks/ecommerce-3';
+@import 'components/building-blocks/infos-tabs';
+@import 'components/building-blocks/video';
+@import 'components/building-blocks/portfolio-images';
+@import 'components/building-blocks/ecommerce-4';
+@import 'components/building-blocks/cta-promo';
+@import 'components/building-blocks/footer-app';

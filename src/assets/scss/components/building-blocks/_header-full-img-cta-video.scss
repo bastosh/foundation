@@ -1,7 +1,7 @@
 .header-cta-video {
-  background: url("../img/header-bg.jpg") 50% 0 no-repeat;
+  background: url("../img/device/header-bg.jpg") 50% 0 no-repeat;
   background-size: cover;
   @include breakpoint(mobile down) {
-    background-image: url("../img/header-bg-middle.jpg");
+    background-image: url("../img/device/header-bg-middle.jpg");
   }
 }

@@ -1,11 +1,12 @@
 .features-steps {
 	border-bottom: solid rem-calc(1) $separator;
-	background: url("../img/design-bg.png") 0 65% no-repeat;
+	background: url("../img/webapp/design-bg.png") 0 65% no-repeat;
 	background-size: 45% auto;
 
 	&__content {
 		position: relative;
-		padding-top: rem-calc(100);
+		margin-top: rem-calc(50);
+		padding-top: rem-calc(50);
 		padding-bottom: rem-calc(111);
 
 		&__title {

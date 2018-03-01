@@ -1,0 +1,157 @@
+.video {
+	border-bottom: solid rem-calc(1) $separator;
+
+	&__container {
+		padding-top: rem-calc(80);
+		padding-bottom: rem-calc(120);
+	}
+
+	&__video__popup {
+		position: fixed;
+		left: rem-calc(0);
+		right: rem-calc(0);
+		top: rem-calc(0);
+		bottom: rem-calc(0);
+		z-index: 999;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.9);
+
+		&__item {
+			display: flex;
+			align-items: center;
+			flex-basis: 100%;
+			justify-content: center;
+
+			iframe {
+				width: 70%;
+				height: 65%;
+
+				@include breakpoint(map-get($breakpoints, mobile) down) {
+					height: 30%;
+				}
+			}
+		}
+
+		&__close {
+			position: absolute;
+			right: rem-calc(60);
+			top: rem-calc(40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 2px solid $white;
+			border-radius: 50%;
+			width: rem-calc(45);
+			height: rem-calc(45);
+			background-color: #3b3d40;
+			cursor: pointer;
+			transition: all linear $base-transition;
+
+			&:hover {
+				opacity: 0.8;
+				transition: all linear $base-transition;
+			}
+
+			.fas {
+				position: relative;
+				top: 1px;
+			}
+
+			@include breakpoint(mobile down) {
+				right: rem-calc(15);
+				top: rem-calc(15);
+			}
+		}
+	}
+
+	&__title {
+		margin: rem-calc(0 0 5 0);
+		text-align: center;
+		color: $text-heading;
+	}
+
+	&__description {
+		margin: 0 auto rem-calc(60);
+		max-width: rem-calc(525);
+		font-weight: 400;
+		font-size: rem-calc(16);
+		line-height: rem-calc(25);
+		text-align: center;
+		color: $dark-gray;
+	}
+
+	&__video {
+		position: relative;
+		overflow: hidden;
+		border-radius: rem-calc(6);
+
+		&__image {
+			max-width: 100%;
+		}
+
+		&__icon {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: rem-calc((-92.5) 0 0 -92.5);
+			border: solid rem-calc(1) rgba($white, 0.3);
+			border-radius: 50%;
+			width: rem-calc(185);
+			height: rem-calc(185);
+			cursor: pointer;
+			transition: opacity $base-transition;
+
+			&::before {
+				@include triangle(to right, rem-calc(51), rem-calc(75), $white);
+
+				content: "";
+				position: absolute;
+				left: 40%;
+				top: 50%;
+				margin-top: rem-calc(-37.5);
+			}
+
+			&:focus,
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	@include breakpoint(large down) {
+		&__container {
+			padding-bottom: rem-calc(100);
+		}
+	}
+
+	@include breakpoint(520 down) {
+		&__video {
+			&__icon {
+				margin: rem-calc((-45) 0 0 -45);
+				width: rem-calc(90);
+				height: rem-calc(90);
+
+				&::before {
+					@include triangle(to right, rem-calc(25), rem-calc(36), $white);
+
+					margin-top: rem-calc(-18);
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__container {
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__container {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+	}
+}

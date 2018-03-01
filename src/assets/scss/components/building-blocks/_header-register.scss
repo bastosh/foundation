@@ -1,5 +1,5 @@
 .header-register {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/header-register-bg.jpg") 50% 0 no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/service/header-register-bg.jpg") 50% 0 no-repeat;
   background-size: cover;
 
   .header__middle {
@@ -12,6 +12,16 @@
         margin-right: auto;
       }
     }
+
+    &__button {
+      .icon {
+        fill: $white;
+        margin-right: .5rem;
+      }
+    }
+
+
+
   }
 
   .header__bottom {

@@ -1,4 +1,25 @@
 .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include breakpoint(medium down) {
+    flex-direction: column;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(mobile down) {
+    ul li {
+      margin: 0;
+    }
+    .menu a {
+      padding: 0.7rem .5rem;
+    }
+  }
+
   a, li a {
     color: $text-primary;
     font-weight: $global-weight-medium;
@@ -6,6 +27,7 @@
       color: $primary-color;
     }
   }
+
   ul li {
     margin-right: 1rem;
   }
@@ -15,17 +37,10 @@
   .menu.social li a {
     padding: .4rem;
   }
-  @include breakpoint(mobile down) {
-    ul li {
-      margin: 0;
-    }
-    .menu a {
-      padding: 0.7rem .5rem;
-    }
-  }
+
   .fab, .fas {
     font-size: 1.5rem;
-    color: $gray-darker;
+    color: $gray-dark;
     &:hover {
       color: $gray-darkest;
     }
@@ -40,16 +55,7 @@
   @include breakpoint(large) {
     padding: 2rem 6rem;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @include breakpoint(mobile up) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+
 
   &__logo {
     display: block;
@@ -57,7 +63,7 @@
     padding: rem-calc(8 5 12);
   }
 
-  .logo__icon {
+  .icon {
     display: block;
     width: rem-calc(128);
     height: rem-calc(22);
@@ -89,7 +95,7 @@
         color: $secondary-color;
       }
     }
-    .logo__icon {
+    .icon {
       fill: $white;
     }
     .footer__top {
@@ -115,4 +121,77 @@
     }
 
   }
+
+  &__copyright {
+    flex-grow: 1;
+    padding-bottom: 1rem / 2;
+  }
+
+  &__contact {
+    flex-grow: 1;
+    padding-bottom: 1rem / 2;
+
+    a {
+      color: $white;
+      transition: opacity $base-transition;
+
+      &:focus,
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__social {
+    &__link {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem-calc(20);
+      transition: $base-transition;
+
+      .icon {
+        max-width: rem-calc(17);
+        max-height: rem-calc(17);
+        fill: $white;
+      }
+
+      &:focus,
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @include breakpoint(large down) {
+
+    &__logo {
+      margin-right: rem-calc(0);
+      margin-bottom: rem-calc(10);
+    }
+
+    &__copyright {
+      text-align: center;
+    }
+
+    &__contact {
+      text-align: center;
+    }
+
+    &__social {
+      margin-top: rem-calc(20);
+      margin-bottom: rem-calc(20);
+
+      &__link {
+        margin-right: 0;
+        margin-left: rem-calc(20);
+      }
+    }
+  }
+
+  @include breakpoint(small down) {
+    &__social {
+      //text-align: center;
+    }
+  }
+
 }

@@ -16,7 +16,10 @@
 		line-height: 1.5625rem;
 
 		a {
-			color: $gray-darkest;
+			color: $gray-darker;
+			&:hover {
+				color: $gray-darkest;
+			}
 		}
 
 		&:last-child {

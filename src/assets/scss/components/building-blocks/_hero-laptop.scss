@@ -19,14 +19,14 @@
     }
   }
   @include breakpoint(large only) {
-    background: url(../img/laptop-2x.png) 110% 100% no-repeat #358ed7;
+    background: url(../img/homepage/laptop-2x.png) 110% 100% no-repeat #358ed7;
     background-size: 40rem;
     .text-container {
       margin-left: 4rem;
     }
   }
   @include breakpoint(xlarge up) {
-    background: url(../img/laptop-2x.png) 100% 100% no-repeat #358ed7;
+    background: url(../img/homepage/laptop-2x.png) 100% 100% no-repeat #358ed7;
     background-size: 40rem;
     .text-container {
       margin-left: 8rem;

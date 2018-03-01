@@ -2,22 +2,12 @@
   position: absolute;
   left: 0;
   right: 0;
+  bottom: rem-calc(-15);
   z-index: 10;
 
   &__link {
     position: relative;
-    top: rem-calc(40);
-    &__bottom {
-      @include breakpoint(small) {
-        top: rem-calc(25);
-      }
-      @include breakpoint(medium) {
-        top: rem-calc(43);
-      }
-      @include breakpoint(xlarge) {
-        top: rem-calc(59);
-      }
-    }
+    top: rem-calc(-30);
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -27,20 +17,68 @@
     box-shadow: rem-calc(1 1 1) rgba($black, 0.1);
     background: $white;
     transition: background-color $base-transition;
+    cursor: pointer;
 
-    &__icon {
+    .icon {
       position: absolute;
       left: 50%;
-      top: 64%;
+      top: 50%;
       z-index: 10;
       margin: rem-calc((-6.5) 0 0 -4.5);
       width: rem-calc(9);
       height: rem-calc(15);
+      fill: $gray-dark;
+      transform: rotate(90deg);
+      transform-origin: 50% 50%;
+      transition: fill $base-transition;
+
     }
+
+    &__bottom {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: rem-calc(12);
+      @include breakpoint(medium) {
+        top: rem-calc(29);
+      }
+      @include breakpoint(xlarge) {
+        top: rem-calc(47);
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 50%;
+      padding-top: rem-calc(3);
+      width: rem-calc(45);
+      height: rem-calc(45);
+      box-shadow: rem-calc(1 1 1) rgba($black, 0.1);
+      background-color: $white;
+      cursor: pointer;
+
+      .icon {
+        width: rem-calc(10);
+        height: rem-calc(15);
+        fill: $gray-dark;
+        transform: rotate(90deg);
+      }
+
+      @include breakpoint(360 down) {
+        bottom: rem-calc(5);
+      }
+    }
+
+
     &:focus,
     &:hover {
-      background-color: $gray-lighter;
-      transition: background-color $base-transition;
+      background-color: $secondary-color;
+    }
+
+    &:focus .icon,
+    &:hover .icon {
+      fill: $white;
     }
   }
 }
