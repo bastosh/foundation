@@ -1,0 +1,107 @@
+.cta-dark {
+	background-color: $gray-darker;
+
+	&__content {
+		padding-top: rem-calc(250);
+		padding-bottom: rem-calc(95);
+
+		&__title {
+			margin: 0 auto rem-calc(20);
+			text-align: center;
+			color: $white;
+		}
+
+		&__subheading {
+			margin: 0 auto rem-calc(40);
+			max-width: rem-calc(650);
+			text-align: center;
+			color: rgba($white, 0.8);
+		}
+
+		&__button {
+			display: block;
+			margin: 0 auto rem-calc(80);
+			padding: rem-calc(20 0);
+			max-width: rem-calc(200);
+		}
+
+		&__slogan {
+			margin: 0 auto rem-calc(30);
+			max-width: rem-calc(300);
+			font-weight: 500;
+			font-size: rem-calc(18);
+			line-height: rem-calc(27);
+			text-align: center;
+			color: rgba($white, 0.6);
+		}
+
+		&__block {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+
+			&__item {
+				margin-right: rem-calc(20);
+				margin-bottom: rem-calc(20);
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				.icon {
+					fill: rgba($white, 0.2);
+					transition: all linear 0.3s;
+
+					&:hover {
+						fill: rgba($white, 0.5);
+						transition: all linear 0.3s;
+					}
+
+					&-evernote {
+						width: rem-calc(139);
+						height: rem-calc(35);
+					}
+
+					&-marvel {
+						width: rem-calc(79);
+						height: rem-calc(35);
+					}
+
+					&-brazzers {
+						width: rem-calc(140);
+						height: rem-calc(30);
+					}
+
+					&-motorola {
+						width: rem-calc(156);
+						height: rem-calc(30);
+					}
+
+					&-netflix {
+						width: rem-calc(96);
+						height: rem-calc(26);
+					}
+
+					&-adobe {
+						width: rem-calc(105);
+						height: rem-calc(23);
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__content {
+			padding-top: rem-calc(230);
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__content {
+			padding-top: rem-calc(210);
+			padding-bottom: rem-calc(60);
+		}
+	}
+}

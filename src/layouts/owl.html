@@ -400,6 +400,74 @@
             });
         });
 
+        jQuery(window).on('load', function (event) {
+            if (jQuery(window).width() <= 830 - 17) {
+                var $swipeButtons = jQuery('.ecommerce-1__content__filter').addClass('owl-carousel');
+                var $swipeItems = jQuery('.ecommerce-1__content__filter__button');
+
+                $swipeItems.wrap('<div class="swipe-buttons-wrap">');
+
+                var $buttonsSlider = $swipeButtons.owlCarousel({
+                    autoWidth: true,
+                    center: false,
+                    items: 6
+                });
+
+                $swipeButtons.find('.owl-stage').css({
+                    'width': '+=1'
+                });
+            }
+        });
+
+        jQuery(function () {
+            if (!jQuery('.testimonial-slider-img-left').length) {
+                return;
+            }
+
+            var $slider = jQuery('.testimonial-slider-img-left__content__slider');
+            var $nextButton = jQuery('.testimonial-slider-img-left__content__slider__item__right__arrow');
+
+            var $carousel = $slider.owlCarousel({
+                items: 1,
+                loop: true,
+                mouseDrag: false,
+                dots: true
+            });
+
+            $nextButton.on('click', function () {
+                $carousel.trigger('next.owl.carousel');
+            });
+
+            // Move owl carousel dots to right block
+
+            var moveDots = function () {
+                var $owlDots = jQuery('.owl-dots');
+                var $rightBlock = jQuery('.owl-item.active').find('.testimonial-slider-img-left__content__slider__item__right');
+                var leftCoord = $rightBlock.position().left;
+                var topCoord = $rightBlock.position().top;
+                var rightBlockHeight = $rightBlock.height();
+
+                $owlDots.css({
+                    left: leftCoord,
+                    top: topCoord + rightBlockHeight + 150
+                });
+
+                if (jQuery(window).width() <= 450) {
+                    $owlDots.css({
+                        left: leftCoord + 25,
+                        top: topCoord + rightBlockHeight + 150
+                    });
+                }
+            };
+
+            moveDots();
+
+            jQuery(window).on('resize', _.debounce(function () {
+                moveDots();
+            }, 300));
+        });
+
+
     </script>
     <script src="{{root}}assets/js/app.js"></script>
   </body>

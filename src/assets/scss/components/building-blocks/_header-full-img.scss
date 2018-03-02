@@ -1,0 +1,117 @@
+.header-full-img {
+  @include breakpoint(large) {
+    padding-bottom: rem-calc(50);
+  }
+  @include breakpoint(small) {
+    background: url("../img/webservice/main-bg.jpg") no-repeat -200px 0 #39add1;
+  }
+  @include breakpoint(mobile) {
+    background: url("../img/webservice/main-bg.jpg") no-repeat 0 0 #39add1;
+  }
+  @include breakpoint(medium) {
+    background: url("../img/webservice/main-bg.jpg") no-repeat 100px 0 #39add1;
+  }
+  @include breakpoint(large) {
+    background: url("../img/webservice/main-bg.jpg") no-repeat 200px 0 #39add1;
+  }
+  @include breakpoint(xlarge) {
+    background: url("../img/webservice/main-bg.jpg") no-repeat 100% 0 #39add1;
+  }
+
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+  }
+
+  .hero-headline-left {
+
+    &__content {
+      position: relative;
+      padding-top: rem-calc(30);
+      @include breakpoint(medium) {
+        padding-top: rem-calc(40);
+      }
+      @include breakpoint(large) {
+        padding-top: rem-calc(50);
+      }
+      padding-bottom: rem-calc(150);
+
+      &__title {
+        margin-bottom: rem-calc(20);
+        max-width: rem-calc(485);
+        color: $white;
+      }
+
+      &__subheading {
+        margin-bottom: rem-calc(40);
+        max-width: rem-calc(280);
+        @include breakpoint(mobile) {
+          max-width: rem-calc(350);
+        }
+        @include breakpoint(medium) {
+          max-width: rem-calc(400);
+        }
+        color: rgba($white, 0.8);
+      }
+
+      &__button {
+        padding: rem-calc(20 30);
+        max-width: rem-calc(180);
+      }
+
+      &__watch {
+        position: absolute;
+        left: 0;
+        bottom: rem-calc(40);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &__button {
+          position: relative;
+          flex: 0 0 auto;
+          margin-right: rem-calc(15);
+          border: solid rem-calc(2) rgba($white, 0.3);
+          border-radius: 50%;
+          width: rem-calc(42);
+          height: rem-calc(42);
+          background-color: rgba($white, 0.1);
+          cursor: pointer;
+          transition: opacity $base-transition;
+
+          &::before {
+            @include triangle(to right, rem-calc(8), rem-calc(12), $white);
+
+            content: "";
+            position: absolute;
+            left: rem-calc(16);
+            top: rem-calc(13);
+          }
+
+          &:focus,
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        &__text {
+          font-weight: 400;
+          font-size: rem-calc(16);
+          line-height: rem-calc(25);
+          color: rgba($white, 0.75);
+        }
+      }
+    }
+
+  }
+
+
+
+}
