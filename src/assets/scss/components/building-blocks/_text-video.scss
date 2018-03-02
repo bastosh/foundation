@@ -1,0 +1,234 @@
+.text-video-2 {
+	&__container {
+		border-bottom: solid rem-calc(1) $separator;
+		padding-top: rem-calc(40);
+		padding-bottom: rem-calc(75);
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column-left {
+		padding-top: rem-calc(43);
+		padding-right: rem-calc(10);
+	}
+
+	&__title {
+		margin-bottom: rem-calc(14);
+		color: $text-heading;
+	}
+
+	&__subheading {
+		margin-bottom: rem-calc(15);
+		max-width: rem-calc(465);
+		color: $text-subheading;
+	}
+
+	&__icons {
+		margin: rem-calc(0 -13);
+		font-size: 0;
+		line-height: 0;
+	}
+
+	&__icon {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		overflow: hidden;
+		margin: rem-calc(13);
+		border-radius: rem-calc(8);
+		width: rem-calc(46);
+		height: rem-calc(46);
+		background-color: #e1e8ee;
+
+		.icon {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			max-width: 90%;
+			max-height: 90%;
+			fill: $gray-dark;
+			transform: translate(-50%, -50%);
+		}
+
+		&-sketch {
+			margin-top: rem-calc(1);
+			width: rem-calc(25);
+			height: rem-calc(24);
+		}
+
+		&-photoshop {
+			width: rem-calc(22);
+			height: rem-calc(16);
+		}
+	}
+
+	&__video {
+		position: relative;
+		z-index: 1;
+		display: block;
+		overflow: hidden;
+		border-radius: rem-calc(6);
+		user-select: none;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			background-color: #3b3d40;
+			opacity: 0.5;
+			transition: opacity $base-transition;
+		}
+
+		&__image {
+			position: relative;
+			z-index: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 3;
+			margin: rem-calc((-41) 0 0 -20);
+			border-style: solid;
+			border-width: rem-calc(41 0 41 57);
+			border-color: transparent transparent transparent #f0f5fb;
+			width: 0;
+			height: 0;
+			opacity: 0.6;
+			transition: opacity $base-transition;
+		}
+
+		&:focus,
+		&:hover {
+			&::before {
+				opacity: 0.65;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__video__popup {
+		position: fixed;
+		left: rem-calc(0);
+		right: rem-calc(0);
+		top: rem-calc(0);
+		bottom: rem-calc(0);
+		z-index: 999;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.9);
+
+		&__item {
+			display: flex;
+			align-items: center;
+			flex-basis: 100%;
+			justify-content: center;
+
+			iframe {
+				width: 70%;
+				height: 65%;
+
+				@include breakpoint(map-get($breakpoints, mobile) down) {
+					height: 30%;
+				}
+			}
+		}
+
+		&__close {
+			position: absolute;
+			right: rem-calc(60);
+			top: rem-calc(40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 2px solid $white;
+			border-radius: 50%;
+			width: rem-calc(45);
+			height: rem-calc(45);
+			background-color: #3b3d40;
+			cursor: pointer;
+			transition: all linear $base-transition;
+
+			&:hover {
+				opacity: 0.8;
+				transition: all linear $base-transition;
+			}
+
+			.icon {
+				width: rem-calc(13);
+				height: rem-calc(13);
+				fill: $white;
+			}
+
+			@include breakpoint(mobile down) {
+				right: rem-calc(15);
+				top: rem-calc(15);
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__container {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+
+		&__row {
+			align-items: center;
+			flex-flow: column wrap;
+			justify-content: flex-start;
+		}
+
+		&__column-left {
+			margin-bottom: rem-calc(80);
+			padding-top: rem-calc(0);
+			padding-right: rem-calc(0);
+			text-align: center;
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__container {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+
+		&__column-left {
+			margin-bottom: rem-calc(60);
+		}
+
+		&__title {
+			margin-right: auto;
+			margin-left: auto;
+			max-width: rem-calc(500);
+			text-align: center;
+		}
+
+		&__subheading {
+			margin-right: auto;
+			margin-left: auto;
+			max-width: rem-calc(500);
+			text-align: center;
+		}
+
+		&__icons {
+			text-align: center;
+		}
+	}
+}

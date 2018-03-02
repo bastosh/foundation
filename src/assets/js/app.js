@@ -422,6 +422,46 @@ $(function () {
     });
 });
 
+$(function () {
+
+    var $activateButton = $('.text-video-2__video');
+    var $videoPopup = $('.text-video-2__video__popup');
+    var $closeButton = $('.text-video-2__video__popup__close');
+
+    var videoFrame = document.getElementById('video-frame');
+
+    if (window.Vimeo) {
+        var player = new Vimeo.Player(videoFrame);
+    }
+
+
+    $activateButton.on('click', function (event) {
+        event.preventDefault();
+        $videoPopup.toggleClass('is-hidden');
+    });
+
+    $closeButton.on('click', function () {
+        $videoPopup.toggleClass('is-hidden');
+        player.unload();
+    });
+
+    if ($(window).width() <= 1020) {
+        $(videoFrame).attr({
+            width: 500,
+            height: 281
+        });
+    }
+
+    if ($(window).width() <= 520) {
+        $(videoFrame).attr({
+            width: 320,
+            height: 180
+        });
+    }
+
+
+});
+
 
 
 

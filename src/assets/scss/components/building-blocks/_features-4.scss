@@ -1,0 +1,102 @@
+.features-4 {
+	overflow: hidden;
+
+	&__container {
+		padding-top: rem-calc(69);
+		padding-bottom: rem-calc(106);
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+
+		&__item {
+			&__icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: rem-calc(9);
+				height: rem-calc(100);
+				font-size: 0;
+				line-height: 0;
+				text-align: center;
+
+				.icon {
+					display: inline-block;
+					vertical-align: middle;
+					max-width: rem-calc(75);
+					max-height: rem-calc(75);
+				}
+
+				&-structure {
+					width: rem-calc(60);
+					height: rem-calc(59);
+				}
+
+				&-design {
+					width: rem-calc(72);
+					height: rem-calc(66);
+				}
+
+				&-layers {
+					width: rem-calc(75);
+					height: rem-calc(75);
+				}
+
+				&-great-fonts {
+					width: rem-calc(60);
+					height: rem-calc(57);
+				}
+			}
+
+			&__title {
+				margin: 0 auto rem-calc(9);
+				max-width: rem-calc(270);
+				text-align: center;
+				color: $text-heading;
+			}
+
+			&__text {
+				margin: 0 auto;
+				max-width: rem-calc(270);
+				text-align: center;
+				color: $gray-darker;
+			}
+
+			&:nth-child(4n-3) {
+				clear: left;
+			}
+		}
+	}
+
+	@include breakpoint(medium down) {
+		&__container {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(768 down) {
+		&__list {
+			align-items: center;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+
+			&__item {
+				flex: 0 1 50%;
+				margin-bottom: rem-calc(30);
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__container {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+
+		&__list {
+			flex-flow: column;
+		}
+	}
+}

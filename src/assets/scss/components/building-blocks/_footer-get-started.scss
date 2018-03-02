@@ -1,0 +1,124 @@
+.footer-get-started {
+	display: flex;
+	justify-content: space-between;
+	padding: rem-calc(29 70);
+
+	&__left {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0;
+	}
+
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: rem-calc(30);
+		padding: rem-calc(8 0 9);
+		font-size: rem-calc(16);
+		line-height: rem-calc(25);
+		white-space: nowrap;
+		color: $gray-darker;
+		transition: color $base-transition;
+
+		&:focus,
+		&:hover {
+			color: $text-heading;
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: rem-calc(30);
+		margin-bottom: 0;
+		padding: rem-calc(8 0 9);
+		font-size: rem-calc(16);
+		line-height: rem-calc(25);
+		color: $gray-darker;
+	}
+
+	&__button {
+		margin: 0;
+		padding: rem-calc(13 30);
+		height: rem-calc(42);
+		background-color: $primary-color;
+
+		&:focus,
+		&:hover {
+			background-color: darken($primary-color, 10%);
+		}
+	}
+
+	@include breakpoint(large down) {
+		flex-flow: column;
+		padding-bottom: rem-calc(15);
+
+		&__left {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			order: 1;
+			padding-top: rem-calc(27);
+			text-align: center;
+		}
+
+		&__right {
+			border-bottom: 1px solid $separator;
+			padding-bottom: rem-calc(30);
+			text-align: center;
+		}
+
+		&__link {
+			margin: rem-calc(0 15 15);
+		}
+	}
+
+	@include breakpoint(mobile down) {
+		&__left {
+			justify-content: center;
+		}
+
+		&__link {
+			margin-right: rem-calc(0);
+		}
+	}
+
+	@include breakpoint(620 down) {
+		&__label {
+			margin-right: rem-calc(0);
+		}
+	}
+
+	@include breakpoint(map-get($breakpoints, mobile) down) {
+		padding-right: rem-calc(0);
+		padding-left: rem-calc(0);
+
+		&__left {
+			&__wrap {
+				display: flex;
+				flex: 0 1 100%;
+				justify-content: center;
+
+				a {
+					margin-right: rem-calc(10);
+					font-weight: 400;
+					font-size: rem-calc(14);
+					line-height: rem-calc(19);
+					color: #86939e;
+
+					&:last-child {
+						margin-right: rem-calc(0);
+					}
+				}
+			}
+
+			> a {
+				margin-bottom: rem-calc(0);
+			}
+		}
+
+		&__link {
+			margin-left: rem-calc(0);
+		}
+	}
+}

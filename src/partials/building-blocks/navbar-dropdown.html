@@ -1,0 +1,31 @@
+<nav class="header-subscribe__top" data-aos="fade-up">
+    <div class="header-subscribe__top__container">
+        <div class="header-subscribe__top__wrap">
+            <a class="header-subscribe__logo" href="/">
+                {{>logo}}
+            </a>
+            <ul class="header-subscribe__menu dropdown menu" data-dropdown-menu="data-dropdown-menu">
+                <li class="header-subscribe__menu__item"><a class="header-subscribe__menu__item__link" href="#">Design</a></li>
+                <li class="header-subscribe__menu__item"><a class="header-subscribe__menu__item__link" href="#">CMS</a></li>
+                <li class="header-subscribe__menu__item"><a class="header-subscribe__menu__item__link" href="#">Cases</a></li>
+                <li class="header-subscribe__menu__item is-dropdown-submenu-parent">
+                    <a class="header-subscribe__menu__item__link" href="#">
+                        More<span class="svg-wrap">{{>icon-arrow-down}}</span>
+                    </a>
+                    <ul class="header-subscribe__menu__item__submenu">
+                        <li class="header-subscribe__menu__item__submenu__item"><a class="header-subscribe__menu__item__submenu__item__link" href="#">First Option</a></li>
+                        <li class="header-subscribe__menu__item__submenu__item"><a class="header-subscribe__menu__item__submenu__item__link" href="#">Second Option</a></li>
+                        <li class="header-subscribe__menu__item__submenu__item"><a class="header-subscribe__menu__item__submenu__item__link" href="#">Third Option</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="header-subscribe__account">
+            <a class="header-subscribe__account__log-in" href="#">Log in</a>
+            <a class="header-subscribe__account__sign-up" href="#">Sign up</a>
+        </div>
+        <a class="header-subscribe__button__hamburger hamburger-button" href="#">
+        {{>hamburger}}
+    </a>
+    </div>
+</nav>

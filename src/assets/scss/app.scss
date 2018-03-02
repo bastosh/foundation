@@ -93,9 +93,7 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/image-slider';
 
 // Template Homepage
-@import "components/building-blocks/platforms";
 @import "components/building-blocks/testimonial-slider";
-@import "components/building-blocks/twitter-cards";
 @import "components/building-blocks/hero-laptop";
 
 // Template Agency
@@ -171,3 +169,15 @@ input::placeholder, textarea::placeholder {
 @import 'components/building-blocks/pricing-2';
 @import 'components/building-blocks/cta-dark';
 @import 'components/building-blocks/footer-large';
+
+// Template Webapp2
+@import 'components/building-blocks/header-subscribe';
+@import 'components/building-blocks/screenshot';
+@import 'components/building-blocks/text-video';
+@import 'components/building-blocks/features-4';
+@import "components/building-blocks/platforms";
+@import 'components/building-blocks/testimonial-slider-avatars';
+@import "components/building-blocks/twitter-cards";
+@import 'components/building-blocks/get-started';
+@import 'components/building-blocks/footer-get-started';
+

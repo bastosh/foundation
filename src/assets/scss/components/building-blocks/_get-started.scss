@@ -1,0 +1,107 @@
+.get-started {
+	background: url("../img/webapp2/image.png") 100% rem-calc(110) no-repeat $primary-color;
+
+	&__container {
+		padding-top: rem-calc(175);
+		padding-bottom: rem-calc(185);
+	}
+
+	&__title {
+		margin-bottom: rem-calc(14);
+		max-width: rem-calc(458);
+		color: $white;
+	}
+
+	&__subheading {
+		margin-bottom: rem-calc(38);
+		max-width: rem-calc(458);
+		color: rgba($white, 0.8);
+	}
+
+	&__form {
+		max-width: rem-calc(458);
+
+		&__textbox {
+			display: block;
+			margin-bottom: rem-calc(15);
+		}
+
+		&__button {
+			display: block;
+			margin: rem-calc(30 0 0);
+		}
+	}
+
+	@include breakpoint(retina) {
+		background: url("../img/webapp2/image-2x.png") 125% rem-calc(110) no-repeat $primary-color;
+		background-size: rem-calc(1000) rem-calc(590);
+	}
+
+	@include breakpoint(xlarge down) {
+		&__container {
+			padding-top: rem-calc(100);
+			padding-bottom: rem-calc(100);
+		}
+
+		@include breakpoint(retina) {
+			background-position: 205% rem-calc(50);
+		}
+	}
+
+	@include breakpoint(large down) {
+		background-position: 100% rem-calc(50);
+		background-size: 55% auto;
+	}
+
+	@include breakpoint(medium down) {
+		background-position: 100% 65%;
+		background-size: 50% auto;
+
+		&__container {
+			padding-top: rem-calc(80);
+			padding-bottom: rem-calc(80);
+		}
+	}
+
+	@include breakpoint(large down) {
+		background-image: none;
+
+		&__form {
+			margin-right: auto;
+			margin-left: auto;
+			max-width: rem-calc(562);
+		}
+
+		&__title {
+			margin-right: auto;
+			margin-left: auto;
+			max-width: rem-calc(500);
+			text-align: center;
+		}
+
+		&__subheading {
+			margin-right: auto;
+			margin-bottom: rem-calc(60);
+			margin-left: auto;
+			max-width: rem-calc(500);
+			text-align: center;
+		}
+
+		&__form {
+			&__button {
+				width: 100%;
+			}
+		}
+	}
+
+	@include breakpoint(small down) {
+		&__container {
+			padding-top: rem-calc(60);
+			padding-bottom: rem-calc(60);
+		}
+
+		&__form {
+			max-width: none;
+		}
+	}
+}

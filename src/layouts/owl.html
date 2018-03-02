@@ -467,6 +467,68 @@
             }, 300));
         });
 
+        jQuery(function () {
+            var $slider = jQuery('.testimonial-slider-avatars__slider');
+
+            var arrowLeft = ('<i class="fas fa-angle-left fa-2x"></i>');
+            var arrowRight = ('<i class="fas fa-angle-right fa-2x"></i>');
+
+            jQuery('.testimonial-slider-avatars__people__item').each(function (index) {
+                $(this)
+                    .data('index', index)
+                    .attr('data-index', index);
+            });
+
+            jQuery('.testimonial-slider-avatars__slider__item').each(function (index) {
+                jQuery(this)
+                    .data('index', index)
+                    .attr('data-index', index);
+            });
+
+            jQuery(document).on('click', '.testimonial-slider-avatars__people__item', function (e) {
+                var $item = $(this);
+
+                e.preventDefault();
+                $slider.trigger('to.owl.carousel', [$item.data('index')]);
+                $item.trigger('blur');
+            });
+
+            jQuery(document).on('mouseenter focus', '.testimonial-slider-avatars__people__item', function () {
+                $slider.find('.testimonial-slider-avatars__people__item').removeClass('hover');
+                $(this).addClass('is-hover');
+            });
+
+            jQuery(document).on('mouseleave blur', '.testimonial-slider-avatars__people__item', function () {
+                $(this).removeClass('is-hover');
+            });
+
+            $slider.owlCarousel({
+                items: 1,
+                autoHeight: true,
+                dots: false,
+                nav: true,
+                loop: true,
+                mouseDrag: false,
+                navText: [arrowLeft, arrowRight],
+                smartSpeed: 750
+            });
+
+            $slider.on('changed.owl.carousel', function (event) {
+                setTimeout(function () {
+                    var $slider = $(event.target);
+                    var $activeSlide = $slider.find('.owl-item.active');
+                    var $activeItem = $activeSlide.find('.testimonial-slider-avatars__slider__item');
+                    var index = $activeItem.data('index');
+
+                    jQuery('.testimonial-slider-avatars__people__item')
+                        .removeClass('is-active')
+                        .filter('[data-index="' + index + '"]')
+                        .addClass('is-active');
+                }, 0);
+            });
+        });
+
+
 
     </script>
     <script src="{{root}}assets/js/app.js"></script>
